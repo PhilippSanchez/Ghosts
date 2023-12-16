@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpt5e5h1lypgo"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="1_7wia8"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="2_71u1u"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="3_uyyyc"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_0e4f0"]
+script = ExtResource("2_71u1u")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ic1i5"]
+script = ExtResource("3_uyyyc")
+
+[node name="DialogueBox" type="Panel"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+offset_right = 256.0
+offset_bottom = 128.0
+script = ExtResource("1_7wia8")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_0e4f0"), SubResource("RichTextEffect_ic1i5")])

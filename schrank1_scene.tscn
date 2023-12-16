@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbn28skl0yds5"]
+
+[ext_resource type="Texture2D" uid="uid://yh1qc6hjyp83" path="res://Assets/Inviroment/Schrank1.png" id="1_k6j03"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="3_yr08g"]
+[ext_resource type="Script" path="res://SchrankInteraction.gd" id="4_guaqq"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="4_k564b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycese"]
+texture = ExtResource("1_k6j03")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_25uhh"]
+sources/0 = SubResource("TileSetAtlasSource_ycese")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_finrx"]
+size = Vector2(25, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18kqg"]
+size = Vector2(51, 29)
+
+[node name="Node2D" type="Node2D" groups=["Schrank1"]]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_25uhh")
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 1, -65536, 65536, 0, 0, 65536, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_finrx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("3_yr08g")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+dialogue_data = ExtResource("4_k564b")
+start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
+
+[node name="Area2D" type="Area2D" parent="." groups=["Schrank1"]]
+script = ExtResource("4_guaqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 8.5)
+shape = SubResource("RectangleShape2D_18kqg")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Ghosts"
+run/main_scene="res://schrank1_scene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
 
 [rendering]
 
