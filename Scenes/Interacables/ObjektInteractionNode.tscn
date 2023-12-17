@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://chese50emd77q"]
+
+[ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode.gd" id="1_iur2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37xq5"]
+size = Vector2(51, 29)
+
+[node name="Area2D" type="Area2D" groups=["Schrank1"]]
+script = ExtResource("1_iur2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 8.5)
+shape = SubResource("RectangleShape2D_37xq5")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
