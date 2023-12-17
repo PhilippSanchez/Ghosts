@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbn28skl0yds5"]
 
-[ext_resource type="Texture2D" uid="uid://yh1qc6hjyp83" path="res://Assets/Inviroment/Schrank1.png" id="1_k6j03"]
-[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="3_yr08g"]
-[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="4_k564b"]
-[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_x5k0t"]
+[ext_resource type="Texture2D" uid="uid://yh1qc6hjyp83" path="res://Assets/Inviroment/Schrank1.png" id="1_fbdk6"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_lse10"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="3_ao6df"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_t2tnk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycese"]
-texture = ExtResource("1_k6j03")
+texture = ExtResource("1_fbdk6")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_finrx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("3_yr08g")]
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("2_lse10")]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -43,9 +43,9 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
-dialogue_data = ExtResource("4_k564b")
+dialogue_data = ExtResource("3_ao6df")
 start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 
-[node name="Area2D" parent="." instance=ExtResource("4_x5k0t")]
+[node name="Area2D" parent="." instance=ExtResource("4_t2tnk")]
 position = Vector2(2, -3)
 textboxName = "SChrank1Interaction"
