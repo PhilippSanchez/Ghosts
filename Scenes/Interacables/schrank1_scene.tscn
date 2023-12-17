@@ -47,5 +47,5 @@ dialogue_data = ExtResource("3_ao6df")
 start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 
 [node name="Area2D" parent="." instance=ExtResource("4_t2tnk")]
-position = Vector2(2, -3)
+position = Vector2(-1, -6)
 textboxName = "SChrank1Interaction"

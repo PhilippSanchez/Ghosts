@@ -209,3 +209,4 @@ start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 [node name="Area2D" parent="." instance=ExtResource("4_eimwa")]
 position = Vector2(8, 10)
 textboxName = "BedInteraction"
+groupName = "Player "

@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://6yvrhih8t76n"]
+[gd_scene load_steps=3 format=3 uid="uid://6yvrhih8t76n"]
+
+[ext_resource type="PackedScene" uid="uid://dmgqhk2b5noe4" path="res://Scenes/Interacables/bett_scene.tscn" id="1_y8rd6"]
+[ext_resource type="PackedScene" uid="uid://dbn28skl0yds5" path="res://Scenes/Interacables/schrank1_scene.tscn" id="2_lgcsv"]
 
 [node name="Zimmer_Aufwachraum" type="Node2D"]
+
+[node name="Bett_Scene" parent="." instance=ExtResource("1_y8rd6")]
+position = Vector2(-1, 10)
+
+[node name="Node2D" parent="." instance=ExtResource("2_lgcsv")]
+position = Vector2(32, 12)
