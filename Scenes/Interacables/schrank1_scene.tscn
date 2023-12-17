@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbn28skl0yds5"]
+[gd_scene load_steps=7 format=3 uid="uid://dbn28skl0yds5"]
 
 [ext_resource type="Texture2D" uid="uid://yh1qc6hjyp83" path="res://Assets/Inviroment/Schrank1.png" id="1_fbdk6"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_lse10"]
-[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="3_ao6df"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_t2tnk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycese"]
@@ -18,7 +17,8 @@ sources/0 = SubResource("TileSetAtlasSource_ycese")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_finrx"]
 size = Vector2(25, 27)
 
-[node name="Node2D" type="Node2D" groups=["Schrank1"]]
+[node name="Schrank1" type="Node2D" groups=["Schrank1"]]
+texture_filter = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_25uhh")
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_finrx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("2_lse10")]
+[node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("2_lse10")]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -42,10 +42,9 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_vertical = 8
-dialogue_data = ExtResource("3_ao6df")
-start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
+size_flags_vertical = 0
 
-[node name="Area2D" parent="." instance=ExtResource("4_t2tnk")]
-position = Vector2(-1, -6)
+[node name="ObjectInteractionCollision2" parent="." instance=ExtResource("4_t2tnk")]
+position = Vector2(1.19209e-07, -4)
+scale = Vector2(0.593008, 1.05445)
 textboxName = "SChrank1Interaction"

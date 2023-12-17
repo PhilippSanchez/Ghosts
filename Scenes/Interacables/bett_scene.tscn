@@ -174,7 +174,8 @@ texture = ExtResource("1_qsiwk")
 sources/0 = SubResource("TileSetAtlasSource_0w088")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sabnp"]
-height = 32.0
+radius = 7.0
+height = 26.0
 
 [node name="Bett_Scene" type="Node2D"]
 
@@ -189,6 +190,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(8, 17)
+scale = Vector2(1.00917, 0.994073)
 shape = SubResource("CapsuleShape2D_sabnp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -206,7 +208,8 @@ size_flags_vertical = 8
 dialogue_data = ExtResource("3_3ux03")
 start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 
-[node name="Area2D" parent="." instance=ExtResource("4_eimwa")]
+[node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
 position = Vector2(8, 10)
+scale = Vector2(0.388969, 0.859162)
 textboxName = "BedInteraction"
 groupName = "Player "

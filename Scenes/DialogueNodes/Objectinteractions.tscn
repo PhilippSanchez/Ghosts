@@ -10,7 +10,7 @@ script = ExtResource("2_71u1u")
 [sub_resource type="RichTextEffect" id="RichTextEffect_ic1i5"]
 script = ExtResource("3_uyyyc")
 
-[node name="DialogueBox" type="Panel"]
+[node name="ObjectInteractionsDialog" type="Panel"]
 visible = false
 custom_minimum_size = Vector2(256, 128)
 offset_right = 256.0

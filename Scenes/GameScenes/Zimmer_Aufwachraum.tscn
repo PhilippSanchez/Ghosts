@@ -8,5 +8,6 @@
 [node name="Bett_Scene" parent="." instance=ExtResource("1_y8rd6")]
 position = Vector2(-1, 10)
 
-[node name="Node2D" parent="." instance=ExtResource("2_lgcsv")]
-position = Vector2(32, 12)
+[node name="Schrank1" parent="." instance=ExtResource("2_lgcsv")]
+position = Vector2(25, 12)
+scale = Vector2(0.499529, 0.655673)
