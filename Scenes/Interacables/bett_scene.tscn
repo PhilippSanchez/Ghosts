@@ -211,6 +211,7 @@ start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 
 [node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
 position = Vector2(8, 9)
+scale = Vector2(0.283485, 0.929839)
 
 [node name="Interaction" parent="." instance=ExtResource("5_fflv2")]
 visible = false

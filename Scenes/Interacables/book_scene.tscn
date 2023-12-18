@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0x0yeng1hece"]
+
+[ext_resource type="Texture2D" uid="uid://f6n2jp5500bl" path="res://Assets/Inviroment/Book.png" id="1_w7o6h"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_hacfx"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="3_rlkme"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_wxujq"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="5_0k68a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqjcq"]
+texture = ExtResource("1_w7o6h")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_va85q"]
+sources/0 = SubResource("TileSetAtlasSource_gqjcq")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wijby"]
+size = Vector2(26.5, 24.5)
+
+[node name="TileMap" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_va85q")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 1, 65536, 0, 65537, 65536, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(15.75, 16)
+shape = SubResource("RectangleShape2D_wijby")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("2_hacfx")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+dialogue_data = ExtResource("3_rlkme")
+start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
+
+[node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_wxujq")]
+position = Vector2(15, 9)
+scale = Vector2(0.659292, 0.859649)
+
+[node name="Interaction" parent="." instance=ExtResource("5_0k68a")]
+visible = false
+position = Vector2(1, 4)
