@@ -9,5 +9,4 @@
 position = Vector2(-1, 10)
 
 [node name="Schrank1" parent="." instance=ExtResource("2_lgcsv")]
-position = Vector2(25, 12)
-scale = Vector2(0.499529, 0.655673)
+position = Vector2(34, 10)

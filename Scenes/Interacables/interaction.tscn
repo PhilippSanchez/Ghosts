@@ -15,3 +15,4 @@ tile_set = SubResource("TileSet_x7il2")
 cell_quadrant_size = 8
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 0, 0)
+metadata/_edit_lock_ = true

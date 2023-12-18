@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddwvabcbilva2"]
+
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="1_wvuo8"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="2_atttu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ObjectInteractionCollision" parent="." instance=ExtResource("1_wvuo8")]
+
+[node name="Node2D" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Interaction" parent="Node2D" instance=ExtResource("2_atttu")]
+position = Vector2(-8, -4)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmgqhk2b5noe4"]
+[gd_scene load_steps=9 format=3 uid="uid://dmgqhk2b5noe4"]
 
 [ext_resource type="Texture2D" uid="uid://dbsx3p5o6l2o3" path="res://Assets/Inviroment/Bed.png" id="1_qsiwk"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_hta38"]
 [ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="3_3ux03"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_eimwa"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="5_fflv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0w088"]
 texture = ExtResource("1_qsiwk")
@@ -209,7 +210,8 @@ dialogue_data = ExtResource("3_3ux03")
 start_id = "$\"../CanvasLayer/DialogueBox\".play(\"SChrank1Interaction"
 
 [node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
-position = Vector2(8, 10)
-scale = Vector2(0.388969, 0.859162)
-textboxName = "BedInteraction"
-groupName = "Player "
+position = Vector2(8, 9)
+
+[node name="Interaction" parent="." instance=ExtResource("5_fflv2")]
+visible = false
+position = Vector2(1, 4)
