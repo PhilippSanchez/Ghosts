@@ -5,36 +5,59 @@
 [resource]
 script = ExtResource("1_j25ul")
 starts = {
-"BedInteraction": &"0_1",
+"Bett": &"0_3",
 "SChrank1Interaction": &"0_2"
 }
 nodes = {
-"0_1": {
-"link": &"1_1",
-"offset": Vector2(-100, 0),
-"start_id": "BedInteraction"
-},
 "0_2": {
 "link": &"1_2",
 "offset": Vector2(-100, 380),
 "start_id": "SChrank1Interaction"
 },
+"0_3": {
+"link": &"1_1",
+"offset": Vector2(-85.683, 641.396),
+"start_id": "Bett"
+},
 "1_1": {
-"dialogue": "Das ist die Bett interaktion",
-"offset": Vector2(127.424, -152.488),
+"dialogue": "",
+"offset": Vector2(141.813, 596.185),
 "options": {
 0: {
 "condition": {},
-"link": "END",
-"text": ""
+"link": &"3_1",
+"text": "Jaa"
+},
+1: {
+"condition": {},
+"link": &"3_2",
+"text": "nein"
+},
+2: {
+"condition": {},
+"link": &"3_3",
+"text": "vielleicht"
 }
 },
-"size": Vector2(300, 276),
-"speaker": "Ich"
+"size": Vector2(300, 338),
+"speaker": "BettInteraction"
 },
 "1_2": {
 "dialogue": "Das ist die Schrankinteractrion",
-"offset": Vector2(140, 180),
+"offset": Vector2(180, 200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Ich"
+},
+"1_3": {
+"dialogue": "asdasdasd",
+"offset": Vector2(543.775, 271.421),
 "options": {
 0: {
 "condition": {},
@@ -42,8 +65,23 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
-"speaker": "Ich"
+"size": Vector2(300, 245),
+"speaker": "Peter"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(581.796, 656.037),
+"signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(525.894, 782.482),
+"signalValue": "false"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(509.922, 872.99),
+"signalValue": "none"
 }
 }
 variables = {}

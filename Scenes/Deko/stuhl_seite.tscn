@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://lsct1l1hiwph"]
+
+[ext_resource type="Texture2D" uid="uid://deejhwy2jefx5" path="res://Assets/Inviroment/Stühle_Ansicht.png" id="2_3xm02"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r32is"]
+texture = ExtResource("2_3xm02")
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1hibs"]
+sources/2 = SubResource("TileSetAtlasSource_r32is")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s61hg"]
+size = Vector2(16.75, 19)
+
+[node name="Stuhl_Seite" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_1hibs")
+cell_quadrant_size = 4
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 2, 4, 0, 2, 3, 1, 65538, 3, 65537, 65538, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(10.625, 14.5)
+shape = SubResource("RectangleShape2D_s61hg")

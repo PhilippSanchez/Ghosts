@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgk8x6brpfkwc"]
+
+[ext_resource type="Texture2D" uid="uid://lovsscsjp4ja" path="res://Assets/Inviroment/Tisch_groß.png" id="1_6bb7l"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6wqq"]
+texture = ExtResource("1_6bb7l")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bafxk"]
+sources/0 = SubResource("TileSetAtlasSource_i6wqq")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgw0q"]
+size = Vector2(56, 26)
+
+[node name="TileMap" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_bafxk")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 1, 65536, 0, 65537, 65536, 1, 2, 131072, 0, 65538, 131072, 1, 3, 196608, 0, 65539, 196608, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(31, 19)
+shape = SubResource("RectangleShape2D_vgw0q")

@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://chese50emd77q"]
+[gd_scene load_steps=5 format=3 uid="uid://chese50emd77q"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode.gd" id="1_iur2n"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="2_gygxo"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="3_cqdin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37xq5"]
 size = Vector2(51, 29)
 
 [node name="ObjectInteractionCollision" type="Area2D" groups=["Schrank1"]]
 script = ExtResource("1_iur2n")
+textboxName = "BedInteraction"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 8.5)
@@ -17,5 +19,10 @@ shape = SubResource("RectangleShape2D_37xq5")
 visible = false
 position = Vector2(-8, -4)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("3_cqdin")]
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://slkuw6tly5ba"]
+
+[ext_resource type="Texture2D" uid="uid://dod1wx2aixg4d" path="res://Assets/Characters/GreyboxCh.jpg" id="1_t20gm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_t20gm")
+hframes = 4
+vframes = 6
