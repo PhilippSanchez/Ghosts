@@ -63,7 +63,7 @@ nodes = {
 },
 "1_3": {
 "dialogue": "asdasdasd",
-"offset": Vector2(543.775, 271.421),
+"offset": Vector2(540, 200),
 "options": {
 0: {
 "condition": {},
@@ -76,7 +76,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "Oh ein Bett....",
-"offset": Vector2(180, 960),
+"offset": Vector2(140, 1020),
 "options": {
 0: {
 "condition": {},
@@ -94,12 +94,12 @@ nodes = {
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(540, 700),
+"offset": Vector2(540, 680),
 "signalValue": "false"
 },
 "3_3": {
 "link": "END",
-"offset": Vector2(540, 780),
+"offset": Vector2(540, 760),
 "signalValue": "none"
 }
 }

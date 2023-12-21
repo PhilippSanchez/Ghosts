@@ -13,10 +13,10 @@
 script = ExtResource("1_x3ga2")
 
 [node name="Bett_Scene" parent="." instance=ExtResource("1_y8rd6")]
-position = Vector2(0, -9)
+position = Vector2(2, -6)
 
 [node name="Schrank1" parent="." instance=ExtResource("2_lgcsv")]
-position = Vector2(50, 10)
+position = Vector2(74, 11)
 
 [node name="Stuhl_Hinten" parent="." instance=ExtResource("4_sddj4")]
 z_index = 1

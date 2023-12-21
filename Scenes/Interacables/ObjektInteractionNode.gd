@@ -6,6 +6,7 @@ extends Area2D
 @onready var interaction = $"../Interaction"
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
 var consequenz = null 
+var dialogue_finished  = false 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,9 +21,10 @@ func _process(delta):
 
 func _on_area_entered(area):
 	print(area)
-	if area.is_in_group("Player"): 
+	if area.is_in_group("Player") and dialogue_finished == false : 
 		interaction.show() 
 		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
+		
 		if Input.is_action_pressed("ui_down"): 
 			textbox.start(textboxName)
 	
@@ -36,6 +38,7 @@ func _on_area_exited(area):
 
 
 func _on_object_interactions_dialog_dialogue_signal(value):
+	dialogue_finished = true 
 	if value == "true": 
 		consequenz = true 
 	elif value =="false":
