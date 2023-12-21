@@ -6,9 +6,15 @@
 script = ExtResource("1_j25ul")
 starts = {
 "Bett": &"0_3",
+"BettBsp": &"0_1",
 "SChrank1Interaction": &"0_2"
 }
 nodes = {
+"0_1": {
+"link": &"1_4",
+"offset": Vector2(-64.3687, 1018.49),
+"start_id": "BettBsp"
+},
 "0_2": {
 "link": &"1_2",
 "offset": Vector2(-100, 380),
@@ -16,7 +22,7 @@ nodes = {
 },
 "0_3": {
 "link": &"1_1",
-"offset": Vector2(-85.683, 641.396),
+"offset": Vector2(-100, 580),
 "start_id": "Bett"
 },
 "1_1": {
@@ -65,22 +71,35 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Peter"
+},
+"1_4": {
+"dialogue": "Oh ein Bett....",
+"offset": Vector2(180, 960),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Player"
 },
 "3_1": {
 "link": "END",
-"offset": Vector2(581.796, 656.037),
+"offset": Vector2(540, 600),
 "signalValue": "true"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(525.894, 782.482),
+"offset": Vector2(540, 700),
 "signalValue": "false"
 },
 "3_3": {
 "link": "END",
-"offset": Vector2(509.922, 872.99),
+"offset": Vector2(540, 780),
 "signalValue": "none"
 }
 }

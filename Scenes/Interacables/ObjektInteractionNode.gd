@@ -9,7 +9,7 @@ var consequenz = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CanvasLayer/ObjectInteractionsDialog.start(textboxName) 
+	
 	pass # Replace with function body.
 
 
@@ -19,8 +19,10 @@ func _process(delta):
 	
 
 func _on_area_entered(area):
-	if area.is_in_group(groupName): 
+	print(area)
+	if area.is_in_group("Player"): 
 		interaction.show() 
+		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
 		if Input.is_action_pressed("ui_down"): 
 			textbox.start(textboxName)
 	

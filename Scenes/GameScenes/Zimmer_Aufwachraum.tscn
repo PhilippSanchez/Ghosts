@@ -1,29 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://6yvrhih8t76n"]
+[gd_scene load_steps=9 format=3 uid="uid://6yvrhih8t76n"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/Zimmer_Aufwachraum.gd" id="1_x3ga2"]
 [ext_resource type="PackedScene" uid="uid://dmgqhk2b5noe4" path="res://Scenes/Interacables/bett_scene.tscn" id="1_y8rd6"]
 [ext_resource type="PackedScene" uid="uid://dbn28skl0yds5" path="res://Scenes/Interacables/schrank1_scene.tscn" id="2_lgcsv"]
 [ext_resource type="PackedScene" uid="uid://b3y6ckaue46jb" path="res://Scenes/Deko/Stuhl_hinten.tscn" id="4_sddj4"]
 [ext_resource type="PackedScene" uid="uid://lsct1l1hiwph" path="res://Scenes/Deko/stuhl_seite.tscn" id="5_cp4f3"]
 [ext_resource type="PackedScene" uid="uid://bncwq62e6wnyh" path="res://Scenes/Deko/stuhl_vorne.tscn" id="6_rego5"]
-[ext_resource type="PackedScene" uid="uid://gavxcfbcv86g" path="res://Scenes/Characters/player.tscn" id="7_dopga"]
+[ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="7_dopga"]
 [ext_resource type="PackedScene" uid="uid://dgk8x6brpfkwc" path="res://Scenes/Deko/TischGroß.tscn" id="7_hdg6k"]
 
 [node name="Zimmer_Aufwachraum" type="Node2D"]
+script = ExtResource("1_x3ga2")
 
 [node name="Bett_Scene" parent="." instance=ExtResource("1_y8rd6")]
 position = Vector2(0, -9)
 
 [node name="Schrank1" parent="." instance=ExtResource("2_lgcsv")]
-position = Vector2(56, 11)
+position = Vector2(50, 10)
 
 [node name="Stuhl_Hinten" parent="." instance=ExtResource("4_sddj4")]
 z_index = 1
 position = Vector2(145, 49)
-rendering_quadrant_size = 8
 
 [node name="Stuhl_Seite" parent="." instance=ExtResource("5_cp4f3")]
 position = Vector2(95, 33)
-rendering_quadrant_size = 4
 
 [node name="Stuhl_vorne3" parent="." instance=ExtResource("6_rego5")]
 position = Vector2(147, 19)
@@ -38,4 +38,4 @@ position = Vector2(114, 19)
 position = Vector2(105, 28)
 
 [node name="Player" parent="." instance=ExtResource("7_dopga")]
-position = Vector2(54, 56)
+position = Vector2(55, 80)

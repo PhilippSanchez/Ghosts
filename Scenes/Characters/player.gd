@@ -26,3 +26,7 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	handleInput()
 	move_and_slide()
 	updateAnimation()
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.

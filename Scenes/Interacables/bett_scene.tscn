@@ -40,10 +40,11 @@ position = Vector2(16, 33)
 scale = Vector2(2.02979, 2.04842)
 shape = SubResource("CapsuleShape2D_sabnp")
 
-[node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
-position = Vector2(15, 20)
-scale = Vector2(0.877633, 1.83889)
-textboxName = "Bett"
-
 [node name="Interaction" parent="." instance=ExtResource("5_fflv2")]
+visible = false
 position = Vector2(8, 13)
+
+[node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
+position = Vector2(16, 18)
+scale = Vector2(0.69299, 1.86706)
+textboxName = "Bett"

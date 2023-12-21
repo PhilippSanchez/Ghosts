@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://gavxcfbcv86g"]
+[gd_scene load_steps=10 format=3 uid="uid://dqfdsfm3x0byr"]
 
-[ext_resource type="Texture2D" uid="uid://b1773qk7xwnr5" path="res://assets/Characters/Skeleton.png" id="1_icw8i"]
+[ext_resource type="Texture2D" uid="uid://b1773qk7xwnr5" path="res://Assets/Characters/Skeleton.png" id="1_icw8i"]
 [ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_wgfm1"]
 
 [sub_resource type="Animation" id="Animation_k2b5f"]
@@ -100,9 +100,8 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oix6w"]
-size = Vector2(10, 11)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 y_sort_enabled = true
 texture_filter = 1
@@ -119,6 +118,15 @@ libraries = {
 "": SubResource("AnimationLibrary_oh2n7")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Schrank1"]]
-position = Vector2(0, -5.5)
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+position = Vector2(1, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Player"]]
 shape = SubResource("RectangleShape2D_oix6w")
+
+[node name="Playerstatic" type="CollisionShape2D" parent="."]
+position = Vector2(1, -7)
+scale = Vector2(0.614406, 0.711181)
+shape = SubResource("RectangleShape2D_oix6w")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

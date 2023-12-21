@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Ghosts"
-run/main_scene="res://Scenes/Interacables/bett_scene.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+run/main_scene="res://Scenes/GameScenes/Zimmer_Aufwachraum.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
