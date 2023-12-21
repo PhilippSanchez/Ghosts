@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dod1wx2aixg4d"
-path="res://.godot/imported/GreyboxCh.jpg-967365f7c7ef9cd32fac77048f36cfc3.ctex"
+path="res://.godot/imported/GreyboxCh.jpg-20e6515a04f65ed6fc9d58867083a318.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/GreyboxCh.jpg"
-dest_files=["res://.godot/imported/GreyboxCh.jpg-967365f7c7ef9cd32fac77048f36cfc3.ctex"]
+source_file="res://assets/Characters/GreyboxCh.jpg"
+dest_files=["res://.godot/imported/GreyboxCh.jpg-20e6515a04f65ed6fc9d58867083a318.ctex"]
 
 [params]
 

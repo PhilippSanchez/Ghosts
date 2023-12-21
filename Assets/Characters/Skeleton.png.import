@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lovsscsjp4ja"
-path="res://.godot/imported/Tisch_groß.png-7aa52ffede53ad7d69085546ab914572.ctex"
+uid="uid://b1773qk7xwnr5"
+path="res://.godot/imported/Skeleton.png-bed9ea50177a6d541671cf6c485f517c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Inviroment/Tisch_groß.png"
-dest_files=["res://.godot/imported/Tisch_groß.png-7aa52ffede53ad7d69085546ab914572.ctex"]
+source_file="res://assets/Characters/Skeleton.png"
+dest_files=["res://.godot/imported/Skeleton.png-bed9ea50177a6d541671cf6c485f517c.ctex"]
 
 [params]
 
