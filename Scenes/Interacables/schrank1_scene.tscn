@@ -33,8 +33,8 @@ scale = Vector2(1.00966, 0.761935)
 shape = SubResource("RectangleShape2D_finrx")
 
 [node name="ObjectInteractionCollision2" parent="." instance=ExtResource("4_t2tnk")]
-position = Vector2(1.19209e-07, -4)
-scale = Vector2(0.636537, 1.03847)
+position = Vector2(0, -4)
+scale = Vector2(0.24407, 0.867676)
 textboxName = "SChrank1Interaction"
 groupName = "Player"
 

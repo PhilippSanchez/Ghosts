@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvprga2ciepva"]
+
+[ext_resource type="Texture2D" uid="uid://buls2gsccjuvu" path="res://Assets/Inviroment/Schreibtisch_version_Elias.png" id="1_du00g"]
+[ext_resource type="Script" path="res://Scenes/Interacables/schreibtisch.gd" id="1_q1rfu"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_dthou"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_huyhm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2v18"]
+texture = ExtResource("1_du00g")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qq81a"]
+sources/0 = SubResource("TileSetAtlasSource_i2v18")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnd8d"]
+size = Vector2(25, 27)
+
+[node name="Schreibtisch" type="Node2D"]
+script = ExtResource("1_q1rfu")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_qq81a")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 0, 0, 0, 0, 1, -65535, 65536, 0, 1, 65536, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(15, 0)
+scale = Vector2(1.23933, 0.455666)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, 3.5)
+scale = Vector2(1.00966, 0.761935)
+shape = SubResource("RectangleShape2D_gnd8d")
+
+[node name="ObjectInteractionCollision2" parent="." instance=ExtResource("2_dthou")]
+position = Vector2(17, -3)
+scale = Vector2(-0.570852, 0.571279)
+textboxName = "Schreibtisch"
+groupName = "Player"
+
+[node name="Interaction" parent="." instance=ExtResource("3_huyhm")]
+visible = false
+position = Vector2(-7, -15)
+
+[connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

@@ -46,5 +46,5 @@ position = Vector2(8, 13)
 
 [node name="ObjectInteractionCollision" parent="." instance=ExtResource("4_eimwa")]
 position = Vector2(16, 18)
-scale = Vector2(0.69299, 1.86706)
+scale = Vector2(0.562537, 1.66243)
 textboxName = "Bett"

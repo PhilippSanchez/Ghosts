@@ -8,6 +8,7 @@ starts = {
 "Bett": &"0_3",
 "BettBsp": &"0_1",
 "SChrank1Interaction": &"0_2",
+"Schreibtisch": &"0_5",
 "Waking_up_seq": &"0_4"
 }
 nodes = {
@@ -30,6 +31,11 @@ nodes = {
 "link": &"1_5",
 "offset": Vector2(-177.869, -262.215),
 "start_id": "Waking_up_seq"
+},
+"0_5": {
+"link": &"3_6",
+"offset": Vector2(-105.044, 1381.87),
+"start_id": "Schreibtisch"
 },
 "1_1": {
 "dialogue": "",
@@ -64,7 +70,20 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
+"speaker": "Player"
+},
+"1_11": {
+"dialogue": "Ein schöner Tisch ",
+"offset": Vector2(360, 1380),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
 "speaker": "Player"
 },
 "1_2": {
@@ -116,7 +135,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Player"
 },
 "1_6": {
@@ -129,7 +148,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "???"
 },
 "1_7": {
@@ -142,7 +161,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "???"
 },
 "1_8": {
@@ -168,7 +187,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Player"
 },
 "3_1": {
@@ -195,6 +214,11 @@ nodes = {
 "link": "END",
 "offset": Vector2(2360, -360),
 "signalValue": "waking_room"
+},
+"3_6": {
+"link": &"1_11",
+"offset": Vector2(120, 1380),
+"signalValue": "true"
 }
 }
 variables = {}
