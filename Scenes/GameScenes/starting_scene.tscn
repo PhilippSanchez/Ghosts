@@ -12,18 +12,16 @@ file = "res://Assets/MovieSequenz/Black_Background.ogg"
 [node name="Starting Scene" type="Node2D"]
 script = ExtResource("1_7mqy3")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0.999985, -2)
-scale = Vector2(0.865825, 1.05168)
-zoom = Vector2(0.2, 0.2)
-
 [node name="BAckground_eyes" type="VideoStreamPlayer" parent="."]
-offset_left = -791.0
-offset_top = -554.0
-offset_right = 1945.0
-offset_bottom = 1494.0
-scale = Vector2(0.580129, 0.547745)
+offset_right = 2736.0
+offset_bottom = 2048.0
+scale = Vector2(0.441312, 0.342205)
 stream = SubResource("VideoStreamTheora_kynka")
+
+[node name="Background_black" type="VideoStreamPlayer" parent="."]
+offset_right = 2736.0
+offset_bottom = 2048.0
+stream = SubResource("VideoStreamTheora_3h4a4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -38,14 +36,7 @@ grow_horizontal = 2
 grow_vertical = 0
 start_id = "Waking_up_seq"
 
-[node name="Background_black" type="VideoStreamPlayer" parent="."]
-offset_left = -791.0
-offset_top = -554.0
-offset_right = 1945.0
-offset_bottom = 1494.0
-scale = Vector2(0.580129, 0.547745)
-stream = SubResource("VideoStreamTheora_3h4a4")
-
 [connection signal="finished" from="BAckground_eyes" to="." method="_on_b_ackground_eyes_finished"]
-[connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]
 [connection signal="finished" from="Background_black" to="." method="_on_background_black_finished"]
+[connection signal="dialogue_ended" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_ended"]
+[connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]
