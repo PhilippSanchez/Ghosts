@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb6yrd2u1ivay"]
+
+[ext_resource type="Script" path="res://Scenes/GameScenes/starting_scene.gd" id="1_7mqy3"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="1_y8r7g"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kynka"]
+file = "res://Assets/MovieSequenz/Background.ogg"
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_3h4a4"]
+file = "res://Assets/MovieSequenz/Black_Background.ogg"
+
+[node name="Starting Scene" type="Node2D"]
+script = ExtResource("1_7mqy3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0.999985, -2)
+scale = Vector2(0.865825, 1.05168)
+zoom = Vector2(0.2, 0.2)
+
+[node name="BAckground_eyes" type="VideoStreamPlayer" parent="."]
+offset_left = -791.0
+offset_top = -554.0
+offset_right = 1945.0
+offset_bottom = 1494.0
+scale = Vector2(0.580129, 0.547745)
+stream = SubResource("VideoStreamTheora_kynka")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("1_y8r7g")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+start_id = "Waking_up_seq"
+
+[node name="Background_black" type="VideoStreamPlayer" parent="."]
+offset_left = -791.0
+offset_top = -554.0
+offset_right = 1945.0
+offset_bottom = 1494.0
+scale = Vector2(0.580129, 0.547745)
+stream = SubResource("VideoStreamTheora_3h4a4")
+
+[connection signal="finished" from="BAckground_eyes" to="." method="_on_b_ackground_eyes_finished"]
+[connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]
+[connection signal="finished" from="Background_black" to="." method="_on_background_black_finished"]

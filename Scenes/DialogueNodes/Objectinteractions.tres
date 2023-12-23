@@ -7,7 +7,8 @@ script = ExtResource("1_j25ul")
 starts = {
 "Bett": &"0_3",
 "BettBsp": &"0_1",
-"SChrank1Interaction": &"0_2"
+"SChrank1Interaction": &"0_2",
+"Waking_up_seq": &"0_4"
 }
 nodes = {
 "0_1": {
@@ -24,6 +25,11 @@ nodes = {
 "link": &"1_1",
 "offset": Vector2(-100, 580),
 "start_id": "Bett"
+},
+"0_4": {
+"link": &"1_5",
+"offset": Vector2(-177.869, -262.215),
+"start_id": "Waking_up_seq"
 },
 "1_1": {
 "dialogue": "",
@@ -47,6 +53,19 @@ nodes = {
 },
 "size": Vector2(300, 338),
 "speaker": "BettInteraction"
+},
+"1_10": {
+"dialogue": "Wo bin ich? ",
+"offset": Vector2(2000, -400),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Player"
 },
 "1_2": {
 "dialogue": "Das ist die Schrankinteractrion",
@@ -84,6 +103,71 @@ nodes = {
 "text": ""
 }
 },
+"size": Vector2(300, 276),
+"speaker": "Player"
+},
+"1_5": {
+"dialogue": "Es ist so Dunkel",
+"offset": Vector2(80, -380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Player"
+},
+"1_6": {
+"dialogue": "Es ist Anfangs immer so Dunkel. Das haben Anfänge so an sich... genau wie Enden einer Geschichte. ",
+"offset": Vector2(400, -380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "???"
+},
+"1_7": {
+"dialogue": "Mach deine Augen auf. Keine Angst es wird gleich besser.",
+"offset": Vector2(720, -380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "???"
+},
+"1_8": {
+"dialogue": "",
+"offset": Vector2(1080, -400),
+"options": {
+0: {
+"condition": {},
+"link": &"3_4",
+"text": "Augen Öffnen"
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Player"
+},
+"1_9": {
+"dialogue": "Es ist so verschwommen...",
+"offset": Vector2(1640, -400),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
 "size": Vector2(300, 245),
 "speaker": "Player"
 },
@@ -101,6 +185,11 @@ nodes = {
 "link": "END",
 "offset": Vector2(540, 760),
 "signalValue": "none"
+},
+"3_4": {
+"link": &"1_9",
+"offset": Vector2(1401.1, -322.767),
+"signalValue": "true"
 }
 }
 variables = {}
