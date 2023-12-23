@@ -21,7 +21,7 @@ texture = ExtResource("2_3xm02")
 sources/2 = SubResource("TileSetAtlasSource_r32is")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s61hg"]
-size = Vector2(16.75, 19)
+size = Vector2(13, 18)
 
 [node name="Stuhl_Seite" type="TileMap"]
 texture_filter = 1
@@ -33,6 +33,5 @@ layer_0/tile_data = PackedInt32Array(65536, 2, 4, 0, 2, 3, 1, 65538, 3, 65537, 6
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(10.625, 14.5)
+position = Vector2(10.5, 14)
 shape = SubResource("RectangleShape2D_s61hg")

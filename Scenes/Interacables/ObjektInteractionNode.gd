@@ -34,6 +34,7 @@ func _on_area_entered(area):
 
 func _on_area_exited(area):
 	interaction.hide()
+	
 	pass # Replace with function body.
 
 

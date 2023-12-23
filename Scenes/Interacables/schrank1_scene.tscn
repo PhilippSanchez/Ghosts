@@ -29,6 +29,7 @@ layer_0/tile_data = PackedInt32Array(-1, 0, 0, 65535, 0, 1, -65536, 65536, 0, 0,
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0.5, 3.5)
+scale = Vector2(1.00966, 0.761935)
 shape = SubResource("RectangleShape2D_finrx")
 
 [node name="ObjectInteractionCollision2" parent="." instance=ExtResource("4_t2tnk")]
