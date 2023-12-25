@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b13cfetwwgwv3"
-path="res://.godot/imported/Cottage_Tileset.png-5ef308f37566e0dd48694cb29926fb20.ctex"
+uid="uid://b8yxmaqwlalcy"
+path="res://.godot/imported/parkett.png-436749c2710d2790529712e9366e320f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/GameScenes/Cottage_Tileset.png"
-dest_files=["res://.godot/imported/Cottage_Tileset.png-5ef308f37566e0dd48694cb29926fb20.ctex"]
+source_file="res://Assets/Inviroment/parkett.png"
+dest_files=["res://.godot/imported/parkett.png-436749c2710d2790529712e9366e320f.ctex"]
 
 [params]
 
