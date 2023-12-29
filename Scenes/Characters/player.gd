@@ -6,7 +6,7 @@ extends CharacterBody2D #muss extenden damit es funktionieren kann
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
 	velocity = moveDirection * speed
-	
+
 
 func updateAnimation():
 	
@@ -26,7 +26,3 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	handleInput()
 	move_and_slide()
 	updateAnimation()
-
-
-func _on_area_2d_body_entered(body):
-	pass # Replace with function body.

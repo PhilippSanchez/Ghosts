@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwte56nb5ejp5"
-path="res://.godot/imported/FlurBodden_wände.png-933bcff4f79ef9f1d6f35196d3a32e09.ctex"
+uid="uid://d2lxw6m4x51n6"
+path="res://.godot/imported/office_floor_carpet_1.png-ab9a25164c879f6de9b3305c2f6e7eeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inviroment/FlurBodden_wände.png"
-dest_files=["res://.godot/imported/FlurBodden_wände.png-933bcff4f79ef9f1d6f35196d3a32e09.ctex"]
+source_file="res://Assets/Inviroment/office_tiles/office_floor_carpet_1.png"
+dest_files=["res://.godot/imported/office_floor_carpet_1.png-ab9a25164c879f6de9b3305c2f6e7eeb.ctex"]
 
 [params]
 
