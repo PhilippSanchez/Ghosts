@@ -12,15 +12,11 @@ config_version=5
 
 config/name="Ghosts"
 run/main_scene="res://Scenes/GameScenes/Zimmer_Aufwachraum.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=224
-window/size/window_width_override=1920
-window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 
 [editor_plugins]

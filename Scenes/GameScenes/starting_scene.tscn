@@ -21,6 +21,7 @@ stream = SubResource("VideoStreamTheora_kynka")
 [node name="Background_black" type="VideoStreamPlayer" parent="."]
 offset_right = 2736.0
 offset_bottom = 2048.0
+scale = Vector2(0.526451, 0.701588)
 stream = SubResource("VideoStreamTheora_3h4a4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

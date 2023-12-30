@@ -250,7 +250,7 @@ nodes = {
 },
 "3_1": {
 "link": &"1_15",
-"offset": Vector2(540, 600),
+"offset": Vector2(520, 580),
 "signalValue": "true"
 },
 "3_10": {
@@ -265,7 +265,7 @@ nodes = {
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(540, 680),
+"offset": Vector2(520, 680),
 "signalValue": "false"
 },
 "3_3": {
