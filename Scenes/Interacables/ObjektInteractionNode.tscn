@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://chese50emd77q"]
+[gd_scene load_steps=6 format=3 uid="uid://chese50emd77q"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode.gd" id="1_iur2n"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="2_gygxo"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="3_cqdin"]
+[ext_resource type="Texture2D" uid="uid://dn4kav8dvjj1b" path="res://Assets/Inviroment/Fußmatte.png" id="4_yshps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37xq5"]
 size = Vector2(51, 29)
@@ -21,6 +22,22 @@ position = Vector2(-8, -4)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="TextsceneBarrier" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.0756, 6.73171)
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextsceneBarrier"]
+texture_filter = 1
+position = Vector2(28.4775, 17.0833)
+scale = Vector2(2.28288, 2.71021)
+texture = ExtResource("4_yshps")
+
 [node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("3_cqdin")]
 anchors_preset = 12
 anchor_top = 1.0
@@ -30,6 +47,7 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_vertical = 8
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
