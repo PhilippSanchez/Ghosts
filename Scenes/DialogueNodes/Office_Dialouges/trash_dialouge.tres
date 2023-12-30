@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://sieexxsq12rb"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_fc5ow"]
+
+[resource]
+script = ExtResource("1_fc5ow")
+starts = {
+"test": &"0_2",
+"trash_interaction": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-60, -800),
+"start_id": "trash_interaction"
+},
+"0_2": {
+"link": &"1_3",
+"offset": Vector2(-60, -1220),
+"start_id": "test"
+},
+"1_1": {
+"dialogue": "Hmm .. Ob ich was im[color=green] Müll [/color] finde?",
+"offset": Vector2(560, -920),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": "Müll durchsuchen..."
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Lieber nicht"
+}
+},
+"size": Vector2(790.001, 1120),
+"speaker": "Ghost"
+},
+"1_2": {
+"dialogue": "[shake rate=20.0 level=5]Iiihhgitt[/shake] nur Essenreste... aber nichts wertvolles.",
+"offset": Vector2(1660, -660),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(633.998, 702),
+"speaker": "Ghost"
+},
+"1_3": {
+"dialogue": "[fade start=5 length=35][shake rate=20.0 level=5] Es wird schon wieder sooo dunkel[/shake][/fade]",
+"offset": Vector2(780, -1460),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(1140, 433),
+"speaker": "Ghost"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
