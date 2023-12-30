@@ -35,3 +35,4 @@ grow_vertical = 0
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="dialogue_ended" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_ended"]
 [connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]
+[connection signal="dialogue_started" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_started"]

@@ -49,7 +49,7 @@ func _on_area_entered(area):
 
 # Prüft ob Player Fläche verlasse hat
 func _on_area_exited(area):
-	textbox_startable= false 
+	textbox_startable = false 
 	interaction.hide()
 	
 	pass # Replace with function body.
@@ -66,6 +66,7 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 		take_something.emit()  
 		
 	if value == "true": 
+		print("true")
 		interaction_true.emit() 
 		consequenz = true 
 	elif value =="false":
@@ -81,6 +82,19 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 
 
 func _on_object_interactions_dialog_dialogue_ended():
-	textbox_startable = true 
+	var window = get_parent().get_parent()
+	var player = window.get_node("Player")
 	
+	print(player)
+	player.dialoge_active = false 
+	textbox_startable = false  
+	
+	pass # Replace with function body.
+
+
+func _on_object_interactions_dialog_dialogue_started(id):
+	var player = get_parent().get_parent()
+	player = player.get_node("Player")
+	player.dialoge_active = true 
+	print(player)
 	pass # Replace with function body.

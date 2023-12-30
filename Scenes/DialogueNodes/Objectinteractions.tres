@@ -133,7 +133,7 @@ nodes = {
 "1_15": {
 "dialogue": "Hier wurde -true ge
 ählt ",
-"offset": Vector2(756.904, 506.042),
+"offset": Vector2(760, 580),
 "options": {
 0: {
 "condition": {},
@@ -260,8 +260,8 @@ nodes = {
 },
 "3_11": {
 "link": "END",
-"offset": Vector2(1209.79, 627.751),
-"signalValue": "null"
+"offset": Vector2(1098.13, 661.726),
+"signalValue": "notagain"
 },
 "3_2": {
 "link": "END",
@@ -271,7 +271,7 @@ nodes = {
 "3_3": {
 "link": "END",
 "offset": Vector2(540, 760),
-"signalValue": "none"
+"signalValue": "null"
 },
 "3_4": {
 "link": &"1_9",
