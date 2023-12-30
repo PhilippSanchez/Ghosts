@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvr1fquca5ave"]
 
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_o14tb"]
-[ext_resource type="Texture2D" uid="uid://wq2c5kleufep" path="res://Assets/Inviroment/asprite/treppe.png" id="2_s6r6a"]
+[ext_resource type="Texture2D" uid="uid://8cojtfxskjhd" path="res://Assets/Inviroment/asprite/treppe.png" id="2_s6r6a"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/switching_scene_2.gd" id="3_mh0xg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jyxn"]
