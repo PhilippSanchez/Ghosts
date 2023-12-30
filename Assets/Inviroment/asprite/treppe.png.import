@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cxeqpjy5ju67i"
+=======
+uid="uid://wq2c5kleufep"
+>>>>>>> b08d59c5ae512b66d212b6535fa19abf0c5cbb96
 path="res://.godot/imported/treppe.png-9c69f0feda0a267f8fe827dc059adb8a.ctex"
 metadata={
 "vram_texture": false

@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cm3l7w4tjq45x"
-=======
-uid="uid://me3ic2t5n3ct"
->>>>>>> b08d59c5ae512b66d212b6535fa19abf0c5cbb96
-path="res://.godot/imported/Letter.png-d500fc85d8479bf8e058aa9928d6c9fb.ctex"
+uid="uid://dmsvdkjckh4k8"
+path="res://.godot/imported/office_walls.png-ed18f7de4692a3ac67a778270ae1ba0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inviroment/asprite/Letter.png"
-dest_files=["res://.godot/imported/Letter.png-d500fc85d8479bf8e058aa9928d6c9fb.ctex"]
+source_file="res://Assets/Inviroment/office_tiles/office_walls.png"
+dest_files=["res://.godot/imported/office_walls.png-ed18f7de4692a3ac67a778270ae1ba0b.ctex"]
 
 [params]
 
