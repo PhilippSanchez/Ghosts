@@ -33,7 +33,7 @@ nodes = {
 "start_id": "Waking_up_seq"
 },
 "0_5": {
-"link": &"3_6",
+"link": &"1_11",
 "offset": Vector2(-105.044, 1381.87),
 "start_id": "Schreibtisch"
 },
@@ -74,8 +74,26 @@ nodes = {
 "speaker": "Player"
 },
 "1_11": {
-"dialogue": "Ein schöner Tisch ",
-"offset": Vector2(360, 1380),
+"dialogue": "Auf dem Tisch befindet sich ein Buch. Soltlen wir fremde Bücher lesen? ",
+"offset": Vector2(160, 1360),
+"options": {
+0: {
+"condition": {},
+"link": &"3_6",
+"text": "Buch lesen"
+},
+1: {
+"condition": {},
+"link": &"3_7",
+"text": "Buch nicht lesen"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "???"
+},
+"1_12": {
+"dialogue": "Unser Held entschließt sicch das Buch nicht zu lesen ",
+"offset": Vector2(760, 1620),
 "options": {
 0: {
 "condition": {},
@@ -83,8 +101,48 @@ nodes = {
 "text": ""
 }
 },
+"size": Vector2(300, 245),
+"speaker": "??? "
+},
+"1_13": {
+"dialogue": "innerhalb des Buches befindet sich ein Schlüssel",
+"offset": Vector2(760, 1320),
+"options": {
+0: {
+"condition": {},
+"link": &"3_9",
+"text": "Schlüssel nehmen"
+}
+},
 "size": Vector2(300, 276),
-"speaker": "Player"
+"speaker": "???"
+},
+"1_14": {
+"dialogue": "Ich entfdliehe der Einsamkeit...",
+"offset": Vector2(1300, 1320),
+"options": {
+0: {
+"condition": {},
+"link": &"3_10",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "???"
+},
+"1_15": {
+"dialogue": "Hier wurde -true ge
+ählt ",
+"offset": Vector2(756.904, 506.042),
+"options": {
+0: {
+"condition": {},
+"link": &"3_11",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": ""
 },
 "1_2": {
 "dialogue": "Das ist die Schrankinteractrion",
@@ -174,7 +232,7 @@ nodes = {
 "text": "Augen Öffnen"
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 276),
 "speaker": "Player"
 },
 "1_9": {
@@ -191,9 +249,19 @@ nodes = {
 "speaker": "Player"
 },
 "3_1": {
-"link": "END",
+"link": &"1_15",
 "offset": Vector2(540, 600),
 "signalValue": "true"
+},
+"3_10": {
+"link": &"3_8",
+"offset": Vector2(1660, 1480),
+"signalValue": "null"
+},
+"3_11": {
+"link": "END",
+"offset": Vector2(1209.79, 627.751),
+"signalValue": "null"
 },
 "3_2": {
 "link": "END",
@@ -216,9 +284,24 @@ nodes = {
 "signalValue": "waking_room"
 },
 "3_6": {
-"link": &"1_11",
-"offset": Vector2(120, 1380),
+"link": &"1_13",
+"offset": Vector2(520, 1380),
 "signalValue": "true"
+},
+"3_7": {
+"link": &"1_12",
+"offset": Vector2(500, 1600),
+"signalValue": "null"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2(1660, 1320),
+"signalValue": "notagain"
+},
+"3_9": {
+"link": &"1_14",
+"offset": Vector2(1080, 1320),
+"signalValue": "takeitem"
 }
 }
 variables = {}

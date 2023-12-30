@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://6yvrhih8t76n"]
+[gd_scene load_steps=20 format=3 uid="uid://6yvrhih8t76n"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/Zimmer_Aufwachraum.gd" id="1_x3ga2"]
 [ext_resource type="PackedScene" uid="uid://dmgqhk2b5noe4" path="res://Scenes/Interacables/bett_scene.tscn" id="1_y8rd6"]
 [ext_resource type="PackedScene" uid="uid://dbn28skl0yds5" path="res://Scenes/Interacables/schrank1_scene.tscn" id="2_lgcsv"]
+[ext_resource type="Texture2D" uid="uid://j06yb5n402qf" path="res://Assets/Inviroment/book_Small.png" id="2_u7p08"]
 [ext_resource type="Texture2D" uid="uid://b13cfetwwgwv3" path="res://Assets/Inviroment/Cottage_Tileset.png" id="2_x3qt7"]
 [ext_resource type="Texture2D" uid="uid://dn4kav8dvjj1b" path="res://Assets/Inviroment/Fußmatte.png" id="3_24w1r"]
+[ext_resource type="Texture2D" uid="uid://bkwj5i3si3523" path="res://Assets/Inviroment/Book1.png" id="3_tihox"]
+[ext_resource type="Texture2D" uid="uid://ciw37s6ivvqcg" path="res://Assets/Inviroment/Interaction.png" id="4_pe0d7"]
 [ext_resource type="Texture2D" uid="uid://b8yxmaqwlalcy" path="res://Assets/Inviroment/parkett.png" id="4_r4wy7"]
 [ext_resource type="Texture2D" uid="uid://dwte56nb5ejp5" path="res://Assets/Inviroment/FlurBodden_wände.png" id="5_bx1fr"]
 [ext_resource type="PackedScene" uid="uid://dvprga2ciepva" path="res://Scenes/Interacables/schreibtisch.tscn" id="6_6udp6"]
@@ -240,14 +243,38 @@ texture = ExtResource("5_bx1fr")
 7:9/0 = 0
 8:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yve55"]
+texture = ExtResource("2_u7p08")
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_7n5uf"]
 sources/0 = SubResource("TileSetAtlasSource_hox08")
 sources/1 = SubResource("TileSetAtlasSource_57ac5")
 sources/2 = SubResource("TileSetAtlasSource_va42u")
 sources/3 = SubResource("TileSetAtlasSource_qkajb")
+sources/4 = SubResource("TileSetAtlasSource_yve55")
 
 [node name="Zimmer_Aufwachraum" type="Node2D"]
 script = ExtResource("1_x3ga2")
+
+[node name="Booksmall" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+position = Vector2(129, 48)
+scale = Vector2(0.693318, 0.588766)
+texture = ExtResource("2_u7p08")
+
+[node name="Book" type="Sprite2D" parent="."]
+visible = false
+z_index = 10
+texture_filter = 1
+position = Vector2(101, 103)
+scale = Vector2(1.86378, 1.86378)
+texture = ExtResource("3_tihox")
+
+[node name="Key" type="Sprite2D" parent="Book"]
+texture_filter = 1
+texture = ExtResource("4_pe0d7")
 
 [node name="Barriere" type="Node2D" parent="."]
 

@@ -46,4 +46,7 @@ groupName = "Player"
 visible = false
 position = Vector2(-7, -15)
 
+[connection signal="interaction_false" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_false"]
+[connection signal="interaction_null" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]
 [connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]
+[connection signal="take_something" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_take_something"]

@@ -7,6 +7,8 @@ extends Area2D
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
 var consequenz = null 
 var dialogue_finished  = false 
+var textbox_startable = false 
+
 
 # Sendet Signal, wenn consequenz == true 
 signal interaction_true 
@@ -14,7 +16,10 @@ signal interaction_true
 #Sendet Signal,sobald consequent = false 
 signal interaction_false 
 
-		
+
+signal interaction_null 
+
+signal take_something 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +29,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
+		textbox_startable = false 
+		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
 	pass 
 	
 # Prüft ob der Player in der Nähe ist
@@ -31,16 +39,17 @@ func _on_area_entered(area):
 	print(area)
 	if area.is_in_group("Player") and dialogue_finished == false : 
 		interaction.show() 
-		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
+		textbox_startable = true 
 		
-		if Input.is_action_pressed("ui_down"): 
-			textbox.start(textboxName)
+		
+		
 	
 	pass # Replace with function body.
 
 
 # Prüft ob Player Fläche verlasse hat
 func _on_area_exited(area):
+	textbox_startable= false 
 	interaction.hide()
 	
 	pass # Replace with function body.
@@ -49,13 +58,29 @@ func _on_area_exited(area):
 #Prüft ob ein Dialog Conserquenzen hat... 
 #Sobald Auswahl getroffen wurde, kann Dialog nicht nochmal aufgerufen werden... 
 func _on_object_interactions_dialog_dialogue_signal(value):
-	dialogue_finished = true 
+	if value == "notagain": 
+		interaction.hide() 
+		dialogue_finished = true 
+		
+	if value == "takeitem":
+		take_something.emit()  
+		
 	if value == "true": 
 		interaction_true.emit() 
 		consequenz = true 
 	elif value =="false":
 		consequenz = false 
 		interaction_false.emit() 
-	else : consequenz = null 
-	consequenz = null 
+	elif value =="null" : 
+		consequenz = null 
+		interaction_null.emit() 
+		
+		
+	
+	pass # Replace with function body.
+
+
+func _on_object_interactions_dialog_dialogue_ended():
+	textbox_startable = true 
+	
 	pass # Replace with function body.

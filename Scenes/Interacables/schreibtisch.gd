@@ -13,5 +13,23 @@ func _process(delta):
 
 
 func _on_object_interaction_collision_2_interaction_true():
+	print("HIT")
+	$"../Book".show() 
 	$"../Barriere".queue_free()
+	pass # Replace with function body.
+
+
+func _on_object_interaction_collision_2_interaction_false():
+	
+	pass # Replace with function body.
+
+
+func _on_object_interaction_collision_2_interaction_null():
+	print("HITFALSE ")
+	$"../Book".hide()  
+	pass # Replace with function body.
+
+
+func _on_object_interaction_collision_2_take_something():
+	$"../Book/Key".hide() 
 	pass # Replace with function body.
