@@ -132,5 +132,3 @@ z_index = 1
 position = Vector2(1, -6)
 scale = Vector2(0.455357, 0.375742)
 shape = SubResource("RectangleShape2D_oix6w")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
