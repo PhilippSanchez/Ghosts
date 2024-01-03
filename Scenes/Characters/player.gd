@@ -2,13 +2,10 @@ extends CharacterBody2D #muss extenden damit es funktionieren kann
 
 @export var speed: int = 35
 @onready var animations = $AnimationPlayer
-var dialoge_active = false  
-
 
 func handleInput():
-	if dialoge_active == false : 
-		var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
-		velocity = moveDirection * speed
+	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
+	velocity = moveDirection * speed
 
 
 func updateAnimation():
@@ -29,5 +26,3 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	handleInput()
 	move_and_slide()
 	updateAnimation()
-	
-
