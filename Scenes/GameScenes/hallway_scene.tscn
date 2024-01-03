@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvr1fquca5ave"]
+[gd_scene load_steps=6 format=3 uid="uid://bvr1fquca5ave"]
 
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_o14tb"]
 [ext_resource type="Texture2D" uid="uid://8cojtfxskjhd" path="res://Assets/Inviroment/asprite/treppe.png" id="2_s6r6a"]
-[ext_resource type="Script" path="res://Scenes/GameScenes/switching_scene_2.gd" id="3_mh0xg"]
+[ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="3_tkuhb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_s6r6a")
@@ -11,8 +11,6 @@ texture = ExtResource("2_s6r6a")
 
 [sub_resource type="TileSet" id="TileSet_o47dc"]
 sources/1 = SubResource("TileSetAtlasSource_rgwuf")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_w756b"]
 
 [node name="HallwayScene" type="Node2D"]
 
@@ -24,11 +22,6 @@ tile_set = SubResource("TileSet_o47dc")
 format = 2
 layer_0/tile_data = PackedInt32Array(327693, 1, 1)
 
-[node name="switching_scene" type="Area2D" parent="."]
-script = ExtResource("3_mh0xg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="switching_scene"]
-position = Vector2(218, 88)
-shape = SubResource("CircleShape2D_w756b")
-
-[connection signal="body_entered" from="switching_scene" to="switching_scene" method="_on_body_entered"]
+[node name="switching_scene" parent="." instance=ExtResource("3_tkuhb")]
+position = Vector2(217, 86)
+scenename = "res://Scenes/GameScenes/office_scene.tscn"
