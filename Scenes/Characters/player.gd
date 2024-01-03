@@ -11,8 +11,7 @@ func handleInput():
 		velocity = moveDirection * speed
 
 
-func updateAnimation():
-	
+func updateAnimation(): 
 	if velocity.length() == 0:
 		if animations.is_playing():
 			animations.stop()
