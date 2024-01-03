@@ -109,13 +109,12 @@ y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_wgfm1")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
-position = Vector2(-5, -9)
+[node name="flash light" type="PointLight2D" parent="."]
+position = Vector2(0, -9)
 color = Color(0.286275, 0.411765, 0.584314, 1)
 blend_mode = 2
 texture = ExtResource("3_fjl27")
-texture_scale = 1.6
+texture_scale = 2.0
 
 [node name="Follow Cam" type="Camera2D" parent="."]
 scale = Vector2(1, 1.02053)
