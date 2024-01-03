@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dr57oyyu44lsu"]
+[gd_scene load_steps=13 format=3 uid="uid://dr57oyyu44lsu"]
 
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="1_wh32p"]
 [ext_resource type="Texture2D" uid="uid://xo1f4cdxrupf" path="res://Assets/Inviroment/office_tiles/office_floor_carpet_2.png" id="2_62s3g"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_xfy35"]
 [ext_resource type="Texture2D" uid="uid://dmsvdkjckh4k8" path="res://Assets/Inviroment/office_tiles/office_walls.png" id="3_djycx"]
 [ext_resource type="Texture2D" uid="uid://d24surwvt0ysa" path="res://Assets/Inviroment/office_tiles/office_tile_set.png" id="4_3c4tn"]
-[ext_resource type="Texture2D" uid="uid://b44glsbj438ld" path="res://Scenes/Particel_Shader/TorchLight.png" id="6_8kva7"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/switching_scence.gd" id="6_xioi0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epeb8"]
@@ -667,18 +666,6 @@ layer_3/tile_data = PackedInt32Array(458758, 4915203, 5, 524294, 4849667, 3, 458
 [node name="Player" parent="." instance=ExtResource("2_xfy35")]
 position = Vector2(45, 37)
 collision_layer = 2
-
-[node name="Follow Cam" type="Camera2D" parent="Player"]
-scale = Vector2(1, 1.02053)
-zoom = Vector2(3, 3)
-
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
-visible = false
-position = Vector2(-5, -9)
-color = Color(0.286275, 0.411765, 0.584314, 1)
-blend_mode = 2
-texture = ExtResource("6_8kva7")
-texture_scale = 1.6
 
 [node name="Switchscene" type="Area2D" parent="."]
 collision_layer = 0

@@ -297,7 +297,7 @@ position = Vector2(87, 44)
 [node name="Player" parent="." instance=ExtResource("7_dopga")]
 position = Vector2(76, 76)
 
-[node name="Follow Cam" type="Camera2D" parent="Player"]
+[node name="Follow Cam2" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
 
 [node name="Schreibtisch" parent="." instance=ExtResource("6_6udp6")]
