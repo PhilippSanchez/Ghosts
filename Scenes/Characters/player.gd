@@ -1,6 +1,6 @@
 extends CharacterBody2D #muss extenden damit es funktionieren kann
 
-@export var speed: int = 35
+@export var speed: int = 50
 @onready var animations = $AnimationPlayer
 var dialoge_active = false  
 

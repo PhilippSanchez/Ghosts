@@ -5,10 +5,11 @@ extends Area2D
 @export var consequent_var : bool 
 @onready var interaction = $"../Interaction"
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
+
 var consequenz = null 
 var dialogue_finished  = false 
 var textbox_startable = false 
-
+@onready var singelton = get_node("/root/Singelton") 
 
 # Sendet Signal, wenn consequenz == true 
 signal interaction_true 
@@ -66,7 +67,9 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 		take_something.emit()  
 		
 	if value == "true": 
+		
 		print("true")
+		
 		interaction_true.emit() 
 		consequenz = true 
 	elif value =="false":
