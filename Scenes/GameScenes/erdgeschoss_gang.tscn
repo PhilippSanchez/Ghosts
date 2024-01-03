@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bavs0fhlms288"]
+[gd_scene load_steps=7 format=3 uid="uid://bavs0fhlms288"]
 
 [ext_resource type="Texture2D" uid="uid://d0ejxyvpu771u" path="res://Assets/Inviroment/erdgeschoss/erdgeschoss-gang.png" id="1_7nf7u"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_jccah"]
+[ext_resource type="Texture2D" uid="uid://xo1f4cdxrupf" path="res://Assets/Inviroment/office_tiles/office_floor_carpet_2.png" id="2_n0k1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8sbwe"]
 texture = ExtResource("1_7nf7u")
@@ -339,20 +340,94 @@ texture = ExtResource("1_7nf7u")
 58:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 58:1/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vfok"]
+texture = ExtResource("2_n0k1d")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="TileSet_37lyk"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8sbwe")
+sources/1 = SubResource("TileSetAtlasSource_6vfok")
 
 [node name="ErdgeschossGang" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
+position = Vector2(5, -16)
 tile_set = SubResource("TileSet_37lyk")
 format = 2
 layer_0/name = "floor"
-layer_0/tile_data = PackedInt32Array(0, 3801088, 0, 65536, 3801088, 1, 1, 3866624, 0, 65537, 3866624, 1, 2, 3932160, 0, 65538, 3932160, 1, 3, 3801088, 0, 65539, 3801088, 1, 4, 3866624, 0, 65540, 3866624, 1, 5, 3932160, 0, 65541, 3932160, 1, 6, 3801088, 0, 65542, 3801088, 1, 7, 3866624, 0, 65543, 3866624, 1, 8, 3932160, 0, 65544, 3932160, 1, 9, 3801088, 0, 65545, 3801088, 1, 10, 3866624, 0, 65546, 3866624, 1, 11, 3932160, 0, 65547, 3932160, 1, 131081, 3801088, 0, 196617, 3801088, 1, 131082, 3866624, 0, 196618, 3866624, 1, 131083, 3932160, 0, 196619, 3932160, 1, 131078, 3801088, 0, 196614, 3801088, 1, 131079, 3866624, 0, 196615, 3866624, 1, 131080, 3932160, 0, 196616, 3932160, 1, 131075, 3801088, 0, 196611, 3801088, 1, 131076, 3866624, 0, 196612, 3866624, 1, 131077, 3932160, 0, 196613, 3932160, 1, 131072, 3801088, 0, 196608, 3801088, 1, 131073, 3866624, 0, 196609, 3866624, 1, 131074, 3932160, 0, 196610, 3932160, 1, 12, 3801088, 0, 65548, 3801088, 1, 13, 3801088, 0, 65549, 3801088, 1, 14, 3801088, 0, 65550, 3801088, 0, 131086, 3801088, 0, 196622, 3801088, 1, 131084, 3801088, 0, 196620, 3801088, 1, 131085, 3801088, 0, 196621, 3801088, 1, 196607, 3801088, 0, 262143, 3801088, 1, 65535, 3801088, 0, 131071, 3801088, 1)
+layer_0/tile_data = PackedInt32Array(0, 3801088, 0, 65536, 3801088, 1, 1, 3866624, 0, 65537, 3866624, 1, 2, 3932160, 0, 65538, 3932160, 1, 3, 196609, 1, 65539, 3801088, 1, 4, 262145, 1, 65540, 3866624, 1, 5, 262145, 1, 65541, 3932160, 1, 6, 262145, 1, 65542, 3801088, 1, 7, 3866624, 0, 65543, 3866624, 1, 8, 262145, 1, 65544, 3932160, 1, 9, 3801088, 0, 65545, 3801088, 1, 10, 3866624, 0, 65546, 3866624, 1, 11, 3932160, 0, 65547, 3932160, 1, 131081, 3801088, 0, 196617, 3801088, 1, 131082, 3866624, 0, 196618, 3866624, 1, 131083, 3932160, 0, 196619, 3932160, 1, 131078, 3801088, 0, 196614, 3801088, 1, 131079, 3866624, 0, 196615, 3866624, 1, 131080, 3932160, 0, 196616, 3932160, 1, 131075, 3801088, 0, 196611, 3801088, 1, 131076, 3866624, 0, 196612, 3866624, 1, 131077, 3932160, 0, 196613, 3932160, 1, 131072, 3801088, 0, 196608, 3801088, 1, 131073, 3866624, 0, 196609, 3866624, 1, 131074, 3932160, 0, 196610, 3932160, 1, 12, 3801088, 0, 65548, 3801088, 1, 13, 3801088, 0, 65549, 3801088, 1, 14, 3801088, 0, 65550, 3801088, 0, 131086, 3801088, 0, 196622, 3801088, 1, 131084, 3801088, 0, 196620, 3801088, 1, 131085, 3801088, 0, 196621, 3801088, 1, 196607, 3801088, 0, 262143, 3801088, 1, 65535, 3801088, 0, 131071, 3801088, 1, -65533, 196609, 0, -65532, 262145, 0, -65531, 262145, 0, -65530, 262145, 0, -65528, 262145, 0)
 layer_1/name = "walls"
-layer_1/tile_data = PackedInt32Array(-196605, 65536, 6, -131069, 65536, 7, -65533, 65536, 8, 3, 65536, 9, -196604, 131072, 6, -131068, 131072, 7, -65532, 131072, 8, 4, 131072, 9, -196603, 196608, 6, -131067, 196608, 7, -65531, 196608, 8, 5, 196608, 9, -196602, 262144, 6, -131066, 262144, 7, -65530, 262144, 8, 6, 262144, 9, -196601, 327680, 6, -131065, 327680, 7, -65529, 327680, 8, 7, 327680, 9, -196600, 393216, 6, -131064, 393216, 7, -65528, 393216, 8, 8, 393216, 9, -131063, 4718592, 2, -65527, 4718592, 3, -131062, 4784128, 2, -65526, 4784128, 3, -131061, 4718592, 2, -65525, 4718592, 3, -131060, 4784128, 2, -65524, 4784128, 3, -131071, 4718592, 2, -65535, 4718592, 3, -131070, 4784128, 2, -65534, 4784128, 3, -65537, 4718592, 2, -1, 4718592, 3, -131072, 4784128, 2, -65536, 4784128, 3, 327679, 4718592, 5, 262144, 4784128, 5, 262145, 4718592, 5, 262146, 4784128, 5, 262147, 4718592, 5, 262148, 4784128, 5, 262149, 4718592, 5, 262150, 4784128, 5, 262151, 4718592, 5, 262152, 4784128, 5, 262153, 4718592, 5, 262154, 4784128, 5, 262155, 4718592, 5, 262156, 4784128, 5, 262157, 4718592, 5, 262158, 4784128, 5, -131059, 4718592, 2, -65523, 4718592, 3, -131058, 4784128, 2, -65522, 4784128, 3)
+layer_1/tile_data = PackedInt32Array(-131063, 4718592, 2, -65527, 4718592, 3, -131062, 4784128, 2, -65526, 4784128, 3, -131061, 4718592, 2, -65525, 4718592, 3, -131060, 4784128, 2, -65524, 4784128, 3, -131071, 4718592, 2, -65535, 4718592, 3, -131070, 4784128, 2, -65534, 4784128, 3, -65537, 4718592, 2, -1, 4718592, 3, -131072, 4784128, 2, -65536, 4784128, 3, 327679, 4718592, 5, 262144, 4784128, 5, 262145, 4718592, 5, 262146, 4784128, 5, 262147, 4718592, 5, 262148, 4784128, 5, 262149, 4718592, 5, 262150, 4784128, 5, 262151, 4718592, 5, 262152, 4784128, 5, 262153, 4718592, 5, 262154, 4784128, 5, 262155, 4718592, 5, 262156, 4784128, 5, 262157, 4718592, 5, 262158, 4784128, 5, -131059, 4718592, 2, -65523, 4718592, 3, -131058, 4784128, 2, -65522, 4784128, 3, -131069, 65536, 6, -65533, 65536, 7, 3, 65536, 8, 65539, 65536, 9, -131068, 131072, 6, -65532, 131072, 7, 4, 131072, 8, 65540, 131072, 9, -131067, 196608, 6, -65531, 196608, 7, 5, 196608, 8, 65541, 196608, 9, -131066, 262144, 6, -65530, 262144, 7, 6, 262144, 8, 65542, 262144, 9, -131065, 327680, 6, -65529, 327680, 7, 7, 327680, 8, 65543, 327680, 9, -131064, 393216, 6, 8, 393216, 8, 65544, 393216, 9, -65528, 393216, 7)
 
 [node name="Player" parent="TileMap" instance=ExtResource("2_jccah")]
 position = Vector2(52, 42)
