@@ -12,8 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dwte56nb5ejp5" path="res://Assets/Inviroment/FlurBodden_wände.png" id="5_bx1fr"]
 [ext_resource type="PackedScene" uid="uid://dvprga2ciepva" path="res://Scenes/Interacables/schreibtisch.tscn" id="6_6udp6"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="7_dopga"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gc6k7"]
+[ext_resource type="PackedScene" uid="uid://dv84jeyphqj6r" path="res://Scenes/barriere.tscn" id="13_rhpbr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hox08"]
 texture = ExtResource("2_x3qt7")
@@ -276,15 +275,6 @@ texture = ExtResource("3_tihox")
 texture_filter = 1
 texture = ExtResource("4_pe0d7")
 
-[node name="Barriere" type="Node2D" parent="."]
-
-[node name="TürBarier" type="StaticBody2D" parent="Barriere"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriere/TürBarier"]
-position = Vector2(96, 182)
-scale = Vector2(2.41011, 0.975601)
-shape = SubResource("RectangleShape2D_gc6k7")
-
 [node name="Hintergrund" type="TileMap" parent="."]
 z_index = -100
 texture_filter = 1
@@ -322,3 +312,6 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wände"]
 polygon = PackedVector2Array(32, 175, 34, 33, 161, 32, 160, 174, 113, 175, 113, 202, 186, 200, 188, -13, 5, -12, 4, 209, 81, 208, 80, 175)
+
+[node name="Barriere" parent="." instance=ExtResource("13_rhpbr")]
+position = Vector2(70, 172)

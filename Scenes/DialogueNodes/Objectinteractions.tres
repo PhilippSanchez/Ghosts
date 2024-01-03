@@ -6,16 +6,16 @@
 script = ExtResource("1_j25ul")
 starts = {
 "Bett": &"0_3",
-"BettBsp": &"0_1",
 "SChrank1Interaction": &"0_2",
 "Schreibtisch": &"0_5",
+"Tür": &"0_1",
 "Waking_up_seq": &"0_4"
 }
 nodes = {
 "0_1": {
 "link": &"1_4",
-"offset": Vector2(-64.3687, 1018.49),
-"start_id": "BettBsp"
+"offset": Vector2(-184.069, 889.034),
+"start_id": "Tür"
 },
 "0_2": {
 "link": &"1_2",
@@ -38,27 +38,17 @@ nodes = {
 "start_id": "Schreibtisch"
 },
 "1_1": {
-"dialogue": "",
-"offset": Vector2(141.813, 596.185),
+"dialogue": "Ein Bett. ",
+"offset": Vector2(120, 580),
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
-"text": "Jaa"
-},
-1: {
-"condition": {},
-"link": &"3_2",
-"text": "nein"
-},
-2: {
-"condition": {},
-"link": &"3_3",
-"text": "vielleicht"
+"link": &"1_15",
+"text": ""
 }
 },
-"size": Vector2(300, 338),
-"speaker": "BettInteraction"
+"size": Vector2(300, 245),
+"speaker": "????"
 },
 "1_10": {
 "dialogue": "Wo bin ich? ",
@@ -74,7 +64,7 @@ nodes = {
 "speaker": "Player"
 },
 "1_11": {
-"dialogue": "Auf dem Tisch befindet sich ein Buch. Soltlen wir fremde Bücher lesen? ",
+"dialogue": "Auf dem Tisch befindet sich ein Buch. sollten wir fremde Bücher lesen? ",
 "offset": Vector2(160, 1360),
 "options": {
 0: {
@@ -131,22 +121,60 @@ nodes = {
 "speaker": "???"
 },
 "1_15": {
-"dialogue": "Hier wurde -true ge
-ählt ",
-"offset": Vector2(760, 580),
+"dialogue": "Wow sag bloß...",
+"offset": Vector2(460, 580),
 "options": {
 0: {
 "condition": {},
-"link": &"3_11",
+"link": &"1_17",
 "text": ""
 }
 },
-"size": Vector2(300, 276),
-"speaker": ""
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_16": {
+"dialogue": "Warum sollte er?  Er ist auch komplett leer.",
+"offset": Vector2(860, 240),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_17": {
+"dialogue": "Es sieht etwas hart aus. ",
+"offset": Vector2(800, 580),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_18": {
+"dialogue": "Vescrhlossen! Mist!!",
+"offset": Vector2(360, 860),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
 },
 "1_2": {
-"dialogue": "Das ist die Schrankinteractrion",
-"offset": Vector2(180, 200),
+"dialogue": "Ein Schrank. Er ist von einer dicken Staubschicht bedeckt.",
+"offset": Vector2(140, 240),
 "options": {
 0: {
 "condition": {},
@@ -154,34 +182,34 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
-"speaker": "Ich"
+"size": Vector2(300, 245),
+"speaker": "????"
 },
 "1_3": {
-"dialogue": "asdasdasd",
-"offset": Vector2(540, 200),
+"dialogue": "Kommt er dir bekannt vor?",
+"offset": Vector2(460, 240),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_16",
 "text": ""
 }
 },
-"size": Vector2(300, 276),
-"speaker": "Peter"
+"size": Vector2(319.87, 245),
+"speaker": "????"
 },
 "1_4": {
-"dialogue": "Oh ein Bett....",
-"offset": Vector2(140, 1020),
+"dialogue": "Unser Held rüttelt an der Tür. Sie bewegt sich nicht...",
+"offset": Vector2(20, 860),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_18",
 "text": ""
 }
 },
-"size": Vector2(300, 276),
-"speaker": "Player"
+"size": Vector2(300, 245),
+"speaker": "????"
 },
 "1_5": {
 "dialogue": "Es ist so Dunkel",
@@ -248,29 +276,9 @@ nodes = {
 "size": Vector2(300, 276),
 "speaker": "Player"
 },
-"3_1": {
-"link": &"1_15",
-"offset": Vector2(520, 580),
-"signalValue": "true"
-},
 "3_10": {
 "link": &"3_8",
 "offset": Vector2(1660, 1480),
-"signalValue": "null"
-},
-"3_11": {
-"link": "END",
-"offset": Vector2(1098.13, 661.726),
-"signalValue": "notagain"
-},
-"3_2": {
-"link": "END",
-"offset": Vector2(520, 680),
-"signalValue": "false"
-},
-"3_3": {
-"link": "END",
-"offset": Vector2(540, 760),
 "signalValue": "null"
 },
 "3_4": {
