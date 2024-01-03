@@ -5,6 +5,8 @@ extends Area2D
 @export var consequent_var : bool 
 @onready var interaction = $"../Interaction"
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
+@onready var player = get_parent().get_parent().get_node("Player")
+
 
 var consequenz = null 
 var dialogue_finished  = false 
@@ -86,10 +88,10 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 
 func _on_object_interactions_dialog_dialogue_ended():
 	$CanvasLayer/TextsceneBarrier.hide() 
-	var window = get_parent().get_parent()
-	var player = window.get_node("Player")
 	
-	print(player)
+	
+	
+	print(player, "false")
 	player.dialoge_active = false 
 	textbox_startable = false  
 	
@@ -98,8 +100,8 @@ func _on_object_interactions_dialog_dialogue_ended():
 
 func _on_object_interactions_dialog_dialogue_started(id):
 	$CanvasLayer/TextsceneBarrier.show() 
-	var player = get_parent().get_parent()
-	player = player.get_node("Player")
+	
+	
 	player.dialoge_active = true 
-	print(player)
+	print(player, "true")
 	pass # Replace with function body.

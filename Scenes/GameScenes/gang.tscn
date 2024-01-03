@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://c43bjybc0ahl4"]
+[gd_scene load_steps=13 format=3 uid="uid://c43bjybc0ahl4"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/gang.gd" id="1_fgtp6"]
 [ext_resource type="Texture2D" uid="uid://dmsvdkjckh4k8" path="res://Assets/Inviroment/office_tiles/office_walls.png" id="1_wgbg4"]
 [ext_resource type="Texture2D" uid="uid://cjn0o4hn4mbpk" path="res://Assets/Inviroment/Gang/Gang.png" id="2_j1a50"]
 [ext_resource type="Texture2D" uid="uid://8cojtfxskjhd" path="res://Assets/Inviroment/asprite/treppe.png" id="3_fxc8h"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="4_th8c4"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="5_7y3hk"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="6_4ueqh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ow2in"]
 
@@ -3619,6 +3622,7 @@ sources/3 = SubResource("TileSetAtlasSource_oesav")
 sources/0 = SubResource("TileSetAtlasSource_fpduv")
 
 [node name="Gang" type="Node2D"]
+script = ExtResource("1_fgtp6")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -3640,3 +3644,17 @@ position = Vector2(44, 26)
 [node name="Follow Cam2" type="Camera2D" parent="Player"]
 scale = Vector2(1, 1.02053)
 zoom = Vector2(3, 3)
+
+[node name="TürAufwachraum" type="Node" parent="."]
+
+[node name="AufwachraumTür" parent="TürAufwachraum" instance=ExtResource("6_4ueqh")]
+position = Vector2(24, -22)
+scale = Vector2(0.402267, 1.08311)
+textboxName = "AufwachraumTür"
+
+[node name="Interaction" parent="TürAufwachraum" instance=ExtResource("5_7y3hk")]
+visible = false
+z_index = 6
+position = Vector2(17, -27)
+
+[connection signal="interaction_true" from="TürAufwachraum/AufwachraumTür" to="." method="_on_aufwachraum_tür_interaction_true"]

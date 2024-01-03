@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_j25ul")
 starts = {
+"AufwachraumTür": &"0_6",
 "Bett": &"0_3",
 "SChrank1Interaction": &"0_2",
 "Schreibtisch": &"0_5",
@@ -37,6 +38,11 @@ nodes = {
 "offset": Vector2(-105.044, 1381.87),
 "start_id": "Schreibtisch"
 },
+"0_6": {
+"link": &"1_19",
+"offset": Vector2(-192.256, 1963.49),
+"start_id": "AufwachraumTür"
+},
 "1_1": {
 "dialogue": "Ein Bett. ",
 "offset": Vector2(120, 580),
@@ -47,7 +53,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "????"
 },
 "1_10": {
@@ -113,7 +119,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"3_10",
+"link": &"3_8",
 "text": ""
 }
 },
@@ -130,7 +136,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -143,7 +149,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_17": {
@@ -156,7 +162,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_18": {
@@ -169,8 +175,21 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
+},
+"1_19": {
+"dialogue": "Willst du in den Aufwachraum zurück? ",
+"offset": Vector2(80, 1900),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "???"
 },
 "1_2": {
 "dialogue": "Ein Schrank. Er ist von einer dicken Staubschicht bedeckt.",
@@ -182,8 +201,26 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "????"
+},
+"1_20": {
+"dialogue": "",
+"offset": Vector2(422.561, 1888.99),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "Ja"
+},
+1: {
+"condition": {},
+"link": &"3_2",
+"text": "Nein"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "Ghost"
 },
 "1_3": {
 "dialogue": "Kommt er dir bekannt vor?",
@@ -195,7 +232,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(319.87, 245),
+"size": Vector2(319.87, 276),
 "speaker": "????"
 },
 "1_4": {
@@ -208,7 +245,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "????"
 },
 "1_5": {
@@ -276,9 +313,19 @@ nodes = {
 "size": Vector2(300, 276),
 "speaker": "Player"
 },
-"3_10": {
-"link": &"3_8",
-"offset": Vector2(1660, 1480),
+"3_1": {
+"link": "END",
+"offset": Vector2(737.43, 2043.34),
+"signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(740, 2120),
+"signalValue": "null"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(1900, 1340),
 "signalValue": "null"
 },
 "3_4": {
@@ -302,7 +349,7 @@ nodes = {
 "signalValue": "null"
 },
 "3_8": {
-"link": "END",
+"link": &"3_3",
 "offset": Vector2(1660, 1320),
 "signalValue": "notagain"
 },
