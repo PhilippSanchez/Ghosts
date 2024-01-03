@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://6yvrhih8t76n"]
+[gd_scene load_steps=21 format=3 uid="uid://6yvrhih8t76n"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/Zimmer_Aufwachraum.gd" id="1_x3ga2"]
 [ext_resource type="PackedScene" uid="uid://dmgqhk2b5noe4" path="res://Scenes/Interacables/bett_scene.tscn" id="1_y8rd6"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dvprga2ciepva" path="res://Scenes/Interacables/schreibtisch.tscn" id="6_6udp6"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="7_dopga"]
 [ext_resource type="PackedScene" uid="uid://dv84jeyphqj6r" path="res://Scenes/barriere.tscn" id="13_rhpbr"]
+[ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="14_xks6g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hox08"]
 texture = ExtResource("2_x3qt7")
@@ -314,4 +315,8 @@ visible = false
 polygon = PackedVector2Array(32, 175, 34, 33, 161, 32, 160, 174, 113, 175, 113, 202, 186, 200, 188, -13, 5, -12, 4, 209, 81, 208, 80, 175)
 
 [node name="Barriere" parent="." instance=ExtResource("13_rhpbr")]
-position = Vector2(70, 172)
+position = Vector2(72, 166)
+
+[node name="switching_scene" parent="." instance=ExtResource("14_xks6g")]
+position = Vector2(-122, 99)
+scenename = "res://Scenes/GameScenes/gang.tscn"

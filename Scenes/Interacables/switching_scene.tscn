@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwkok0yy7ifdu"]
+
+[ext_resource type="Script" path="res://Scenes/GameScenes/switching_scene_2.gd" id="1_y7vvw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxuaf"]
+
+[node name="switching_scene" type="Area2D"]
+script = ExtResource("1_y7vvw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_cxuaf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
