@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://8cojtfxskjhd" path="res://Assets/Inviroment/asprite/treppe.png" id="2_s6r6a"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/switching_scene_2.gd" id="3_mh0xg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jyxn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_s6r6a")
 0:0/0 = 0
 0:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o47dc"]
-sources/0 = SubResource("TileSetAtlasSource_2jyxn")
+sources/1 = SubResource("TileSetAtlasSource_rgwuf")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w756b"]
 
@@ -22,7 +22,7 @@ position = Vector2(112, 71)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_o47dc")
 format = 2
-layer_0/tile_data = PackedInt32Array(327693, 0, 1)
+layer_0/tile_data = PackedInt32Array(327693, 1, 1)
 
 [node name="switching_scene" type="Area2D" parent="."]
 script = ExtResource("3_mh0xg")
