@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwte56nb5ejp5"
-path="res://.godot/imported/FlurBodden_wände.png-933bcff4f79ef9f1d6f35196d3a32e09.ctex"
+uid="uid://b44glsbj438ld"
+path="res://.godot/imported/TorchLight.png-79b5531ee931290b338ba42d5729a33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inviroment/FlurBodden_wände.png"
-dest_files=["res://.godot/imported/FlurBodden_wände.png-933bcff4f79ef9f1d6f35196d3a32e09.ctex"]
+source_file="res://Scenes/Particel_Shader/TorchLight.png"
+dest_files=["res://.godot/imported/TorchLight.png-79b5531ee931290b338ba42d5729a33a.ctex"]
 
 [params]
 
