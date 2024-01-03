@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwte56nb5ejp5"
-path="res://.godot/imported/FlurBodden_wände.png-08d3bfa789571969b111cd30109cc192.ctex"
+uid="uid://d1a8h3jcsmsqp"
+path="res://.godot/imported/Aufenthaltsraum.png-45c018a22c48bfaa7dbfa42832073dda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inviroment/FlurBodden_wände.png"
-dest_files=["res://.godot/imported/FlurBodden_wände.png-08d3bfa789571969b111cd30109cc192.ctex"]
+source_file="res://Assets/Inviroment/Aufenthaltsraum/Aufenthaltsraum.png"
+dest_files=["res://.godot/imported/Aufenthaltsraum.png-45c018a22c48bfaa7dbfa42832073dda.ctex"]
 
 [params]
 
