@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvprga2ciepva"]
+[gd_scene load_steps=9 format=3 uid="uid://dvprga2ciepva"]
 
 [ext_resource type="Texture2D" uid="uid://buls2gsccjuvu" path="res://Assets/Inviroment/Schreibtisch_version_Elias.png" id="1_du00g"]
 [ext_resource type="Script" path="res://Scenes/Interacables/schreibtisch.gd" id="1_q1rfu"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_dthou"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_huyhm"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="4_ejswu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i2v18"]
 texture = ExtResource("1_du00g")
@@ -41,6 +42,7 @@ position = Vector2(17, -3)
 scale = Vector2(-0.570852, 0.571279)
 textboxName = "Schreibtisch"
 groupName = "Player"
+dialogue_data = ExtResource("4_ejswu")
 
 [node name="Interaction" parent="." instance=ExtResource("3_huyhm")]
 visible = false

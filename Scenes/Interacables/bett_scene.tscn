@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmgqhk2b5noe4"]
+[gd_scene load_steps=9 format=3 uid="uid://dmgqhk2b5noe4"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/bett_scene.gd" id="1_n0n53"]
 [ext_resource type="Texture2D" uid="uid://dbsx3p5o6l2o3" path="res://Assets/Inviroment/Bed.png" id="1_qsiwk"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_eimwa"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="5_fflv2"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="5_reuhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uic5t"]
 texture = ExtResource("1_qsiwk")
@@ -48,3 +49,4 @@ position = Vector2(8, 13)
 position = Vector2(16, 18)
 scale = Vector2(0.562537, 1.66243)
 textboxName = "Bett"
+dialogue_data = ExtResource("5_reuhy")

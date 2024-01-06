@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbn28skl0yds5"]
+[gd_scene load_steps=8 format=3 uid="uid://dbn28skl0yds5"]
 
 [ext_resource type="Texture2D" uid="uid://yh1qc6hjyp83" path="res://Assets/Inviroment/Schrank1.png" id="1_fbdk6"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="3_x1so1"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="4_2mkxj"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="4_t2tnk"]
 
@@ -37,6 +38,7 @@ position = Vector2(0, -4)
 scale = Vector2(0.24407, 0.867676)
 textboxName = "SChrank1Interaction"
 groupName = "Player"
+dialogue_data = ExtResource("3_x1so1")
 
 [node name="Interaction" parent="." instance=ExtResource("4_2mkxj")]
 visible = false

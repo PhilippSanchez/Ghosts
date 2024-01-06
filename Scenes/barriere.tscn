@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv84jeyphqj6r"]
+[gd_scene load_steps=5 format=3 uid="uid://dv84jeyphqj6r"]
 
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="1_5ffcx"]
+[ext_resource type="Resource" uid="uid://c2lkw25jx2aad" path="res://Scenes/DialogueNodes/Objectinteractions.tres" id="2_lkoih"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_o508w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lvjsj"]
@@ -11,6 +12,7 @@
 position = Vector2(27, 6)
 scale = Vector2(1.05489, 1.36491)
 textboxName = "Tür"
+dialogue_data = ExtResource("2_lkoih")
 
 [node name="Interaction" parent="." instance=ExtResource("1_5ffcx")]
 visible = false

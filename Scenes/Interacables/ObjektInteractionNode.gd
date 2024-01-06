@@ -3,9 +3,11 @@ extends Area2D
 @export var textboxName ="" 
 @export var groupName  =""
 @export var consequent_var : bool 
+@export var dialogue_data : DialogueData = null
 @onready var interaction = $"../Interaction"
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
 @onready var player = get_parent().get_parent().get_node("Player")
+
 
 
 var consequenz = null 
@@ -26,7 +28,7 @@ signal take_something
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	$CanvasLayer/ObjectInteractionsDialog.set_data(dialogue_data) 
 	pass # Replace with function body.
 
 
