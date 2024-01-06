@@ -83,7 +83,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_1",
 "text": ""
 }
 },
@@ -123,6 +123,16 @@ nodes = {
 "x": 942.16,
 "y": 282.0
 }
+},
+"3_1": {
+"link": &"3_2",
+"offset": Vector2(760, -600),
+"signalValue": "notagain"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(1000, -600),
+"signalValue": "null"
 }
 }
 variables = {}

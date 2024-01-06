@@ -47,7 +47,6 @@ dialogue_data = ExtResource("4_ejswu")
 [node name="Interaction" parent="." instance=ExtResource("3_huyhm")]
 visible = false
 position = Vector2(-7, -15)
-rendering_quadrant_size = 8
 
 [connection signal="interaction_false" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_false"]
 [connection signal="interaction_null" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]

@@ -43,4 +43,3 @@ dialogue_data = ExtResource("3_x1so1")
 [node name="Interaction" parent="." instance=ExtResource("4_2mkxj")]
 visible = false
 position = Vector2(-7, -15)
-rendering_quadrant_size = 8
