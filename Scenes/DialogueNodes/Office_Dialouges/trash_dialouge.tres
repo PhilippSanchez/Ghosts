@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://sieexxsq12rb"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://d2wv31k5rhg5y"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_fc5ow"]
 
@@ -11,17 +11,17 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(-60, -800),
+"offset": Vector2(-200, -700),
 "start_id": "trash_interaction"
 },
 "0_2": {
 "link": &"1_3",
-"offset": Vector2(-60, -1220),
+"offset": Vector2(-200, -1480),
 "start_id": "test"
 },
 "1_1": {
 "dialogue": "Hmm .. Ob ich was im[color=green] Müll [/color] finde?",
-"offset": Vector2(560, -920),
+"offset": Vector2(540, -700),
 "options": {
 0: {
 "condition": {},
@@ -34,12 +34,12 @@ nodes = {
 "text": "Lieber nicht"
 }
 },
-"size": Vector2(790.001, 1120),
+"size": Vector2(790.002, 1120),
 "speaker": "Ghost"
 },
 "1_2": {
 "dialogue": "[shake rate=20.0 level=5]Iiihhgitt[/shake] nur Essenreste... aber nichts wertvolles.",
-"offset": Vector2(1660, -660),
+"offset": Vector2(1560, -260),
 "options": {
 0: {
 "condition": {},
@@ -47,12 +47,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(633.998, 702),
+"size": Vector2(633.999, 702.001),
 "speaker": "Ghost"
 },
 "1_3": {
 "dialogue": "[fade start=5 length=35][shake rate=20.0 level=5] Es wird schon wieder sooo dunkel[/shake][/fade]",
-"offset": Vector2(780, -1460),
+"offset": Vector2(560, -1480),
 "options": {
 0: {
 "condition": {},

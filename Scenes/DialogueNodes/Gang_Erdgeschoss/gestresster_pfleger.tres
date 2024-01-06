@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b4byebhp0pbpu"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_3nq2i"]
+
+[resource]
+script = ExtResource("1_3nq2i")
+starts = {
+"pfleger_gestresst": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-3760, -220),
+"start_id": "pfleger_gestresst"
+},
+"1_1": {
+"dialogue": "\"Verflixte Schlüssel!
+Schon wieder alles durcheinandergebracht. Fast hätte ich sie in den Mülleimer geworfen. Warum muss auch immer alles so kompliziert sein?",
+"offset": Vector2(-3140, -220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(665.76, 562.959),
+"speaker": "Pfleger"
+},
+"1_2": {
+"dialogue": "....",
+"offset": Vector2(-2180, -220),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(527.52, 575.919),
+"speaker": "Pfleger"
+},
+"1_3": {
+"dialogue": "Moment mal was stehst du hier? 
+Die anderen warten bestimmt schon. 
+Beeil dich!",
+"offset": Vector2(-1300, -220),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(511.68, 581.679),
+"speaker": "Pfleger"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

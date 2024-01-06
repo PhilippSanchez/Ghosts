@@ -17,6 +17,7 @@ dialogue_data = ExtResource("2_lkoih")
 [node name="Interaction" parent="." instance=ExtResource("1_5ffcx")]
 visible = false
 position = Vector2(5, -9)
+rendering_quadrant_size = 8
 
 [node name="TürBarier" type="StaticBody2D" parent="."]
 position = Vector2(-69, -174)

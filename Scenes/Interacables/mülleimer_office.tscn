@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqteul2inrhfv"]
+
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_xvh0x"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_34h0q"]
+[ext_resource type="Resource" uid="uid://d2wv31k5rhg5y" path="res://Scenes/DialogueNodes/Office_Dialouges/trash_dialouge.tres" id="3_o48e6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3an8"]
+
+[node name="MülleimerOffice" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_l3an8")
+
+[node name="ObjectInteractionCollision2" parent="." instance=ExtResource("2_xvh0x")]
+position = Vector2(-0.27, -2.46)
+scale = Vector2(0.41, 0.66)
+textboxName = "trash_interaction"
+groupName = "Player"
+dialogue_data = ExtResource("3_o48e6")
+
+[node name="Interaction" parent="." instance=ExtResource("3_34h0q")]
+visible = false
+position = Vector2(-7, -15)
+rendering_quadrant_size = 8

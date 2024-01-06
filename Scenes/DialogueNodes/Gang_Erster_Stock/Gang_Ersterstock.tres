@@ -1,0 +1,131 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://76ld08c1cca1"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_m3iw3"]
+
+[resource]
+script = ExtResource("1_m3iw3")
+starts = {
+"door_locked_1": &"0_2",
+"door_locked_2": &"0_4",
+"enter_gang": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-3871.08, -657.51),
+"start_id": "enter_gang"
+},
+"0_2": {
+"link": &"1_6",
+"offset": Vector2(-3880, 300),
+"start_id": "door_locked_1"
+},
+"0_4": {
+"link": &"1_8",
+"offset": Vector2(-3860, 2300),
+"start_id": "door_locked_2"
+},
+"1_1": {
+"dialogue": "[wave amp=15  freq=4 connected=1][shake rate=10.0 level=3 connected=1]buhuuuhuuuuuuuuuuu[/shake][/wave]",
+"offset": Vector2(-3257.16, -763.85),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(952.32, 515.44),
+"speaker": "?!"
+},
+"1_2": {
+"dialogue": "Was war das?... ist da jemand...",
+"offset": Vector2(-2080, -760),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(681.6, 646.48),
+"speaker": "Ghost"
+},
+"1_3": {
+"dialogue": "Ein schritt vor den anderen.. Sei mutig. Du trägst ein gutes Herz in dir, auch wenn du oft an dir zweifelst. Dein Weg mag schwer sein, aber du bist stärker, als du denkst.",
+"offset": Vector2(-1100, -760),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(694.561, 698.32),
+"speaker": "..."
+},
+"1_4": {
+"dialogue": "Wer bist du? Warum begleitest du mich?",
+"offset": Vector2(-280, -760),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(554.88, 613.36),
+"speaker": "Ghost"
+},
+"1_5": {
+"dialogue": "*Stille*",
+"offset": Vector2(341.173, -649.341),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300.002, 431),
+"speaker": ""
+},
+"1_6": {
+"dialogue": "Hmm... es Scheint was hinter der Tür zu Klemmen vielleicht finde ich einen anderen weg...",
+"offset": Vector2(-3180, 300),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(606.72, 550),
+"speaker": "Ghost"
+},
+"1_8": {
+"dialogue": "Kein zutritt..",
+"offset": Vector2(-3200, 2300),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(642.72, 761.68),
+"speaker": "Ghost"
+},
+"2_1": {
+"comment": "Vieleich durch eine randomized zahl verschiedenen Dialoge?",
+"offset": Vector2(-1383.24, 1042.26),
+"size": {
+"x": 942.16,
+"y": 282.0
+}
+}
+}
+variables = {}
+comments = Array[String](["2_1"])
+strays = Array[String]([])
+characters = ""

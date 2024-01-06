@@ -19,6 +19,7 @@ shape = SubResource("RectangleShape2D_37xq5")
 [node name="Interaction" parent="." instance=ExtResource("2_gygxo")]
 visible = false
 position = Vector2(-8, -4)
+rendering_quadrant_size = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

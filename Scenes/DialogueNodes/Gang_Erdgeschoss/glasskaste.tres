@@ -1,0 +1,219 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://c5s6dq4m385l5"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_obq0r"]
+
+[resource]
+script = ExtResource("1_obq0r")
+starts = {
+"GK_1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"5_1",
+"offset": Vector2(-900, -520),
+"start_id": "GK_1"
+},
+"1_1": {
+"dialogue": "Na, was treibt dich hier so allein rum? Hast du nichts Besseres zu tun? Oder willst du dich nur verlaufen?",
+"offset": Vector2(1040, -340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": "Fragen wo ich bin"
+},
+1: {
+"condition": {},
+"link": &"1_4",
+"text": "Fragen wer er ist"
+}
+},
+"size": Vector2(685.002, 649),
+"speaker": "..."
+},
+"1_2": {
+"dialogue": "Ähm, könntest du mir sagen, wo ich hier bin?",
+"offset": Vector2(2040, -580),
+"options": {
+0: {
+"condition": {},
+"link": &"4_2",
+"text": ""
+}
+},
+"size": Vector2(731.998, 590.002),
+"speaker": "Ghost"
+},
+"1_3": {
+"dialogue": "Ha! Das soll wohl ein Witz sein? Du bist im Waisenhaus, falls es dir entgangen ist. Kinder, die nicht wissen, wo sie sind... typisch.",
+"offset": Vector2(3620, -820),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(960.999, 645.92),
+"speaker": "..."
+},
+"1_4": {
+"dialogue": "Wie heißt du eigentlich?",
+"offset": Vector2(2100, 400),
+"options": {
+0: {
+"condition": {},
+"link": &"4_3",
+"text": ""
+}
+},
+"size": Vector2(720.995, 602),
+"speaker": "Ghost"
+},
+"1_5": {
+"dialogue": "Pah! Als ob dich das was angehen würde. Aber wenn du es unbedingt wissen musst, ich bin Eric. Nicht dass das irgendetwas ändern würde.",
+"offset": Vector2(3660, 920),
+"options": {
+0: {
+"condition": {},
+"link": &"5_3",
+"text": ""
+}
+},
+"size": Vector2(1022.68, 628.281),
+"speaker": "..."
+},
+"1_6": {
+"dialogue": "Was ist den noch...",
+"offset": Vector2(1080, -1340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(765.004, 482),
+"speaker": "Eric"
+},
+"1_7": {
+"dialogue": ".. is was?",
+"offset": Vector2(6140, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"4_3",
+"text": "Fragen wie er heißt"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(825.589, 709.44),
+"speaker": "..."
+},
+"1_8": {
+"dialogue": "hmm .. ?!",
+"offset": Vector2(6100, 1560),
+"options": {
+0: {
+"condition": {},
+"link": &"4_2",
+"text": "Fragen wo ich bin"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(870.227, 757.363),
+"speaker": "Eric"
+},
+"1_9": {
+"dialogue": "Na gut, du weißt jetzt, dass ich Eric bin und wo du bist!
+Und jetzt verschwinde und lass mich in Ruhe. Es gibt hier genug zu tun, ohne dass ich mich mit neugierigen Kindern rumschlagen muss.",
+"offset": Vector2(8060, 460),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(817.999, 848),
+"speaker": "Eric"
+},
+"2_1": {
+"comment": "Muss noch gespeicher werdenim singeltion",
+"offset": Vector2(-1300, -520),
+"size": {
+"x": 322.0,
+"y": 330.0
+}
+},
+"4_1": {
+"link": &"1_1",
+"offset": Vector2(520, -280),
+"type": 1,
+"value": "1",
+"variable": "convo_count"
+},
+"4_2": {
+"link": &"1_3",
+"offset": Vector2(3020, -640),
+"type": 0,
+"value": "true",
+"variable": "ask_loc"
+},
+"4_3": {
+"link": &"1_5",
+"offset": Vector2(3039.96, 951.198),
+"type": 0,
+"value": "true",
+"variable": "ask_name"
+},
+"5_1": {
+"false": &"4_1",
+"offset": Vector2(-180, -520),
+"operator": 2,
+"true": &"1_6",
+"value1": "{{convo_count}}",
+"value2": "0"
+},
+"5_2": {
+"false": &"1_7",
+"offset": Vector2(5000, -800),
+"operator": 0,
+"true": &"1_9",
+"value1": "{{ask_name}}",
+"value2": "true"
+},
+"5_3": {
+"false": &"1_8",
+"offset": Vector2(5120, 1480),
+"operator": 0,
+"true": &"1_9",
+"value1": "{{ask_loc}}",
+"value2": "true"
+}
+}
+variables = {
+"ask_loc": {
+"type": 1,
+"value": false
+},
+"ask_name": {
+"type": 1,
+"value": false
+},
+"convo_count": {
+"type": 2,
+"value": 0.0
+}
+}
+comments = Array[String](["2_1"])
+strays = Array[String]([])
+characters = ""

@@ -21,7 +21,6 @@ signal interaction_true
 #Sendet Signal,sobald consequent = false 
 signal interaction_false 
 
-
 signal interaction_null 
 
 signal take_something 
@@ -33,7 +32,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
 		textbox_startable = false 
 		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
@@ -53,7 +52,7 @@ func _on_area_entered(area):
 
 
 # Prüft ob Player Fläche verlasse hat
-func _on_area_exited(area):
+func _on_area_exited(_area):
 	textbox_startable = false 
 	interaction.hide()
 	
@@ -100,9 +99,8 @@ func _on_object_interactions_dialog_dialogue_ended():
 	pass # Replace with function body.
 
 
-func _on_object_interactions_dialog_dialogue_started(id):
+func _on_object_interactions_dialog_dialogue_started(_id):
 	$CanvasLayer/TextsceneBarrier.show() 
-	
 	
 	player.dialoge_active = true 
 	print(player, "true")

@@ -1,0 +1,331 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bhk070nh670ro"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_k1x6u"]
+
+[resource]
+script = ExtResource("1_k1x6u")
+starts = {
+"Nasius_door": &"0_1",
+"nasius_main_dialouge": &"0_2"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-4520, -1080),
+"start_id": "Nasius_door"
+},
+"0_2": {
+"link": &"5_5",
+"offset": Vector2(-4500, 820),
+"start_id": "nasius_main_dialouge"
+},
+"1_1": {
+"dialogue": "Ein [shake rate=10.0 level=3 connected=1]Wimmern...[/shake] jemand braucht Hilfe. Sollte ich die Tür öffnen und nachsehen?",
+"offset": Vector2(-4080, -1080),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "Zimmer betreten"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Ignorieren"
+}
+},
+"size": Vector2(667.002, 838.999),
+"speaker": "Nasius"
+},
+"1_10": {
+"dialogue": "Du bist genauso gemein wie die anderen... weint heftiger Warum sagen alle so gemeine Dinge über meine Nase?",
+"offset": Vector2(7400, 480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": "Entschuldigen"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(585.123, 658.002),
+"speaker": "..."
+},
+"1_11": {
+"dialogue": "Kannst du mir vielleicht sagen, wo du deine Pfeife verloren hast? Vielleicht können wir sie zusammen suchen. ",
+"offset": Vector2(6400, 2440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_14",
+"text": ""
+}
+},
+"size": Vector2(645.6, 760.235),
+"speaker": "Ghost"
+},
+"1_12": {
+"dialogue": "Oh nein, es tut mir leid, Nasius. Das war nicht nett von mir.",
+"offset": Vector2(8320, 440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_13",
+"text": ""
+}
+},
+"size": Vector2(550.562, 701.832),
+"speaker": "Ghost"
+},
+"1_13": {
+"dialogue": "Schon Okay.. seufz... ich bin es ja gewohnt..",
+"offset": Vector2(9180, 440),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(533.288, 686.798),
+"speaker": "Nasius"
+},
+"1_14": {
+"dialogue": "Ich weiß es nicht immer wenn ich versuche mich daran zu erinnern tut mein Kopf so weh.. Das einzige was mir dann in den Kopf kommt ist dass.. Suche da wo die Sonne auf die Erde fällt und sich der Blume Köpfchen Neigen.. Ich weis nicht was das heißt ... murmel",
+"offset": Vector2(7410.71, 2457.89),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(798.235, 793.361),
+"speaker": "Nasius"
+},
+"1_15": {
+"dialogue": "Das ist wirklich Kryptisch..
+aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfeife!",
+"offset": Vector2(8658.5, 2579.48),
+"options": {
+0: {
+"condition": {},
+"link": &"1_16",
+"text": ""
+}
+},
+"size": Vector2(701.759, 761.676),
+"speaker": "Ghost"
+},
+"1_16": {
+"dialogue": " ... Vielen dank ... Schnief .. Schnief",
+"offset": Vector2(9605.73, 2618.36),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(576.485, 647.919),
+"speaker": "Nasius"
+},
+"1_2": {
+"dialogue": "Hey, warum weinst du?
+Kann ich dir irgendwie helfen? ",
+"offset": Vector2(-3260, 600),
+"options": {
+0: {
+"condition": {},
+"link": &"4_3",
+"text": ""
+}
+},
+"size": Vector2(770.001, 598.996),
+"speaker": "Ghost"
+},
+"1_3": {
+"dialogue": "Ich... ich bin so verloren. 
+Ich kann meinen Weg nicht finden.
+[fade start=4 length=14]Es ist so dunkel[/fade]",
+"offset": Vector2(-1240, 600),
+"options": {
+0: {
+"condition": {},
+"link": &"4_2",
+"text": "Was ist passiert"
+},
+1: {
+"condition": {},
+"link": &"4_1",
+"text": "Wie heißt du?"
+}
+},
+"size": Vector2(925.001, 751.997),
+"speaker": "..."
+},
+"1_4": {
+"dialogue": "Es ist so schwer... schluchzt... die anderen Waisen Kinder lachen über mich, nur wegen meiner blöden großen Nase. Und jetzt habe ich auch noch meine geliebte Pfeife verloren. schnieft.. wenn ich doch nur noch meine geliebte Pfeife hätte... Mit ihr könnte ich mir tausend Freunde machen.",
+"offset": Vector2(2900, 440),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(715.005, 599.999),
+"speaker": "..."
+},
+"1_5": {
+"dialogue": "Schnief.. 
+Ich heiße Nasius... glaube ich zumindest..",
+"offset": Vector2(2760, 2280),
+"options": {
+0: {
+"condition": {},
+"link": &"5_3",
+"text": ""
+}
+},
+"size": Vector2(688.999, 572.992),
+"speaker": "..."
+},
+"1_6": {
+"dialogue": "hmmm....",
+"offset": Vector2(5180, 1280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": "Nase kommentieren"
+},
+1: {
+"condition": {},
+"link": &"1_11",
+"text": "Nach Pfeife fragen"
+}
+},
+"size": Vector2(670.1, 762.726),
+"speaker": "Ghost"
+},
+"1_7": {
+"dialogue": ".... seufz",
+"offset": Vector2(4400, 360),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": "Wie heißt du?"
+}
+},
+"size": Vector2(300.001, 491.998),
+"speaker": "..."
+},
+"1_8": {
+"dialogue": "Schluchtz...",
+"offset": Vector2(4420, 2100),
+"options": {
+0: {
+"condition": {},
+"link": &"4_2",
+"text": "Was ist passiert?"
+}
+},
+"size": Vector2(300.005, 431.003),
+"speaker": "..."
+},
+"1_9": {
+"dialogue": "Du hast aber auch echt einen Riesen Zinken.",
+"offset": Vector2(6400, 480),
+"options": {
+0: {
+"condition": {},
+"link": &"1_10",
+"text": ""
+}
+},
+"size": Vector2(599.516, 629.2),
+"speaker": "Ghost"
+},
+"2_1": {
+"comment": "speichern wo man startet?
+Herz abziehen wenn beleidigen",
+"offset": Vector2(3840, -140),
+"size": {
+"x": 274.007,
+"y": 477.0
+}
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(-3160, -420),
+"signalValue": ""
+},
+"4_1": {
+"link": &"1_5",
+"offset": Vector2(2320, 2020),
+"type": 0,
+"value": "true",
+"variable": "ask_name"
+},
+"4_2": {
+"link": &"1_4",
+"offset": Vector2(2260, 640),
+"type": 0,
+"value": "true",
+"variable": "ask_problem"
+},
+"4_3": {
+"link": &"1_3",
+"offset": Vector2(-2020, 800),
+"type": 0,
+"value": "true",
+"variable": "convo_started"
+},
+"5_2": {
+"false": &"1_7",
+"offset": Vector2(3760, 780),
+"operator": 0,
+"true": &"1_6",
+"value1": "{{ask_name}}",
+"value2": "true"
+},
+"5_3": {
+"false": &"1_8",
+"offset": Vector2(3660, 1960),
+"operator": 4,
+"true": &"1_6",
+"value1": "{{ask_problem}}",
+"value2": "true"
+},
+"5_5": {
+"false": &"1_2",
+"offset": Vector2(-3960, 760),
+"operator": 0,
+"true": &"1_3",
+"value1": "convo_started",
+"value2": "true"
+}
+}
+variables = {
+"ask_name": {
+"type": 1,
+"value": true
+},
+"ask_problem": {
+"type": 1,
+"value": true
+},
+"convo_started": {
+"type": 1,
+"value": true
+}
+}
+comments = Array[String](["2_1"])
+strays = Array[String]([])
+characters = ""

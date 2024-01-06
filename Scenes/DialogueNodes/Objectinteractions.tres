@@ -20,7 +20,7 @@ nodes = {
 },
 "0_2": {
 "link": &"1_2",
-"offset": Vector2(-100, 380),
+"offset": Vector2(-300, 320),
 "start_id": "SChrank1Interaction"
 },
 "0_3": {
@@ -30,17 +30,17 @@ nodes = {
 },
 "0_4": {
 "link": &"1_5",
-"offset": Vector2(-177.869, -262.215),
+"offset": Vector2(-340, -300),
 "start_id": "Waking_up_seq"
 },
 "0_5": {
 "link": &"1_11",
-"offset": Vector2(-105.044, 1381.87),
+"offset": Vector2(-600, 1380),
 "start_id": "Schreibtisch"
 },
 "0_6": {
 "link": &"1_19",
-"offset": Vector2(-192.256, 1963.49),
+"offset": Vector2(-840, 2160),
 "start_id": "AufwachraumTür"
 },
 "1_1": {
@@ -53,7 +53,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431),
 "speaker": "????"
 },
 "1_10": {
@@ -66,12 +66,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431),
 "speaker": "Player"
 },
 "1_11": {
 "dialogue": "Auf dem Tisch befindet sich ein Buch. sollten wir fremde Bücher lesen? ",
-"offset": Vector2(160, 1360),
+"offset": Vector2(-120, 1360),
 "options": {
 0: {
 "condition": {},
@@ -84,12 +84,12 @@ nodes = {
 "text": "Buch nicht lesen"
 }
 },
-"size": Vector2(300, 307),
+"size": Vector2(300.001, 492.001),
 "speaker": "???"
 },
 "1_12": {
 "dialogue": "Unser Held entschließt sicch das Buch nicht zu lesen ",
-"offset": Vector2(760, 1620),
+"offset": Vector2(800, 1720),
 "options": {
 0: {
 "condition": {},
@@ -97,12 +97,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431),
 "speaker": "??? "
 },
 "1_13": {
 "dialogue": "innerhalb des Buches befindet sich ein Schlüssel",
-"offset": Vector2(760, 1320),
+"offset": Vector2(780, 1200),
 "options": {
 0: {
 "condition": {},
@@ -110,7 +110,7 @@ nodes = {
 "text": "Schlüssel nehmen"
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431.001),
 "speaker": "???"
 },
 "1_14": {
@@ -123,7 +123,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431.001),
 "speaker": "???"
 },
 "1_15": {
@@ -136,7 +136,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -149,7 +149,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431.001),
 "speaker": "Ghost"
 },
 "1_17": {
@@ -162,7 +162,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431),
 "speaker": "Ghost"
 },
 "1_18": {
@@ -175,12 +175,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.002, 431),
 "speaker": "Ghost"
 },
 "1_19": {
 "dialogue": "Willst du in den Aufwachraum zurück? ",
-"offset": Vector2(80, 1900),
+"offset": Vector2(-300, 2160),
 "options": {
 0: {
 "condition": {},
@@ -188,7 +188,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 431),
 "speaker": "???"
 },
 "1_2": {
@@ -201,12 +201,12 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431.001),
 "speaker": "????"
 },
 "1_20": {
 "dialogue": "",
-"offset": Vector2(422.561, 1888.99),
+"offset": Vector2(240, 2140),
 "options": {
 0: {
 "condition": {},
@@ -219,7 +219,7 @@ nodes = {
 "text": "Nein"
 }
 },
-"size": Vector2(300, 307),
+"size": Vector2(300.001, 492),
 "speaker": "Ghost"
 },
 "1_3": {
@@ -232,7 +232,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(319.87, 276),
+"size": Vector2(319.87, 431.001),
 "speaker": "????"
 },
 "1_4": {
@@ -245,7 +245,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431),
 "speaker": "????"
 },
 "1_5": {
@@ -258,7 +258,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431.001),
 "speaker": "Player"
 },
 "1_6": {
@@ -271,7 +271,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.002, 431.001),
 "speaker": "???"
 },
 "1_7": {
@@ -284,7 +284,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300.001, 431.001),
 "speaker": "???"
 },
 "1_8": {
@@ -297,7 +297,7 @@ nodes = {
 "text": "Augen Öffnen"
 }
 },
-"size": Vector2(300.001, 276),
+"size": Vector2(300.001, 431),
 "speaker": "Player"
 },
 "1_9": {
@@ -310,17 +310,17 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 276),
+"size": Vector2(300, 431),
 "speaker": "Player"
 },
 "3_1": {
 "link": "END",
-"offset": Vector2(737.43, 2043.34),
+"offset": Vector2(800, 2340),
 "signalValue": "true"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(740, 2120),
+"offset": Vector2(780, 2740),
 "signalValue": "null"
 },
 "3_3": {
@@ -340,12 +340,12 @@ nodes = {
 },
 "3_6": {
 "link": &"1_13",
-"offset": Vector2(520, 1380),
+"offset": Vector2(300, 1380),
 "signalValue": "true"
 },
 "3_7": {
 "link": &"1_12",
-"offset": Vector2(500, 1600),
+"offset": Vector2(360, 1760),
 "signalValue": "null"
 },
 "3_8": {
