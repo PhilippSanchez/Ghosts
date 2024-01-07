@@ -10,8 +10,8 @@ starts = {
 }
 nodes = {
 "0_1": {
-"link": &"1_4",
-"offset": Vector2(-560, -700),
+"link": &"1_1",
+"offset": Vector2(-80, -700),
 "start_id": "trash_interaction"
 },
 "0_2": {
@@ -43,8 +43,8 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
-"text": "nimm schlüssel"
+"link": &"1_5",
+"text": "weiter suchen"
 },
 1: {
 "condition": {},
@@ -52,7 +52,7 @@ nodes = {
 "text": "weggehen"
 }
 },
-"size": Vector2(633.999, 702.001),
+"size": Vector2(634.001, 702.001),
 "speaker": "Ghost"
 },
 "1_3": {
@@ -69,21 +69,36 @@ nodes = {
 "speaker": "Ghost"
 },
 "1_4": {
-"dialogue": "Vielleicht gibt es hier etwas Nützliches im Mülleimer. Man sagt ja, dass manchmal der Müll den wahren Schatz birgt.",
-"offset": Vector2(106.242, -573.074),
+"dialogue": "Ah, da ist ja etwas! Eine Zahlenkombination. 
+[hint=something]\"1054\"[/hint] 
+Vielleichtöffnet sie eine verschlossene Tür oder einen Safe.",
+"offset": Vector2(3200, -580),
 "options": {
 0: {
 "condition": {},
-"link": &"1_1",
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(1309.48, 1159.96),
+"speaker": "Ghost"
+},
+"1_5": {
+"dialogue": "ganz schön wiederloch",
+"offset": Vector2(2494.83, -502.56),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
 "text": ""
 }
 },
 "size": Vector2(300, 370),
-"speaker": ""
+"speaker": "Ghost"
 },
 "3_1": {
 "link": "END",
-"offset": Vector2(2460, -600),
+"offset": Vector2(5140, -660),
 "signalValue": "true"
 }
 }

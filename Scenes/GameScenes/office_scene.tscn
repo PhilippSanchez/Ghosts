@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dr57oyyu44lsu"]
+[gd_scene load_steps=15 format=3 uid="uid://dr57oyyu44lsu"]
 
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="1_wh32p"]
 [ext_resource type="Texture2D" uid="uid://xo1f4cdxrupf" path="res://Assets/Inviroment/office_tiles/office_floor_carpet_2.png" id="2_62s3g"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d24surwvt0ysa" path="res://Assets/Inviroment/office_tiles/office_tile_set.png" id="4_3c4tn"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/switching_scence.gd" id="6_xioi0"]
 [ext_resource type="PackedScene" uid="uid://cqteul2inrhfv" path="res://Scenes/Interacables/mülleimer_office.tscn" id="7_r2b20"]
+[ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/PC_GUI.tscn" id="8_bqo67"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epeb8"]
 texture = ExtResource("1_wh32p")
@@ -664,38 +665,46 @@ layer_2/tile_data = PackedInt32Array(-196598, 2031619, 1, -131062, 2031619, 2)
 layer_3/name = "Walls"
 layer_3/tile_data = PackedInt32Array(458758, 4915203, 5, 524294, 4849667, 3, 458755, 4587523, 5, 524291, 4653059, 3, 393222, 4915203, 5, 327686, 4915203, 4, 327683, 4587523, 4, 393219, 4587523, 5, 327687, 4718595, 5, 327681, 4718595, 5, 327682, 4718595, 5, 327680, 4784131, 5, 589830, 4849667, 4, 589827, 4653059, 4, 524295, 4784131, 2, 589831, 4784131, 3, 524296, 4784131, 2, 589832, 4784131, 3, 524290, 4784131, 2, 589826, 4784131, 3, 524289, 4784131, 2, 589825, 4784131, 3, 327688, 262146, 5, 786433, 4718595, 5, 786434, 4718595, 5, 786435, 4718595, 5, 786436, 4718595, 5, 786437, 4718595, 5, 786438, 4718595, 5, 786439, 4718595, 5, 786440, 4718595, 5, 786441, 4718595, 5, 655361, 0, 0, 720897, 0, 1, 655362, 65536, 0, 720898, 65536, 1, 524292, 0, 0, 589828, 0, 1, 524293, 65536, 0, 589829, 65536, 1, 393220, 0, 0, 458756, 0, 1, 393221, 65536, 0, 458757, 65536, 1, 655363, 0, 0, 720899, 0, 1, 655364, 0, 0, 720900, 0, 1, 655365, 65536, 0, 720901, 65536, 1, 655367, 65536, 0, 720903, 65536, 1, 655368, 0, 0, 720904, 0, 1, 655369, 65536, 0, 720905, 65536, 1, 655366, 0, 0, 720902, 0, 1, 524297, 4784131, 2, 589833, 4784131, 3, 327689, 262146, 5, 262155, 4915203, 5, 196619, 4915203, 5, 131083, 4915203, 5, 65547, 4915203, 5, 11, 4915203, 5, -65525, 4915203, 5, -131061, 4915203, 5, -196597, 4849667, 1, -262133, 4915203, 1, 327690, 4784131, 5, 327691, 4849667, 5, 393215, 4653059, 5, 196607, 196609, 0, 524288, 4653059, 0, 589824, 4653059, 1, 655360, 4653059, 2, 720896, 4653059, 2, 720906, 4849667, 2, 655370, 4849667, 2, 524298, 4849667, 0, 589834, 4849667, 1, 786442, 4849667, 5, 786432, 4653059, 5)
 
-[node name="Player" parent="." instance=ExtResource("2_xfy35")]
+[node name="Player" parent="Office" instance=ExtResource("2_xfy35")]
 position = Vector2(135, 4)
 collision_layer = 2
 
-[node name="Switchscene" type="Area2D" parent="."]
+[node name="Switchscene" type="Area2D" parent="Office"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("6_xioi0")
 gamepath = "res://Scenes/GameScenes/hallway_scene.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Switchscene"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Office/Switchscene"]
 position = Vector2(-11, 38)
 shape = SubResource("RectangleShape2D_1afxr")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="Office"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Office/StaticBody2D"]
 polygon = PackedVector2Array(-16, 30, 0, 30, 0, -32, -15, -63, -16, 22)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Office/StaticBody2D"]
 polygon = PackedVector2Array(-16, -63, 0, -32, 176, -32, 192, -63)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Office/StaticBody2D"]
 polygon = PackedVector2Array(177, -32, 192, -63, 192, 85, 177, 85)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Office/StaticBody2D"]
 polygon = PackedVector2Array(-15, 49, 0, 49, 0, 80, 55, 81, 64, 97, 64, 159, 15, 160, 15, 198, 0, 198, 0, 85, -15, 85)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Office/StaticBody2D"]
 polygon = PackedVector2Array(176, 81, 105, 81, 96, 96, 96, 160, 160, 160, 160, 192, 15, 192, 15, 198, 176, 198, 175, 129, 112, 129, 112, 85, 177, 85)
 
-[node name="MülleimerOffice" parent="." instance=ExtResource("7_r2b20")]
+[node name="MülleimerOffice" parent="Office" instance=ExtResource("7_r2b20")]
 position = Vector2(136, -25)
 
-[connection signal="body_entered" from="Switchscene" to="Switchscene" method="_on_body_entered"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Office"]
+
+[node name="PC" parent="Office/CanvasLayer" instance=ExtResource("8_bqo67")]
+offset_left = 165.0
+offset_top = 178.0
+offset_right = 205.0
+offset_bottom = 218.0
+
+[connection signal="body_entered" from="Office/Switchscene" to="Office/Switchscene" method="_on_body_entered"]

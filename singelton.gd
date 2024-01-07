@@ -1,11 +1,9 @@
 extends Node
 var entering_gang_first = true 
 var aufwach_rätsel = true 
-<<<<<<< HEAD
-var schlüssel_keller = false
-=======
 
->>>>>>> refs/remotes/origin/main
+var schlüssel_keller = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
