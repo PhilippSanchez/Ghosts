@@ -1,21 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3vi6vv4uhl57"]
+[gd_scene load_steps=4 format=3 uid="uid://b3vi6vv4uhl57"]
 
+[ext_resource type="Script" path="res://inventory_script.gd" id="1_344xe"]
 [ext_resource type="Texture2D" uid="uid://c27j7yo5ehaqv" path="res://Assets/GUI/inventory_field.png" id="1_fi14y"]
-[ext_resource type="PackedScene" uid="uid://ljj574mupfjb" path="res://Scenes/Interacables/Office/PC_GUI_Slot.tscn" id="2_j6auy"]
+[ext_resource type="PackedScene" uid="uid://ljj574mupfjb" path="res://Scenes/Interacables/Office/Inventory_slot.tscn" id="2_j6auy"]
 
-[node name="PC" type="Control"]
+[node name="inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_344xe")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 texture_filter = 1
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 644.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.196
+anchor_right = 0.5
+anchor_bottom = 0.205
+offset_left = -186.0
+offset_top = -121.84
+offset_right = 187.0
+offset_bottom = 115.8
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_fi14y")
-patch_margin_left = 2
 
 [node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
 layout_mode = 1
@@ -24,14 +34,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -775.0
-offset_top = -322.0
-offset_right = -79.0
-offset_bottom = -226.0
+offset_left = -151.0
+offset_top = -95.0
+offset_right = 145.0
+offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(11, 0)
-columns = 7
+columns = 3
 
 [node name="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("2_j6auy")]
 layout_mode = 2
@@ -49,7 +59,4 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Panel6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_j6auy")]
-layout_mode = 2
-
-[node name="Panel7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_j6auy")]
 layout_mode = 2

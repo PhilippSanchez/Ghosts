@@ -6,10 +6,9 @@
 script = ExtResource("1_vuo7u")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 301.0
-offset_top = 46.0
-offset_right = 341.0
-offset_bottom = 86.0
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
 
 [node name="LineEdit" type="LineEdit" parent="Panel"]
 layout_mode = 0

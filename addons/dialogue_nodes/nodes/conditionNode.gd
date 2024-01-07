@@ -24,11 +24,11 @@ func _to_dict(graph):
 	dict['false'] = 'END'
 	
 	for connection in graph.get_connection_list():
-		if connection['from_node'] == name:
+		if connection['from'] == name:
 			if connection['from_port'] == 0:
-				dict['true'] = connection['to_node']
+				dict['true'] = connection['to']
 			elif connection['from_port'] == 1:
-				dict['false'] = connection['to_node']
+				dict['false'] = connection['to']
 	
 	return dict
 

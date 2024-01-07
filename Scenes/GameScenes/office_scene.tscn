@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dr57oyyu44lsu"]
+[gd_scene load_steps=14 format=3 uid="uid://dr57oyyu44lsu"]
 
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="1_wh32p"]
 [ext_resource type="Texture2D" uid="uid://xo1f4cdxrupf" path="res://Assets/Inviroment/office_tiles/office_floor_carpet_2.png" id="2_62s3g"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://d24surwvt0ysa" path="res://Assets/Inviroment/office_tiles/office_tile_set.png" id="4_3c4tn"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/switching_scence.gd" id="6_xioi0"]
 [ext_resource type="PackedScene" uid="uid://cqteul2inrhfv" path="res://Scenes/Interacables/mülleimer_office.tscn" id="7_r2b20"]
-[ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/PC_GUI.tscn" id="8_bqo67"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epeb8"]
 texture = ExtResource("1_wh32p")
@@ -698,13 +697,5 @@ polygon = PackedVector2Array(176, 81, 105, 81, 96, 96, 96, 160, 160, 160, 160, 1
 
 [node name="MülleimerOffice" parent="Office" instance=ExtResource("7_r2b20")]
 position = Vector2(136, -25)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Office"]
-
-[node name="PC" parent="Office/CanvasLayer" instance=ExtResource("8_bqo67")]
-offset_left = 165.0
-offset_top = 178.0
-offset_right = 205.0
-offset_bottom = 218.0
 
 [connection signal="body_entered" from="Office/Switchscene" to="Office/Switchscene" method="_on_body_entered"]
