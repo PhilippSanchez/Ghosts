@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqteul2inrhfv"]
+[gd_scene load_steps=6 format=3 uid="uid://cqteul2inrhfv"]
 
+[ext_resource type="Script" path="res://Scenes/Interacables/mülleimer_office_new.gd" id="1_8fqsn"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_xvh0x"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_34h0q"]
 [ext_resource type="Resource" uid="uid://d2wv31k5rhg5y" path="res://Scenes/DialogueNodes/Office_Dialouges/trash_dialouge.tres" id="3_o48e6"]
@@ -7,6 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3an8"]
 
 [node name="MülleimerOffice" type="Node2D"]
+script = ExtResource("1_8fqsn")
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
@@ -27,3 +29,5 @@ dialogue_data = ExtResource("3_o48e6")
 visible = false
 position = Vector2(-7, -15)
 rendering_quadrant_size = 8
+
+[connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

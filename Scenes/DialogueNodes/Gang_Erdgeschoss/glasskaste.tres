@@ -28,7 +28,7 @@ nodes = {
 "text": "Fragen wer er ist"
 }
 },
-"size": Vector2(685.002, 649),
+"size": Vector2(685.002, 648.999),
 "speaker": "..."
 },
 "1_2": {
@@ -41,7 +41,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(731.998, 590.002),
+"size": Vector2(732, 590.002),
 "speaker": "Ghost"
 },
 "1_3": {
@@ -54,7 +54,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(960.999, 645.92),
+"size": Vector2(960.998, 645.919),
 "speaker": "..."
 },
 "1_4": {
@@ -67,7 +67,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(720.995, 602),
+"size": Vector2(720.997, 602.001),
 "speaker": "Ghost"
 },
 "1_5": {
@@ -80,7 +80,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(1022.68, 628.281),
+"size": Vector2(1022.68, 628.283),
 "speaker": "..."
 },
 "1_6": {
@@ -93,7 +93,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(765.004, 482),
+"size": Vector2(765.006, 482),
 "speaker": "Eric"
 },
 "1_7": {
@@ -111,7 +111,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(825.589, 709.44),
+"size": Vector2(825.588, 709.44),
 "speaker": "..."
 },
 "1_8": {
@@ -129,7 +129,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(870.227, 757.363),
+"size": Vector2(870.229, 757.366),
 "speaker": "Eric"
 },
 "1_9": {
@@ -151,7 +151,7 @@ Und jetzt verschwinde und lass mich in Ruhe. Es gibt hier genug zu tun, ohne das
 "offset": Vector2(-1300, -520),
 "size": {
 "x": 322.0,
-"y": 330.0
+"y": 345.001
 }
 },
 "4_1": {

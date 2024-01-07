@@ -53,7 +53,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300.001, 431),
 "speaker": "????"
 },
 "1_10": {
@@ -66,7 +66,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300.002, 431),
 "speaker": "Player"
 },
 "1_11": {
@@ -84,7 +84,7 @@ nodes = {
 "text": "Buch nicht lesen"
 }
 },
-"size": Vector2(300.001, 492.001),
+"size": Vector2(300.001, 492),
 "speaker": "???"
 },
 "1_12": {
@@ -110,12 +110,12 @@ nodes = {
 "text": "Schlüssel nehmen"
 }
 },
-"size": Vector2(300.001, 431.001),
+"size": Vector2(300.001, 431),
 "speaker": "???"
 },
 "1_14": {
 "dialogue": "Ich entfdliehe der Einsamkeit...",
-"offset": Vector2(1300, 1320),
+"offset": Vector2(1400, 1300),
 "options": {
 0: {
 "condition": {},
@@ -136,7 +136,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300.001, 431),
+"size": Vector2(300.002, 431),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -232,7 +232,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(319.87, 431.001),
+"size": Vector2(319.871, 431.001),
 "speaker": "????"
 },
 "1_4": {
@@ -325,7 +325,7 @@ nodes = {
 },
 "3_3": {
 "link": "END",
-"offset": Vector2(1900, 1340),
+"offset": Vector2(2260, 1300),
 "signalValue": "null"
 },
 "3_4": {
@@ -350,12 +350,12 @@ nodes = {
 },
 "3_8": {
 "link": &"3_3",
-"offset": Vector2(1660, 1320),
+"offset": Vector2(1820, 1300),
 "signalValue": "notagain"
 },
 "3_9": {
 "link": &"1_14",
-"offset": Vector2(1080, 1320),
+"offset": Vector2(1120, 1320),
 "signalValue": "takeitem"
 }
 }

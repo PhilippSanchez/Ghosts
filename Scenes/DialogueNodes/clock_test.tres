@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dn3u44bi2gxar"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_vvmno"]
+
+[resource]
+script = ExtResource("1_vvmno")
+starts = {}
+nodes = {
+"1_1": {
+"dialogue": "",
+"offset": Vector2(305, 118.5),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(901, 874),
+"speaker": ""
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String](["1_1"])
+characters = ""
