@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmrg8jl06rgd0"]
+[gd_scene load_steps=11 format=3 uid="uid://bmrg8jl06rgd0"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/gang_erdgeschoss_nacht.gd" id="1_1e6ag"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_8sfjk"]
 [ext_resource type="Texture2D" uid="uid://8cojtfxskjhd" path="res://Assets/Inviroment/asprite/treppe.png" id="2_o07vl"]
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="3_0bla1"]
@@ -408,6 +409,7 @@ sources/2 = SubResource("TileSetAtlasSource_i2ucf")
 sources/3 = SubResource("TileSetAtlasSource_yoggm")
 
 [node name="HallwayScene" type="Node2D"]
+script = ExtResource("1_1e6ag")
 
 [node name="Player" parent="." instance=ExtResource("1_8sfjk")]
 position = Vector2(13, 92)
@@ -438,7 +440,11 @@ layer_2/tile_data = PackedInt32Array(65545, 65538, 6, 131081, 65538, 7, 65546, 1
 [node name="switching_scene" parent="." instance=ExtResource("4_cv2xq")]
 position = Vector2(375, 88)
 scenename = "res://Scenes/GameScenes/gang.tscn"
+xposition_player = 375.0
+yposition_player = 35.0
 
 [node name="switching_scene2" parent="." instance=ExtResource("4_cv2xq")]
 position = Vector2(-13, 85)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum_nacht.tscn"
+xposition_player = 65.0
+yposition_player = 70.0

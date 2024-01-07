@@ -31,7 +31,6 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	updateAnimation()
 	start_torch()
 	
-	
 func start_torch() : 
 	if singelton.player_torch == true: 
 		$PointLight2D.show() 

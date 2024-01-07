@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bwpuo1b564b80"]
+[gd_scene load_steps=13 format=3 uid="uid://bwpuo1b564b80"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/aufenthaltsraum.gd" id="1_2svxj"]
 [ext_resource type="Texture2D" uid="uid://d1a8h3jcsmsqp" path="res://Assets/Inviroment/Aufenthaltsraum/Aufenthaltsraum.png" id="1_vpngu"]
 [ext_resource type="Texture2D" uid="uid://b8yxmaqwlalcy" path="res://Assets/Inviroment/parkett.png" id="2_k44mw"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_n58p0"]
@@ -653,6 +654,7 @@ sources/0 = SubResource("TileSetAtlasSource_u4u6w")
 sources/1 = SubResource("TileSetAtlasSource_l6b6p")
 
 [node name="Aufenthaltsraum" type="Node2D"]
+script = ExtResource("1_2svxj")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -696,6 +698,8 @@ position = Vector2(55, 79)
 [node name="switching_aufenthaltsraum" parent="." instance=ExtResource("4_seyhk")]
 position = Vector2(90, 73)
 scenename = "res://Scenes/GameScenes/gang_erdgeschoss.tscn"
+xposition_player = 12.0
+yposition_player = 85.0
 
 [node name="Node2D" type="Node2D" parent="."]
 
