@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bvgh2ojgaahl"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_1qkdh"]
+
+[resource]
+script = ExtResource("1_1qkdh")
+starts = {
+"Uhr": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-837.091, -325.455),
+"start_id": "Uhr"
+},
+"1_1": {
+"dialogue": "Die Zeiger der Uhr scheinen locker. Sie lassen sich bewegen",
+"offset": Vector2(-640, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "freundliche Stimme"
+},
+"1_2": {
+"dialogue": "Ich könnte versuchen sie zu bewegen ",
+"offset": Vector2(-320, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "Zeiger verdrehen"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(300, 307),
+"speaker": "Ghost "
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(0, -320),
+"signalValue": "true"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

@@ -14,7 +14,6 @@ extends Control
 @onready var data = $Main/Workspace/SidePanel/Data
 @onready var characters = $Main/Workspace/SidePanel/Data/Characters
 @onready var variables = $Main/Workspace/SidePanel/Data/Variables
-@onready var version_number = $Main/Statusbar/VersionNumber
 @onready var dialogue = $DialogueBox
 @onready var dialogueBG = $DialogBackground
 @onready var newDialogue = $NewDialog
@@ -41,11 +40,10 @@ func _ready():
 	dialogue.dialogue_signal.connect(_on_dialogue_signal)
 	dialogue.variable_changed.connect(_on_dialogue_variable_changed)
 	dialogue.dialogue_ended.connect(_on_dialogue_ended)
-	dialogue.option_selected.connect(_on_dialogue_option_selected)
 	
 	var config = ConfigFile.new()
 	config.load('res://addons/dialogue_nodes/plugin.cfg')
-	version_number.text = config.get_value('plugin', 'version')
+	$Main/Statusbar/VersionNumber.text = config.get_value('plugin', 'version')
 
 
 func init_menus():
@@ -64,6 +62,7 @@ func init_menus():
 		runMenu.hide()
 
 
+# Run
 func _run_tree(start_node):	
 	var data : DialogueData = DialogueData.new()
 	data.starts = {}
@@ -123,7 +122,7 @@ func get_data() -> DialogueData:
 		if node is GraphNode and not data.nodes.has(node.name):
 			data.strays.append(node.name)
 			data.nodes[node.name] = node._to_dict(graph)
-			data.nodes[node.name]['offset'] = node.position_offset
+			data.nodes[node.name]['offset'] = node.offset
 	
 	data.characters = characters.filePath.text
 	
@@ -305,15 +304,6 @@ func _on_dialogue_ended():
 		print('Dialogue finished')
 
 
-func _on_dialogue_option_selected(idx):
-	if _debug:
-		print('Option selected. idx: ', idx, ', text: ', dialogue.options.get_child(idx).text)
-
-
 func _on_dialog_background_input(event):
 	if event is InputEventMouseButton:
 		dialogue.stop()
-
-
-func _on_version_number_pressed():
-	DisplayServer.clipboard_set('v'+version_number.text)

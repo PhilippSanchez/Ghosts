@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c43bjybc0ahl4"]
+[gd_scene load_steps=19 format=3 uid="uid://c43bjybc0ahl4"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/gang.gd" id="1_fgtp6"]
 [ext_resource type="Texture2D" uid="uid://dmsvdkjckh4k8" path="res://Assets/Inviroment/office_tiles/office_walls.png" id="1_wgbg4"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="9_8740y"]
 [ext_resource type="Resource" uid="uid://76ld08c1cca1" path="res://Scenes/DialogueNodes/Gang_Erster_Stock/Gang_Ersterstock.tres" id="9_itpjv"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="10_mlf6j"]
+[ext_resource type="Script" path="res://Scenes/Interacables/switching_scene_nacht_tag.gd" id="13_xwjhx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ow2in"]
 
@@ -3692,6 +3693,6 @@ scale = Vector2(0.700614, 0.702754)
 
 [node name="switching_scene" parent="." instance=ExtResource("10_mlf6j")]
 position = Vector2(374, 11)
-scenename = "res://Scenes/GameScenes/gang_erdgeschoss.tscn"
+script = ExtResource("13_xwjhx")
 
 [connection signal="interaction_true" from="TürAufwachraum/AufwachraumTür" to="." method="_on_aufwachraum_tür_interaction_true"]

@@ -42,11 +42,6 @@ func _ready():
 	queued = []
 
 
-func _exit_tree():
-	close_all(true)
-	file_icon = null
-
-
 func _show_dir(idx):
 	var metadata = get_item_metadata(idx)
 	var parts = metadata['path'].split('/')
@@ -228,7 +223,7 @@ func close_file(idx = current):
 		switched.emit(get_item_metadata(current)['data'])
 
 
-func close_all(force_close = false):
+func close_all():
 	# Check if any file is modified
 	var modified = false
 	for idx in range(get_item_count()):
@@ -237,7 +232,7 @@ func close_all(force_close = false):
 			break
 	
 	# Store all files in queue, ask for confirmation
-	if modified and not force_close:
+	if modified:
 		queued.clear()
 		for idx in range(get_item_count()):
 			queued.push_front(idx)

@@ -15,7 +15,7 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_4",
-"offset": Vector2(-184.069, 889.034),
+"offset": Vector2(-760, 740),
 "start_id": "Tür"
 },
 "0_2": {
@@ -167,7 +167,7 @@ nodes = {
 },
 "1_18": {
 "dialogue": "Vescrhlossen! Mist!!",
-"offset": Vector2(360, 860),
+"offset": Vector2(-200, 860),
 "options": {
 0: {
 "condition": {},
@@ -237,7 +237,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "Unser Held rüttelt an der Tür. Sie bewegt sich nicht...",
-"offset": Vector2(20, 860),
+"offset": Vector2(-580, 760),
 "options": {
 0: {
 "condition": {},

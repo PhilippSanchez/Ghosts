@@ -3,6 +3,7 @@ extends CharacterBody2D #muss extenden damit es funktionieren kann
 @export var speed: int = 50
 @onready var animations = $AnimationPlayer
 var dialoge_active = false  
+@onready var singelton = get_node("/root/Singelton")
 
 
 func handleInput():
@@ -28,3 +29,10 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	handleInput()
 	move_and_slide()
 	updateAnimation()
+	start_torch()
+	
+	
+func start_torch() : 
+	if singelton.player_torch == true: 
+		$PointLight2D.show() 
+	else : $PointLight2D.hide()
