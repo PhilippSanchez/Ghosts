@@ -32,9 +32,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if textbox_startable == true and dialogue_finished == false and singelton.entering_gang_first == true: 
+
+	if textbox_startable == true and dialogue_finished == false and singelton.entering_gang_unten_first == true: 
 		textbox_startable = false 
-		singelton.entering_gang_first = false 
+		singelton.entering_gang_unten_first = false 
 		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
 	pass 
 	
@@ -42,6 +43,7 @@ func _process(_delta):
 func _on_area_entered(area):
 	print(area)
 	if area.is_in_group("Player") and dialogue_finished == false : 
+		$"..".player_entered = true 
 		textbox_startable = true 
 		
 		
@@ -104,4 +106,13 @@ func _on_object_interactions_dialog_dialogue_started(_id):
 	
 	player.dialoge_active = true 
 	print(player, "true")
+	pass # Replace with function body.
+
+
+
+func _on_interaction_true():
+	$"..".player_entered = false 
+	singelton.entering_gang_unten_first = false
+	$"..".endPosition = $"..".global_position
+	print($"../Marker2D".position.x, $"../Marker2D".position.y)
 	pass # Replace with function body.
