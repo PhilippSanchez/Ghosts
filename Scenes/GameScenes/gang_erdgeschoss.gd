@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var pflegergeist_gestresst = $Pfelger_rennt
 @onready var singelton = get_node("/root/Singelton")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +13,7 @@ func _ready():
 		$Player.position.y = singelton.yposplayer 
 	
 func _process(delta):
-	if $Pfelger_rennt: 
-		if $Pfelger_rennt.position.x < 110 && singelton.entering_gang_unten_first == false: 
-			$Pfelger_rennt.queue_free()
+	if pflegergeist_gestresst!= null: 
+		if pflegergeist_gestresst.position.x < 110 && singelton.entering_gang_unten_first == false: 
+			pflegergeist_gestresst.queue_free()
 			$Player.dialoge_active = false 

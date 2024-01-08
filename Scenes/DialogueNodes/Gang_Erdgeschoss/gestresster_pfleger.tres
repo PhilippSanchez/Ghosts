@@ -31,7 +31,7 @@ Schon wieder alles durcheinandergebracht. Fast hätte ich sie in den Mülleimer 
 }
 },
 "size": Vector2(665.76, 562.959),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
 },
 "1_2": {
 "dialogue": "....",
@@ -44,7 +44,7 @@ Schon wieder alles durcheinandergebracht. Fast hätte ich sie in den Mülleimer 
 }
 },
 "size": Vector2(527.52, 575.919),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
 },
 "1_3": {
 "dialogue": "Moment mal was stehst du hier? 
@@ -59,7 +59,7 @@ Beeil dich!",
 }
 },
 "size": Vector2(511.68, 581.679),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
 },
 "1_4": {
 "dialogue": "Ohnein ohnein wo ist er nur... murmel...murmel",
@@ -76,7 +76,7 @@ Beeil dich!",
 },
 "1_5": {
 "dialogue": "...",
-"offset": Vector2(-2660, 440),
+"offset": Vector2(-2660, 420),
 "options": {
 0: {
 "condition": {},
@@ -89,12 +89,12 @@ Beeil dich!",
 },
 "3_1": {
 "link": &"3_2",
-"offset": Vector2(-3173.7, 442.772),
+"offset": Vector2(-3160, 420),
 "signalValue": "true"
 },
 "3_2": {
 "link": &"1_5",
-"offset": Vector2(-2920, 440),
+"offset": Vector2(-2880, 420),
 "signalValue": "notagain"
 }
 }
