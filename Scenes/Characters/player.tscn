@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqfdsfm3x0byr"]
+[gd_scene load_steps=15 format=3 uid="uid://dqfdsfm3x0byr"]
 
 [ext_resource type="Texture2D" uid="uid://b1773qk7xwnr5" path="res://Assets/Characters/Skeleton.png" id="1_icw8i"]
 [ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_wgfm1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b44glsbj438ld" path="res://Scenes/Particel_Shader/TorchLight.png" id="3_fjl27"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/CanvasLayer.gd" id="5_84wi0"]
 [ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/inventory_GUI.tscn" id="6_1ej2n"]
+[ext_resource type="PackedScene" uid="uid://ch1wl42qyfnpd" path="res://GUI/Karma/karma_container.tscn" id="7_3whqy"]
 
 [sub_resource type="Animation" id="Animation_k2b5f"]
 length = 0.001
@@ -159,5 +160,11 @@ offset_left = 536.0
 offset_top = 381.0
 offset_right = 576.0
 offset_bottom = 421.0
+
+[node name="karmaContainer" parent="CanvasLayer" instance=ExtResource("7_3whqy")]
+offset_left = 89.0
+offset_top = 13.0
+offset_right = 165.0
+offset_bottom = 30.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://is4g4weykn8t"]
+
+[ext_resource type="Script" path="res://GUI/Karma/karma_gui.gd" id="1_2stjs"]
+[ext_resource type="Texture2D" uid="uid://drs0def3ffref" path="res://Assets/GUI/karama/Heart.png" id="1_s2dpd"]
+
+[node name="karmaGui" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_2stjs")
+
+[node name="karmaPoints" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_s2dpd")
+centered = false
+hframes = 5

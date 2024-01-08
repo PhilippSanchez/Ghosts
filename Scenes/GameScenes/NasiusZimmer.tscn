@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm7syvhhy62cp"]
+[gd_scene load_steps=17 format=3 uid="uid://dm7syvhhy62cp"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/NasiusZimmer.gd" id="1_86hdd"]
 [ext_resource type="Texture2D" uid="uid://b2xrb1re01n52" path="res://Assets/Inviroment/NasiusZimmer/nasius_tiles.png" id="1_l4p4i"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_iwdue"]
+[ext_resource type="Texture2D" uid="uid://cb6y324ygf73c" path="res://Assets/Characters/Nasebert.png" id="3_boebp"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/Nasius.gd" id="4_oj6px"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/switching_scence.gd" id="4_u0lgn"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="6_v56m8"]
+[ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="7_di6ht"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="8_gnpnt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b650x"]
 texture = ExtResource("1_l4p4i")
@@ -88,9 +95,55 @@ texture = ExtResource("1_l4p4i")
 [sub_resource type="TileSet" id="TileSet_wkt44"]
 sources/0 = SubResource("TileSetAtlasSource_b650x")
 
+[sub_resource type="Animation" id="Animation_7hlly"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_66rqv"]
+resource_name = "crying"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rfc0l"]
+_data = {
+"RESET": SubResource("Animation_7hlly"),
+"crying": SubResource("Animation_66rqv")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg3wf"]
+size = Vector2(31, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hags0"]
+size = Vector2(65.526, 39.2386)
+
 [node name="NasiusZimmer" type="Node2D"]
+script = ExtResource("1_86hdd")
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 tile_set = SubResource("TileSet_wkt44")
 format = 2
 layer_0/name = "Walls"
@@ -98,6 +151,60 @@ layer_0/tile_data = PackedInt32Array(0, 4653056, 3, 65536, 4063232, 1, 131072, 4
 layer_1/name = "interior"
 layer_1/tile_data = PackedInt32Array(-65523, 3735552, 0, 13, 3735552, 1, 65549, 3735552, 2, -65522, 3801088, 0, 14, 3801088, 1, 65550, 3801088, 2, 262156, 3801088, 4, 196618, 3735552, 4, 262154, 3735552, 5, 327690, 3735552, 6, 0, 3473408, 5, 65536, 3473408, 6, 1, 3538944, 5, 65537, 3538944, 6, 2, 3604480, 5, 65538, 3604480, 6, 3, 3604480, 2, 65539, 3604480, 3, 524294, 4128768, 3, 524295, 4194304, 3)
 
-[node name="Player" parent="." instance=ExtResource("2_iwdue")]
-position = Vector2(113, 83)
+[node name="Player" parent="TileMap" instance=ExtResource("2_iwdue")]
+position = Vector2(111, 125)
 inventory = null
+
+[node name="Nasius" type="Sprite2D" parent="TileMap"]
+texture_filter = 1
+position = Vector2(111, 70)
+texture = ExtResource("3_boebp")
+vframes = 2
+script = ExtResource("4_oj6px")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/Nasius"]
+libraries = {
+"": SubResource("AnimationLibrary_rfc0l")
+}
+
+[node name="ObjectInteractionCollision2" parent="TileMap/Nasius" instance=ExtResource("6_v56m8")]
+position = Vector2(2, 13)
+scale = Vector2(0.41, 0.66)
+textboxName = "nasius_main_dialouge"
+groupName = "Player"
+dialogue_data = ExtResource("7_di6ht")
+
+[node name="Interaction" parent="TileMap/Nasius" instance=ExtResource("8_gnpnt")]
+visible = false
+z_index = 2
+position = Vector2(-0.87, -18.9)
+scale = Vector2(0.41, 0.66)
+rendering_quadrant_size = 8
+
+[node name="Switchscene" type="Area2D" parent="TileMap"]
+position = Vector2(112, 144)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_u0lgn")
+gamepath = "res://Scenes/GameScenes/gang.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Switchscene"]
+shape = SubResource("RectangleShape2D_sg3wf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+position = Vector2(113, 88)
+scale = Vector2(0.41, 0.66)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
+position = Vector2(0, -3.07304)
+scale = Vector2(1.34, 0.62)
+shape = SubResource("RectangleShape2D_hags0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="changedKarma" from="TileMap/Nasius" to="TileMap/Player" method="_on_nasius_changed_karma"]
+[connection signal="interaction_true" from="TileMap/Nasius/ObjectInteractionCollision2" to="TileMap/Nasius" method="_on_object_interaction_collision_2_interaction_true"]
+[connection signal="body_entered" from="TileMap/Switchscene" to="TileMap/Switchscene" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,13 +1,23 @@
 extends CharacterBody2D #muss extenden damit es funktionieren kann
 
-@export var speed: int = 50
 
+@export var speed: int = 50
+@export var maxKarma = 4
 @export var inventory: Inventory
+
 @onready var animations = $AnimationPlayer
+@onready var karmaContainer = $CanvasLayer/karmaContainer
 @onready var singelton = get_node("/root/Singelton")
+@onready var currentKarma = singelton.currentKarma
 
 var dialoge_active = false  
 
+func _ready():
+	karmaContainer.setMaxKarma(maxKarma)
+
+	
+	
+	
 func handleInput():
 	if dialoge_active == false : 
 		var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
@@ -32,6 +42,7 @@ func _physics_process(_delta):   #verarbeitet die physics des characters das ist
 	move_and_slide()
 	updateAnimation()
 	start_torch()
+
 	
 	
 func start_torch() : 
@@ -43,3 +54,7 @@ func start_torch() :
 func _on_mülleimer_office_got_item(item):
 	inventory.insert(item)
 	singelton.inventory.append(item)
+
+
+func _on_nasius_changed_karma(hit):
+		karmaContainer.updateKarma(currentKarma - hit)

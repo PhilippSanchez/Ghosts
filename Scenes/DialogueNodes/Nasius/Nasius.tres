@@ -52,7 +52,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(585.123, 658.002),
+"size": Vector2(585.122, 658.003),
 "speaker": "..."
 },
 "1_11": {
@@ -65,7 +65,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(645.6, 760.235),
+"size": Vector2(645.599, 760.235),
 "speaker": "Ghost"
 },
 "1_12": {
@@ -91,7 +91,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(533.288, 686.798),
+"size": Vector2(533.283, 686.798),
 "speaker": "Nasius"
 },
 "1_14": {
@@ -104,7 +104,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(798.235, 793.361),
+"size": Vector2(798.233, 793.363),
 "speaker": "Nasius"
 },
 "1_15": {
@@ -118,7 +118,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(701.759, 761.676),
+"size": Vector2(701.757, 761.677),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -131,7 +131,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(576.485, 647.919),
+"size": Vector2(576.484, 647.919),
 "speaker": "Nasius"
 },
 "1_2": {
@@ -145,7 +145,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(770.001, 598.996),
+"size": Vector2(770.001, 598.997),
 "speaker": "Ghost"
 },
 "1_3": {
@@ -165,7 +165,7 @@ Ich kann meinen Weg nicht finden.
 "text": "Wie heißt du?"
 }
 },
-"size": Vector2(925.001, 751.997),
+"size": Vector2(925, 751.998),
 "speaker": "..."
 },
 "1_4": {
@@ -192,7 +192,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(688.999, 572.992),
+"size": Vector2(688.998, 572.994),
 "speaker": "..."
 },
 "1_6": {
@@ -210,7 +210,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Nach Pfeife fragen"
 }
 },
-"size": Vector2(670.1, 762.726),
+"size": Vector2(670.1, 762.728),
 "speaker": "Ghost"
 },
 "1_7": {
@@ -236,7 +236,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Was ist passiert?"
 }
 },
-"size": Vector2(300.005, 431.003),
+"size": Vector2(300.005, 431.005),
 "speaker": "..."
 },
 "1_9": {
@@ -245,11 +245,11 @@ Ich heiße Nasius... glaube ich zumindest..",
 "options": {
 0: {
 "condition": {},
-"link": &"1_10",
+"link": &"3_2",
 "text": ""
 }
 },
-"size": Vector2(599.516, 629.2),
+"size": Vector2(599.515, 629.201),
 "speaker": "Ghost"
 },
 "2_1": {
@@ -258,13 +258,18 @@ Herz abziehen wenn beleidigen",
 "offset": Vector2(3840, -140),
 "size": {
 "x": 274.007,
-"y": 477.0
+"y": 507.0
 }
 },
 "3_1": {
 "link": "END",
 "offset": Vector2(-3160, -420),
 "signalValue": ""
+},
+"3_2": {
+"link": &"1_10",
+"offset": Vector2(7080, 660),
+"signalValue": "true"
 },
 "4_1": {
 "link": &"1_5",

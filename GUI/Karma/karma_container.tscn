@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch1wl42qyfnpd"]
+
+[ext_resource type="Script" path="res://GUI/Karma/karma_container.gd" id="1_2wpaq"]
+
+[node name="karmaContainer" type="HBoxContainer"]
+layout_direction = 3
+offset_right = 76.0
+offset_bottom = 17.0
+scale = Vector2(2, 2)
+script = ExtResource("1_2wpaq")
