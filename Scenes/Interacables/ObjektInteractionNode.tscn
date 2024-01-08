@@ -19,6 +19,7 @@ shape = SubResource("RectangleShape2D_37xq5")
 [node name="Interaction" parent="." instance=ExtResource("2_gygxo")]
 visible = false
 position = Vector2(-8, -4)
+rendering_quadrant_size = 8
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -34,8 +35,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextsceneBarrier"]
 texture_filter = 1
-position = Vector2(28.4775, 17.0833)
-scale = Vector2(2.28288, 2.71021)
+position = Vector2(19.7588, 86.0108)
+scale = Vector2(1.23708, 1.27197)
 texture = ExtResource("4_yshps")
 
 [node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("3_cqdin")]

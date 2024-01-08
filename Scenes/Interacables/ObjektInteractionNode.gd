@@ -72,9 +72,10 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 	if value == "true": 
 		
 		print("true")
-		
+
 		interaction_true.emit() 
 		consequenz = true 
+		
 	elif value =="false":
 		consequenz = false 
 		interaction_false.emit() 

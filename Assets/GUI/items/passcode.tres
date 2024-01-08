@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://drjylnshorlba"]
 
 [ext_resource type="Script" path="res://inventory_item.gd" id="1_q375v"]
-[ext_resource type="Texture2D" uid="uid://j06yb5n402qf" path="res://Assets/Inviroment/book_Small.png" id="2_l7xth"]
+[ext_resource type="Texture2D" uid="uid://blp8wu0rgvxkt" path="res://Assets/GUI/items/passcode.png" id="2_oqmv7"]
 
 [resource]
 script = ExtResource("1_q375v")
 name = "Key"
-texture = ExtResource("2_l7xth")
+texture = ExtResource("2_oqmv7")

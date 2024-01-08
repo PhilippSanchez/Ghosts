@@ -1,8 +1,10 @@
 extends Node
+
 var entering_gang_first = true 
 var aufwach_rätsel = true 
+var passcode_keller = false
 
-var schlüssel_keller = false
+var inventory = []
 
 
 signal playertorch_signal 

@@ -1,11 +1,12 @@
 extends CharacterBody2D #muss extenden damit es funktionieren kann
 
 @export var speed: int = 50
-@onready var animations = $AnimationPlayer
-var dialoge_active = false  
-@onready var singelton = get_node("/root/Singelton")
 
 @export var inventory: Inventory
+@onready var animations = $AnimationPlayer
+@onready var singelton = get_node("/root/Singelton")
+
+var dialoge_active = false  
 
 func handleInput():
 	if dialoge_active == false : 
@@ -39,11 +40,6 @@ func start_torch() :
 	else : $PointLight2D.hide()
 
 
-func _on_inventory_gui_closed():
-	get_tree().paused = true
-	
-
-
-
-func _on_inventory_gui_opened():
-	get_tree().paused = true
+func _on_mülleimer_office_got_item(item):
+	inventory.insert(item)
+	singelton.inventory.append(item)

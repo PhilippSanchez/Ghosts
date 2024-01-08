@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dr57oyyu44lsu"]
+[gd_scene load_steps=15 format=3 uid="uid://dr57oyyu44lsu"]
 
+[ext_resource type="Script" path="res://Scenes/GameScenes/office_scene.gd" id="1_iwu44"]
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="1_wh32p"]
 [ext_resource type="Texture2D" uid="uid://xo1f4cdxrupf" path="res://Assets/Inviroment/office_tiles/office_floor_carpet_2.png" id="2_62s3g"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_xfy35"]
@@ -650,6 +651,7 @@ sources/3 = SubResource("TileSetAtlasSource_go8qk")
 size = Vector2(10, 20)
 
 [node name="OfficeScene" type="Node2D"]
+script = ExtResource("1_iwu44")
 
 [node name="Office" type="TileMap" parent="."]
 texture_filter = 1
@@ -699,3 +701,4 @@ polygon = PackedVector2Array(176, 81, 105, 81, 96, 96, 96, 160, 160, 160, 160, 1
 position = Vector2(136, -25)
 
 [connection signal="body_entered" from="Office/Switchscene" to="Office/Switchscene" method="_on_body_entered"]
+[connection signal="gotItem" from="Office/MülleimerOffice" to="Office/Player" method="_on_mülleimer_office_got_item"]

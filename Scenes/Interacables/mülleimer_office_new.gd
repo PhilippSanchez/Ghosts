@@ -1,12 +1,17 @@
 extends Node2D
+
 @onready var singelton = get_node("/root/Singelton")
 
-# Called when the node enters the scene tree for the first time.
+@export var itemRes: InventoryItem
 
-
+signal gotItem
+	
 func _on_object_interaction_collision_2_interaction_true():
 	print("Schlüssel erhalten")
-	print(singelton.schlüssel_keller)
-	singelton.schlüssel_keller = true
+	singelton.passcode_keller = true
+	gotItem.emit(itemRes)
+	
+
+
 
 

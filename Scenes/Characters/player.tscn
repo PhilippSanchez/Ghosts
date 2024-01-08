@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b1773qk7xwnr5" path="res://Assets/Characters/Skeleton.png" id="1_icw8i"]
 [ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_wgfm1"]
-[ext_resource type="Resource" uid="uid://btatr6tjowmrs" path="res://Assets/GUI/items/player_inventory_resource.tres" id="2_lrddh"]
+[ext_resource type="Resource" uid="uid://btatr6tjowmrs" path="res://Assets/GUI/items/playerInventory.tres" id="2_pr5kk"]
 [ext_resource type="Texture2D" uid="uid://b44glsbj438ld" path="res://Scenes/Particel_Shader/TorchLight.png" id="3_fjl27"]
-[ext_resource type="Script" path="res://Scenes/GameScenes/CanvasLayer.gd" id="4_tk8p0"]
-[ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/inventory_GUI.tscn" id="5_rlmks"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/CanvasLayer.gd" id="5_84wi0"]
+[ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/inventory_GUI.tscn" id="6_1ej2n"]
 
 [sub_resource type="Animation" id="Animation_k2b5f"]
 length = 0.001
@@ -111,7 +111,7 @@ z_index = 1
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_wgfm1")
-inventory = ExtResource("2_lrddh")
+inventory = ExtResource("2_pr5kk")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 visible = false
@@ -152,14 +152,12 @@ shape = SubResource("RectangleShape2D_oix6w")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
-script = ExtResource("4_tk8p0")
+script = ExtResource("5_84wi0")
 
-[node name="inventoryGUI" parent="CanvasLayer" instance=ExtResource("5_rlmks")]
-offset_left = 544.0
-offset_top = 311.0
-offset_right = 584.0
-offset_bottom = 351.0
+[node name="inventoryGUI" parent="CanvasLayer" instance=ExtResource("6_1ej2n")]
+offset_left = 536.0
+offset_top = 381.0
+offset_right = 576.0
+offset_bottom = 421.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="closed" from="CanvasLayer/inventoryGUI" to="." method="_on_inventory_gui_closed"]
-[connection signal="opened" from="CanvasLayer/inventoryGUI" to="." method="_on_inventory_gui_opened"]
