@@ -14,8 +14,10 @@ var dialoge_active = false
 
 func _ready():
 	karmaContainer.setMaxKarma(maxKarma)
+	singelton.karmahit.connect(_onkarmachange)
 
-	
+func _onkarmachange(): 
+	karmaContainer.updateKarma(singelton.currentKarma)
 	
 	
 func handleInput():
@@ -56,5 +58,5 @@ func _on_mülleimer_office_got_item(item):
 	singelton.inventory.append(item)
 
 
-func _on_nasius_changed_karma(hit):
-		karmaContainer.updateKarma(currentKarma - hit)
+
+		
