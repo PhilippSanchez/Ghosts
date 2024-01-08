@@ -514,6 +514,5 @@ dialogue_data = ExtResource("8_aylcj")
 [node name="Marker2D" type="Marker2D" parent="Pfelger_rennt"]
 position = Vector2(229, -13)
 
-[connection signal="area_entered" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt" method="_on_object_interaction_collision_area_entered"]
 [connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt" method="_on_direcrinteraction_interaction_true"]
 [connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt/Direcrinteraction" method="_on_interaction_true"]

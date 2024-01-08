@@ -40,7 +40,7 @@ func _process(_delta):
 	
 # Prüft ob der Player in der Nähe ist
 func _on_area_entered(area):
-	print(area)
+	print("areatest")
 	if area.is_in_group("Player") and dialogue_finished == false : 
 		interaction.show() 
 		textbox_startable = true 
