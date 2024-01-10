@@ -1,9 +1,15 @@
 extends Area2D
 
 @export var textboxName ="" 
+@onready var second_dialogue_name = ""
+@onready var second_dialogue_true = false 
 @export var groupName  =""
 @export var consequent_var : bool 
 @export var dialogue_data : DialogueData = null
+
+
+
+
 @onready var interaction = $"../Interaction"
 @onready var textbox = $CanvasLayer/ObjectInteractionsDialog
 @onready var player = get_parent().get_parent().get_node("Player")
@@ -27,6 +33,7 @@ signal take_something
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	$CanvasLayer/ObjectInteractionsDialog.set_data(dialogue_data) 
 	pass # Replace with function body.
 
@@ -35,7 +42,10 @@ func _ready():
 func _process(_delta):
 	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
 		textbox_startable = false 
-		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
+		if second_dialogue_true == true && second_dialogue_name != "":
+			$CanvasLayer/ObjectInteractionsDialog.start(second_dialogue_name) 
+		else: 
+			$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
 	pass 
 	
 # Prüft ob der Player in der Nähe ist

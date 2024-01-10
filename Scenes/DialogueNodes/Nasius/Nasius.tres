@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_k1x6u")
 starts = {
+"NasiusDoor2": &"0_3",
 "Nasius_door": &"0_1",
 "nasius_main_dialouge": &"0_2"
 }
@@ -18,6 +19,11 @@ nodes = {
 "link": &"5_5",
 "offset": Vector2(-4500, 820),
 "start_id": "nasius_main_dialouge"
+},
+"0_3": {
+"link": &"1_17",
+"offset": Vector2(-4471.65, -44.7022),
+"start_id": "NasiusDoor2"
 },
 "1_1": {
 "dialogue": "Ein [shake rate=10.0 level=3 connected=1]Wimmern...[/shake] jemand braucht Hilfe. Sollte ich die Tür öffnen und nachsehen?",
@@ -52,7 +58,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(585.122, 658.003),
+"size": Vector2(585.12, 658.003),
 "speaker": "..."
 },
 "1_11": {
@@ -65,7 +71,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(645.599, 760.235),
+"size": Vector2(645.6, 760.233),
 "speaker": "Ghost"
 },
 "1_12": {
@@ -78,7 +84,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(550.562, 701.832),
+"size": Vector2(550.56, 701.831),
 "speaker": "Ghost"
 },
 "1_13": {
@@ -91,7 +97,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(533.283, 686.798),
+"size": Vector2(533.281, 686.798),
 "speaker": "Nasius"
 },
 "1_14": {
@@ -104,7 +110,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(798.233, 793.363),
+"size": Vector2(798.232, 793.363),
 "speaker": "Nasius"
 },
 "1_15": {
@@ -118,7 +124,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(701.757, 761.677),
+"size": Vector2(701.756, 761.678),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -133,6 +139,24 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 },
 "size": Vector2(576.484, 647.919),
 "speaker": "Nasius"
+},
+"1_17": {
+"dialogue": "Nasius Zimmer betreten? ",
+"offset": Vector2(-3993.71, -191.836),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": "Ja"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Nein"
+}
+},
+"size": Vector2(433.734, 307),
+"speaker": "???"
 },
 "1_2": {
 "dialogue": "Hey, warum weinst du?
@@ -178,7 +202,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(715.005, 599.999),
+"size": Vector2(715.007, 599.999),
 "speaker": "..."
 },
 "1_5": {
@@ -223,7 +247,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Wie heißt du?"
 }
 },
-"size": Vector2(300.001, 491.998),
+"size": Vector2(300, 491.998),
 "speaker": "..."
 },
 "1_8": {
@@ -236,7 +260,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Was ist passiert?"
 }
 },
-"size": Vector2(300.005, 431.005),
+"size": Vector2(300.004, 431.006),
 "speaker": "..."
 },
 "1_9": {
@@ -249,7 +273,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(599.515, 629.201),
+"size": Vector2(599.516, 629.201),
 "speaker": "Ghost"
 },
 "2_1": {
@@ -257,18 +281,23 @@ Ich heiße Nasius... glaube ich zumindest..",
 Herz abziehen wenn beleidigen",
 "offset": Vector2(3840, -140),
 "size": {
-"x": 274.007,
+"x": 274.008,
 "y": 507.0
 }
 },
 "3_1": {
 "link": "END",
 "offset": Vector2(-3160, -420),
-"signalValue": ""
+"signalValue": "true"
 },
 "3_2": {
 "link": &"1_10",
 "offset": Vector2(7080, 660),
+"signalValue": "true"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(-3536.49, -106.31),
 "signalValue": "true"
 },
 "4_1": {
@@ -317,20 +346,7 @@ Herz abziehen wenn beleidigen",
 "value2": "true"
 }
 }
-variables = {
-"ask_name": {
-"type": 1,
-"value": true
-},
-"ask_problem": {
-"type": 1,
-"value": true
-},
-"convo_started": {
-"type": 1,
-"value": true
-}
-}
+variables = {}
 comments = Array[String](["2_1"])
 strays = Array[String]([])
 characters = ""

@@ -6,7 +6,6 @@ var entering_gang_unten_first = true
 var aufwach_rätsel = true 
 var passcode_keller = false
 
-
 #GUI
 
 var inventory = []
@@ -29,6 +28,8 @@ var strike = 0
 var xposplayer : float 
 var yposplayer : float 
 
+
+var entered_nasius = true 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

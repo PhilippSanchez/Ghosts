@@ -113,14 +113,14 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(642.72, 761.68),
+"size": Vector2(642.72, 761.681),
 "speaker": "Ghost"
 },
 "2_1": {
 "comment": "Vieleich durch eine randomized zahl verschiedenen Dialoge?",
 "offset": Vector2(-1383.24, 1042.26),
 "size": {
-"x": 942.16,
+"x": 942.161,
 "y": 282.0
 }
 },

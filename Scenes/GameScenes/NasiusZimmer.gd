@@ -1,8 +1,13 @@
 extends Node2D
 
-
+@onready var singelton = get_node("/root/Singelton")
 # Called when the node enters the scene tree for the first time.
-#func _ready():
+func _ready():
+	singelton.entered_nasius = false 
+	
+	
+	
+	
 #	$Timer.start()
 
 #func _on_timer_timeout():

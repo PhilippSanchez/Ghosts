@@ -5,6 +5,9 @@ extends Node2D
 func _ready():
 	if singelton.aufwach_rätsel == false: 
 		$Barriere.queue_free()
+	if singelton.xposplayer: 
+		$Player.position.x = singelton.xposplayer 
+		$Player.position.y = singelton.yposplayer
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
