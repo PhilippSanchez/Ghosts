@@ -11,5 +11,6 @@ func _process(_delta):
 
 
 func _on_object_interaction_collision_2_interaction_true():
-	changedKarma.emit(1)
+	singelton.currentKarma -=1 
+	
 	

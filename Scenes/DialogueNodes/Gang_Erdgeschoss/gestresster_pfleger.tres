@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_3nq2i")
 starts = {
+"Pfelger_rennt": &"0_2",
 "pfleger_gestresst": &"0_1"
 }
 nodes = {
@@ -12,6 +13,11 @@ nodes = {
 "link": &"1_1",
 "offset": Vector2(-3760, -220),
 "start_id": "pfleger_gestresst"
+},
+"0_2": {
+"link": &"1_4",
+"offset": Vector2(-3807.45, 446.278),
+"start_id": "Pfelger_rennt"
 },
 "1_1": {
 "dialogue": "\"Verflixte Schlüssel!
@@ -25,7 +31,7 @@ Schon wieder alles durcheinandergebracht. Fast hätte ich sie in den Mülleimer 
 }
 },
 "size": Vector2(665.76, 562.959),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
 },
 "1_2": {
 "dialogue": "....",
@@ -38,7 +44,7 @@ Schon wieder alles durcheinandergebracht. Fast hätte ich sie in den Mülleimer 
 }
 },
 "size": Vector2(527.52, 575.919),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
 },
 "1_3": {
 "dialogue": "Moment mal was stehst du hier? 
@@ -53,7 +59,43 @@ Beeil dich!",
 }
 },
 "size": Vector2(511.68, 581.679),
-"speaker": "Pfleger"
+"speaker": "Gestresster Geist"
+},
+"1_4": {
+"dialogue": "Ohnein ohnein wo ist er nur... murmel...murmel",
+"offset": Vector2(-3540, 400),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Gestresster Geist"
+},
+"1_5": {
+"dialogue": "...",
+"offset": Vector2(-2660, 420),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Gestresster Geist"
+},
+"3_1": {
+"link": &"3_2",
+"offset": Vector2(-3160, 420),
+"signalValue": "true"
+},
+"3_2": {
+"link": &"1_5",
+"offset": Vector2(-2880, 420),
+"signalValue": "notagain"
 }
 }
 variables = {}

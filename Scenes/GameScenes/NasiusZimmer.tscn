@@ -1,14 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dm7syvhhy62cp"]
+[gd_scene load_steps=16 format=3 uid="uid://dm7syvhhy62cp"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/NasiusZimmer.gd" id="1_86hdd"]
 [ext_resource type="Texture2D" uid="uid://b2xrb1re01n52" path="res://Assets/Inviroment/NasiusZimmer/nasius_tiles.png" id="1_l4p4i"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_iwdue"]
 [ext_resource type="Texture2D" uid="uid://cb6y324ygf73c" path="res://Assets/Characters/Nasebert.png" id="3_boebp"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Nasius.gd" id="4_oj6px"]
-[ext_resource type="Script" path="res://Scenes/GameScenes/switching_scence.gd" id="4_u0lgn"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="6_v56m8"]
 [ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="7_di6ht"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="8_gnpnt"]
+[ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="9_ci1uk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b650x"]
 texture = ExtResource("1_l4p4i")
@@ -133,9 +133,6 @@ _data = {
 "crying": SubResource("Animation_66rqv")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg3wf"]
-size = Vector2(31, 15)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hags0"]
 size = Vector2(65.526, 39.2386)
 
@@ -181,16 +178,6 @@ position = Vector2(-0.87, -18.9)
 scale = Vector2(0.41, 0.66)
 rendering_quadrant_size = 8
 
-[node name="Switchscene" type="Area2D" parent="TileMap"]
-position = Vector2(112, 144)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("4_u0lgn")
-gamepath = "res://Scenes/GameScenes/gang.tscn"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Switchscene"]
-shape = SubResource("RectangleShape2D_sg3wf")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
 position = Vector2(113, 88)
 scale = Vector2(0.41, 0.66)
@@ -204,7 +191,13 @@ shape = SubResource("RectangleShape2D_hags0")
 wait_time = 10.0
 one_shot = true
 
+[node name="switching_aufenthaltsraum" parent="." instance=ExtResource("9_ci1uk")]
+position = Vector2(112, 146)
+scale = Vector2(1.56554, -0.715172)
+scenename = "res://Scenes/GameScenes/gang.tscn"
+xposition_player = 280.0
+yposition_player = 10.0
+
 [connection signal="changedKarma" from="TileMap/Nasius" to="TileMap/Player" method="_on_nasius_changed_karma"]
 [connection signal="interaction_true" from="TileMap/Nasius/ObjectInteractionCollision2" to="TileMap/Nasius" method="_on_object_interaction_collision_2_interaction_true"]
-[connection signal="body_entered" from="TileMap/Switchscene" to="TileMap/Switchscene" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

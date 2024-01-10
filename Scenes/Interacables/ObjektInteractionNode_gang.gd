@@ -105,4 +105,3 @@ func _on_object_interactions_dialog_dialogue_started(_id):
 	player.dialoge_active = true 
 	print(player, "true")
 	pass # Replace with function body.
-

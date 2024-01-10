@@ -1,5 +1,7 @@
 extends Label
 
+@onready var singelton = get_node("/root/Singelton")
+
 var curentNumb = ""
 
 func _on_button_send_data(parameter):
@@ -32,8 +34,9 @@ func _on_button_3_send_data(parameter):
 
 func _on_enter_button_pressed():
 	if self.text == "1057":
+		singelton.keller_open = true
 		self.text = "Code Correct"
-		get_tree().change_scene_to_file("res://Scenes/GameScenes/keller_scene.tscn")
+		get_tree().change_scene_to_file("res://Scenes/GameScenes/Keller_Vorraum.tscn")
 	else:
 		self.text = "Code Inavalid"
 		self.text = "Enter Pin Code ..."

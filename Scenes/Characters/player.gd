@@ -14,17 +14,21 @@ var dialoge_active = false
 
 func _ready():
 	karmaContainer.setMaxKarma(maxKarma)
+	singelton.karmahit.connect(_onkarmachange)
 
-	
+func _onkarmachange(): 
+	karmaContainer.updateKarma(singelton.currentKarma)
 	
 	
 func handleInput():
-	if dialoge_active == false : 
-		var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
-		velocity = moveDirection * speed
+	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down") # nimmt input ds users auf
+	velocity = moveDirection * speed
 
 
 func updateAnimation(): 
+	if dialoge_active == true:
+		if animations.is_playing():
+			animations.stop()
 	if velocity.length() == 0:
 		if animations.is_playing():
 			animations.stop()
@@ -38,10 +42,11 @@ func updateAnimation():
 		animations.play("walk_" + direction) 
 
 func _physics_process(_delta):   #verarbeitet die physics des characters das ist Unser Character Gameloop
-	handleInput()
-	move_and_slide()
-	updateAnimation()
-	start_torch()
+	if dialoge_active == false :
+		handleInput()
+		move_and_slide()
+		updateAnimation()
+		start_torch()
 
 	
 	
@@ -55,6 +60,7 @@ func _on_mülleimer_office_got_item(item):
 	inventory.insert(item)
 	singelton.inventory.append(item)
 
+func _on_area_2d_body_entered(param) : 
+	pass 
 
-func _on_nasius_changed_karma(hit):
-		karmaContainer.updateKarma(currentKarma - hit)
+		
