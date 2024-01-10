@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://docj351kx05c1"]
+[gd_scene load_steps=9 format=3 uid="uid://docj351kx05c1"]
 
 [ext_resource type="Texture2D" uid="uid://v08p7xyvprwj" path="res://Assets/Inviroment/garten/garten_tileset.png" id="1_7nnh8"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/garten_scene.gd" id="1_ktvof"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_wbwch"]
 [ext_resource type="PackedScene" uid="uid://dl3eoa1hru7ri" path="res://Scenes/Interacables/stock.tscn" id="3_h34nn"]
 [ext_resource type="Script" path="res://Scenes/Interacables/stock.gd" id="4_j8s1a"]
+[ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="6_wfo45"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uxmqe"]
 texture = ExtResource("1_7nnh8")
@@ -352,3 +353,9 @@ position = Vector2(56, 73)
 [node name="Node2D" parent="TileMap" instance=ExtResource("3_h34nn")]
 position = Vector2(226.342, 113.308)
 script = ExtResource("4_j8s1a")
+
+[node name="switching_pin_pad" parent="." instance=ExtResource("6_wfo45")]
+position = Vector2(57, 49)
+scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
+xposition_player = 12.0
+yposition_player = 85.0

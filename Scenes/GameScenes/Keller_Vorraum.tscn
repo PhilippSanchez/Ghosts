@@ -181,3 +181,9 @@ position = Vector2(47, -8)
 scenename = "res://Scenes/GameScenes/keller_scene.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
+
+[node name="switching_pin_pad2" parent="Raum" instance=ExtResource("3_nxfyg")]
+position = Vector2(3, 56)
+scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
+xposition_player = 12.0
+yposition_player = 85.0
