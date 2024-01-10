@@ -1,0 +1,279 @@
+[gd_scene load_steps=21 format=3 uid="uid://ux8whmecx3j5"]
+
+[ext_resource type="Script" path="res://Scenes/Interacables/keller/Enter_Button.gd" id="1_ifohy"]
+[ext_resource type="Texture2D" uid="uid://bofklbmt3muic" path="res://Assets/GUI/codepanel/codbox.png" id="1_n5ld5"]
+[ext_resource type="Texture2D" uid="uid://ca5g86xmrc7ys" path="res://Assets/GUI/codepanel/button.png" id="1_sd2gl"]
+[ext_resource type="Script" path="res://Scenes/Interacables/keller/pinpad.gd" id="1_vqrc5"]
+[ext_resource type="Script" path="res://Scenes/Interacables/keller/Label.gd" id="3_biiex"]
+[ext_resource type="Texture2D" uid="uid://bc5lq5uiokwb6" path="res://Assets/GUI/codepanel/Button_0.png" id="4_casjn"]
+[ext_resource type="Texture2D" uid="uid://do3hcplm08ttq" path="res://Assets/GUI/codepanel/Button_2.png" id="5_drt3t"]
+[ext_resource type="Texture2D" uid="uid://cgbwxk40r2xik" path="res://Assets/GUI/codepanel/Button_1.png" id="5_l7u6g"]
+[ext_resource type="Texture2D" uid="uid://bj6fa1hv4nq1t" path="res://Assets/GUI/codepanel/Button_3.png" id="6_05abm"]
+[ext_resource type="Texture2D" uid="uid://dhvv4hjpph6w2" path="res://Assets/GUI/codepanel/Button_4.png" id="7_vr44c"]
+[ext_resource type="Texture2D" uid="uid://bqbnhx44qkqri" path="res://Assets/GUI/codepanel/Button_5.png" id="8_jmdur"]
+[ext_resource type="Texture2D" uid="uid://swpfwhsxwlge" path="res://Assets/GUI/codepanel/Button_6.png" id="9_up2ia"]
+[ext_resource type="Texture2D" uid="uid://csunwdeefltck" path="res://Assets/GUI/codepanel/Button_7.png" id="10_8j8y3"]
+[ext_resource type="Texture2D" uid="uid://byil44mhdalxi" path="res://Assets/GUI/codepanel/Button_8.png" id="11_b8xg2"]
+[ext_resource type="Texture2D" uid="uid://duql5g252131k" path="res://Assets/GUI/codepanel/Button_9.png" id="12_d227y"]
+[ext_resource type="Texture2D" uid="uid://bsmetxbqgsecd" path="res://Assets/GUI/codepanel/clear.png" id="14_7igwu"]
+[ext_resource type="Texture2D" uid="uid://bipqj17de3us2" path="res://Assets/GUI/codepanel/display.png" id="16_6xxbd"]
+[ext_resource type="Texture2D" uid="uid://c175qgf6dfne8" path="res://Assets/GUI/codepanel/display_error.png" id="17_7y61m"]
+
+[sub_resource type="Theme" id="Theme_hvtta"]
+default_base_scale = 0.79
+
+[sub_resource type="LabelSettings" id="LabelSettings_luptp"]
+font_color = Color(0.188235, 0.709804, 0, 1)
+shadow_size = 2
+shadow_color = Color(0.615686, 1, 0.584314, 0)
+shadow_offset = Vector2(2, 2)
+
+[node name="code_panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0.560784, 0.262745, 0.231373, 1)
+
+[node name="invalidTimer" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(157, 150)
+transform = Transform2D(1, 0, 0, 1, 157, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+z_index = -2
+position = Vector2(411, 149)
+scale = Vector2(1.17614, 0.900568)
+texture = ExtResource("1_n5ld5")
+
+[node name="Enter Button" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 445.0
+offset_top = 233.0
+offset_right = 493.0
+offset_bottom = 281.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "enter"
+script = ExtResource("1_ifohy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Enter Button"]
+texture = ExtResource("1_sd2gl")
+centered = false
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 388.0
+offset_top = 231.0
+offset_right = 436.0
+offset_bottom = 279.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "0"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button"]
+texture = ExtResource("4_casjn")
+centered = false
+
+[node name="Button1" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 327.0
+offset_top = 61.0
+offset_right = 375.0
+offset_bottom = 109.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "1"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button1"]
+texture = ExtResource("5_l7u6g")
+centered = false
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 387.0
+offset_top = 61.0
+offset_right = 435.0
+offset_bottom = 109.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "2"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button2"]
+texture = ExtResource("5_drt3t")
+centered = false
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 445.0
+offset_top = 61.0
+offset_right = 493.0
+offset_bottom = 109.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "3"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button3"]
+texture = ExtResource("6_05abm")
+centered = false
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 327.0
+offset_top = 121.0
+offset_right = 375.0
+offset_bottom = 169.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "4"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button4"]
+texture = ExtResource("7_vr44c")
+centered = false
+
+[node name="Button5" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 387.0
+offset_top = 121.0
+offset_right = 435.0
+offset_bottom = 169.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "5"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button5"]
+texture = ExtResource("8_jmdur")
+centered = false
+
+[node name="Button6" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 445.0
+offset_top = 121.0
+offset_right = 493.0
+offset_bottom = 169.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "6"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button6"]
+texture = ExtResource("9_up2ia")
+centered = false
+
+[node name="Button7" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 327.0
+offset_top = 177.0
+offset_right = 375.0
+offset_bottom = 225.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "7"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button7"]
+texture = ExtResource("10_8j8y3")
+centered = false
+
+[node name="Button8" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 387.0
+offset_top = 177.0
+offset_right = 435.0
+offset_bottom = 225.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "8"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button8"]
+texture = ExtResource("11_b8xg2")
+centered = false
+
+[node name="Button9" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 444.0
+offset_top = 177.0
+offset_right = 492.0
+offset_bottom = 225.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "9"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Button9"]
+texture = ExtResource("12_d227y")
+centered = false
+
+[node name="clear" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 327.0
+offset_top = 231.0
+offset_right = 375.0
+offset_bottom = 279.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "clear"
+script = ExtResource("1_vqrc5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/clear"]
+texture = ExtResource("14_7igwu")
+centered = false
+
+[node name="Display" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 327.0
+offset_top = 7.0
+offset_right = 494.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Enter Pin Code ..."
+label_settings = SubResource("LabelSettings_luptp")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_biiex")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Display"]
+z_index = -1
+scale = Vector2(1.0375, 1)
+texture = ExtResource("16_6xxbd")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Display"]
+visible = false
+z_index = -1
+scale = Vector2(1.0375, 1)
+texture = ExtResource("17_7y61m")
+centered = false
+
+[connection signal="timeout" from="invalidTimer" to="CanvasLayer/Display" method="_on_invalid_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Enter Button" to="CanvasLayer/Display" method="_on_enter_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Display" method="_on_button_pressed"]
+[connection signal="sendData" from="CanvasLayer/Button" to="CanvasLayer/Display" method="_on_button_send_data"]
+[connection signal="pressed" from="CanvasLayer/Button1" to="CanvasLayer/Display" method="_on_button_pressed"]
+[connection signal="sendData" from="CanvasLayer/Button1" to="CanvasLayer/Display" method="_on_button_send_data"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Display" method="_on_button_pressed"]
+[connection signal="sendData" from="CanvasLayer/Button2" to="CanvasLayer/Display" method="_on_button_2_send_data"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Display" method="_on_button_pressed"]
+[connection signal="sendData" from="CanvasLayer/Button3" to="CanvasLayer/Display" method="_on_button_3_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button4" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button5" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button6" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button7" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button8" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/Button9" to="CanvasLayer/Display" method="_on_button_4_send_data"]
+[connection signal="sendData" from="CanvasLayer/clear" to="CanvasLayer/Display" method="_on_clear_send_data"]
