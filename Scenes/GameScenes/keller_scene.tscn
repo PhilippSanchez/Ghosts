@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy08ikw7j7uve"]
+[gd_scene load_steps=6 format=3 uid="uid://cy08ikw7j7uve"]
 
 [ext_resource type="Texture2D" uid="uid://b55y6eckktd5y" path="res://Assets/Inviroment/Keller/keller_tiles.png" id="1_bvvsb"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_muovt"]
+[ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="3_l4f0j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fc2ow"]
 texture = ExtResource("1_bvvsb")
@@ -160,4 +161,10 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(524302, 3735552, 1, 458766, 3735552, 1, 393230, 3735552, 1, 327694, 3735552, 1, 262158, 3735552, 1, 196622, 3735552, 1, 131086, 3735552, 1, 65550, 3801088, 1, 1, 3538944, 0, 11, 3735552, 4, 65547, 3735552, 5, 131083, 3735552, 6, 12, 3801088, 4, 65548, 3801088, 5, 131084, 3801088, 6, 524290, 3801088, 4, 524291, 3801088, 4, -65522, 3997696, 4, 14, 3997696, 5, 524298, 3735552, 7, 524299, 3801088, 7, 524300, 3866624, 7)
 
 [node name="Player" parent="TileMap" instance=ExtResource("2_muovt")]
-position = Vector2(130, 72)
+position = Vector2(37, 12)
+
+[node name="switching_pin_pad" parent="." instance=ExtResource("3_l4f0j")]
+position = Vector2(16, 6)
+scenename = "res://Scenes/GameScenes/Keller_Vorraum.tscn"
+xposition_player = 12.0
+yposition_player = 85.0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl3eoa1hru7ri"]
+
+[ext_resource type="Texture2D" uid="uid://b1nglynn7hwuq" path="res://Assets/Inviroment/garten/stock.png" id="1_wdslx"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_bxon6"]
+[ext_resource type="Resource" uid="uid://b1gvfuw3xndc4" path="res://Scenes/DialogueNodes/Garten/stock.tres" id="3_62kwj"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="4_ujku2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_knl6l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_knl6l")
+
+[node name="ObjectInteractionCollision2" parent="." instance=ExtResource("2_bxon6")]
+position = Vector2(-0.52, -7.68)
+scale = Vector2(0.572, 0.92)
+textboxName = "stock_pick"
+groupName = "Player"
+dialogue_data = ExtResource("3_62kwj")
+
+[node name="Interaction" parent="." instance=ExtResource("4_ujku2")]
+visible = false
+position = Vector2(-7, -15)
+rendering_quadrant_size = 8
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("1_wdslx")

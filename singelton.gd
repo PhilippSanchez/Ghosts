@@ -5,6 +5,7 @@ var entering_gang_first = true
 var entering_gang_unten_first = true 
 var aufwach_rätsel = true 
 var passcode_keller = false
+var has_pipe = true
 
 #GUI
 
@@ -13,7 +14,9 @@ signal karmahit
 var currentKarma: int = 4
 var newKarma : int 
 
-
+#Enviroment
+var keller_open = false
+var stock_picked = false
 
 
 
