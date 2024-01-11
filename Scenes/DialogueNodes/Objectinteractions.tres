@@ -9,13 +9,14 @@ starts = {
 "Bett": &"0_3",
 "SChrank1Interaction": &"0_2",
 "Schreibtisch": &"0_5",
+"Tutorial": &"0_7",
 "Tür": &"0_1",
 "Waking_up_seq": &"0_4"
 }
 nodes = {
 "0_1": {
 "link": &"1_4",
-"offset": Vector2(-760, 740),
+"offset": Vector2(-1120, 760),
 "start_id": "Tür"
 },
 "0_2": {
@@ -42,6 +43,11 @@ nodes = {
 "link": &"1_19",
 "offset": Vector2(-840, 2160),
 "start_id": "AufwachraumTür"
+},
+"0_7": {
+"link": &"1_21",
+"offset": Vector2(-898.221, 2775.82),
+"start_id": "Tutorial"
 },
 "1_1": {
 "dialogue": "Ein Bett. ",
@@ -85,7 +91,7 @@ nodes = {
 }
 },
 "size": Vector2(300.001, 492),
-"speaker": "???"
+"speaker": "Freundliche Stimme"
 },
 "1_12": {
 "dialogue": "Unser Held entschließt sicch das Buch nicht zu lesen ",
@@ -98,7 +104,7 @@ nodes = {
 }
 },
 "size": Vector2(300.001, 431),
-"speaker": "??? "
+"speaker": "Freundliche Stimme"
 },
 "1_13": {
 "dialogue": "innerhalb des Buches befindet sich ein Schlüssel",
@@ -111,7 +117,7 @@ nodes = {
 }
 },
 "size": Vector2(300.001, 431),
-"speaker": "???"
+"speaker": "Freundliche Stimme"
 },
 "1_14": {
 "dialogue": "Ich entfdliehe der Einsamkeit...",
@@ -124,7 +130,7 @@ nodes = {
 }
 },
 "size": Vector2(300.001, 431.001),
-"speaker": "???"
+"speaker": "Freundliche Stimme"
 },
 "1_15": {
 "dialogue": "Wow sag bloß...",
@@ -167,11 +173,11 @@ nodes = {
 },
 "1_18": {
 "dialogue": "Vescrhlossen! Mist!!",
-"offset": Vector2(-200, 860),
+"offset": Vector2(-540, 760),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_24",
 "text": ""
 }
 },
@@ -189,7 +195,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 431),
-"speaker": "???"
+"speaker": "Freundliche Stimme"
 },
 "1_2": {
 "dialogue": "Ein Schrank. Er ist von einer dicken Staubschicht bedeckt.",
@@ -222,6 +228,60 @@ nodes = {
 "size": Vector2(300.001, 492),
 "speaker": "Ghost"
 },
+"1_21": {
+"dialogue": "Wo bin ich? ",
+"offset": Vector2(-600, 2720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_22",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_22": {
+"dialogue": "Keine Angst es ist alles gut. 
+Du bist endlich aufgewacht! ",
+"offset": Vector2(-240, 2720),
+"options": {
+0: {
+"condition": {},
+"link": &"1_23",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme"
+},
+"1_23": {
+"dialogue": "Schau dich doch etwas um. 
+Bei der Fußmatte ist eine TÜRE versuche sie doch mal zu benutzen",
+"offset": Vector2(100, 2720),
+"options": {
+0: {
+"condition": {},
+"link": &"3_10",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme "
+},
+"1_24": {
+"dialogue": "Es gibt bestimmt eine Lösung für dieses Rätsel. Schau dich weiter im Raum um",
+"offset": Vector2(-220, 760),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme"
+},
 "1_3": {
 "dialogue": "Kommt er dir bekannt vor?",
 "offset": Vector2(460, 240),
@@ -237,7 +297,7 @@ nodes = {
 },
 "1_4": {
 "dialogue": "Unser Held rüttelt an der Tür. Sie bewegt sich nicht...",
-"offset": Vector2(-580, 760),
+"offset": Vector2(-880, 760),
 "options": {
 0: {
 "condition": {},
@@ -316,6 +376,11 @@ nodes = {
 "3_1": {
 "link": "END",
 "offset": Vector2(800, 2340),
+"signalValue": "true"
+},
+"3_10": {
+"link": "END",
+"offset": Vector2(480, 2820),
 "signalValue": "true"
 },
 "3_2": {
