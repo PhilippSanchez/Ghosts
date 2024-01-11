@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/GameScenes/garten_scene.gd" id="1_ktvof"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_wbwch"]
 [ext_resource type="PackedScene" uid="uid://dl3eoa1hru7ri" path="res://Scenes/Interacables/stock.tscn" id="3_h34nn"]
-[ext_resource type="Script" path="res://Scenes/Interacables/stock.gd" id="4_j8s1a"]
+[ext_resource type="AudioStream" uid="uid://btsxj3mwskdw0" path="res://Audio/Sounds/Collect.wav" id="5_w0c1u"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="6_wfo45"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uxmqe"]
@@ -350,12 +350,16 @@ layer_5/tile_data = PackedInt32Array(655355, 3866624, 0, 720891, 3866624, 1, 786
 [node name="Player" parent="TileMap" instance=ExtResource("2_wbwch")]
 position = Vector2(56, 73)
 
-[node name="Node2D" parent="TileMap" instance=ExtResource("3_h34nn")]
+[node name="Stick" parent="TileMap" instance=ExtResource("3_h34nn")]
 position = Vector2(226.342, 113.308)
-script = ExtResource("4_j8s1a")
+
+[node name="Succes" type="AudioStreamPlayer" parent="TileMap"]
+stream = ExtResource("5_w0c1u")
 
 [node name="switching_pin_pad" parent="." instance=ExtResource("6_wfo45")]
 position = Vector2(57, 49)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
+
+[connection signal="gotItem" from="TileMap/Stick" to="TileMap/Player" method="_on_stick_got_item"]

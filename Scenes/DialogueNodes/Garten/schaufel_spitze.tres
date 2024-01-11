@@ -1,20 +1,20 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://b1gvfuw3xndc4"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dweyoh83v73h4"]
 
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_hfe0d"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_y5t5u"]
 
 [resource]
-script = ExtResource("1_hfe0d")
+script = ExtResource("1_y5t5u")
 starts = {
-"stock_pick": &"0_1"
+"schaufel_spitze": &"0_1"
 }
 nodes = {
 "0_1": {
 "link": &"1_1",
 "offset": Vector2(148, 536),
-"start_id": "stock_pick"
+"start_id": "schaufel_spitze"
 },
 "1_1": {
-"dialogue": "Mhmm ein Stock…
+"dialogue": "Mhmm eine Verrostete SchaufelSpitze…
 ob der mir nützlich sein könnte?",
 "offset": Vector2(526, 501.5),
 "options": {
@@ -33,7 +33,7 @@ ob der mir nützlich sein könnte?",
 "speaker": "Ghost"
 },
 "1_2": {
-"dialogue": "Stock Erhalten!",
+"dialogue": "SchaufelSpitze Erhalten!",
 "offset": Vector2(1594.2, 148.02),
 "options": {
 0: {
@@ -42,12 +42,12 @@ ob der mir nützlich sein könnte?",
 "text": ""
 }
 },
-"size": Vector2(439, 498),
+"size": Vector2(438.999, 498),
 "speaker": ""
 },
 "3_1": {
 "link": &"1_2",
-"offset": Vector2(1240, 580),
+"offset": Vector2(1282, 585),
 "signalValue": "true"
 }
 }

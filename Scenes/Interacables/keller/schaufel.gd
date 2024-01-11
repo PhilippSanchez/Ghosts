@@ -1,13 +1,12 @@
 extends Node2D
 
 @onready var singelton = get_node("/root/Singelton")
-
 @export var itemRes: InventoryItem
 
 signal gotItem
-	
-func _on_object_interaction_collision_2_interaction_true():
-	singelton.passcode_keller = true
-	gotItem.emit(itemRes)
-	$Succes.play()
 
+func _on_object_interaction_collision_2_interaction_true():
+	singelton.stock_picked = true
+	gotItem.emit(itemRes)
+	queue_free()
+	$"../Succes".play()

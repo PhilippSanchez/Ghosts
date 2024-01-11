@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl3eoa1hru7ri"]
+[gd_scene load_steps=9 format=3 uid="uid://dl3eoa1hru7ri"]
 
+[ext_resource type="Script" path="res://Scenes/Interacables/stock.gd" id="1_d7y6b"]
 [ext_resource type="Texture2D" uid="uid://b1nglynn7hwuq" path="res://Assets/Inviroment/garten/stock.png" id="1_wdslx"]
+[ext_resource type="Resource" uid="uid://5xrdn7tjq2ae" path="res://Assets/GUI/items/stock.tres" id="2_5qci8"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="2_bxon6"]
 [ext_resource type="Resource" uid="uid://b1gvfuw3xndc4" path="res://Scenes/DialogueNodes/Garten/stock.tres" id="3_62kwj"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="4_ujku2"]
+[ext_resource type="Script" path="res://Scenes/Interacables/Sprite2D2.gd" id="5_s50ef"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_knl6l"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_d7y6b")
+itemRes = ExtResource("2_5qci8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -27,4 +32,8 @@ position = Vector2(-7, -15)
 rendering_quadrant_size = 8
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_wdslx")
+script = ExtResource("5_s50ef")
+
+[connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

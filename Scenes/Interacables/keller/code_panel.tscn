@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ux8whmecx3j5"]
+[gd_scene load_steps=22 format=3 uid="uid://ux8whmecx3j5"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/Enter_Button.gd" id="1_ifohy"]
 [ext_resource type="Texture2D" uid="uid://bofklbmt3muic" path="res://Assets/GUI/codepanel/codbox.png" id="1_n5ld5"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bsmetxbqgsecd" path="res://Assets/GUI/codepanel/clear.png" id="14_7igwu"]
 [ext_resource type="Texture2D" uid="uid://bipqj17de3us2" path="res://Assets/GUI/codepanel/display.png" id="16_6xxbd"]
 [ext_resource type="Texture2D" uid="uid://c175qgf6dfne8" path="res://Assets/GUI/codepanel/display_error.png" id="17_7y61m"]
+[ext_resource type="AudioStream" uid="uid://btsxj3mwskdw0" path="res://Audio/Sounds/Collect.wav" id="19_6epjm"]
 
 [sub_resource type="Theme" id="Theme_hvtta"]
 default_base_scale = 0.79
@@ -43,6 +44,7 @@ offset_bottom = 646.0
 color = Color(0.32549, 0.372549, 0.411765, 1)
 
 [node name="invalidTimer" type="Timer" parent="."]
+process_callback = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 offset = Vector2(157, 150)
@@ -53,6 +55,21 @@ z_index = -2
 position = Vector2(411, 149)
 scale = Vector2(1.17614, 0.900568)
 texture = ExtResource("1_n5ld5")
+
+[node name="exipt" type="Button" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 905.0
+offset_top = -107.0
+offset_right = 955.0
+offset_bottom = -59.0
+theme = SubResource("Theme_hvtta")
+theme_type_variation = &"FlatButton"
+text = "enter"
+script = ExtResource("1_ifohy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/exipt"]
+texture = ExtResource("1_sd2gl")
+centered = false
 
 [node name="Enter Button" type="Button" parent="CanvasLayer"]
 texture_filter = 1
@@ -260,7 +277,13 @@ scale = Vector2(1.0375, 1)
 texture = ExtResource("17_7y61m")
 centered = false
 
+[node name="Succes" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_6epjm")
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="timeout" from="invalidTimer" to="CanvasLayer/Display" method="_on_invalid_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/exipt" to="CanvasLayer/Display" method="_on_exipt_pressed"]
 [connection signal="pressed" from="CanvasLayer/Enter Button" to="CanvasLayer/Display" method="_on_enter_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Display" method="_on_button_pressed"]
 [connection signal="sendData" from="CanvasLayer/Button" to="CanvasLayer/Display" method="_on_button_send_data"]
@@ -277,3 +300,4 @@ centered = false
 [connection signal="sendData" from="CanvasLayer/Button8" to="CanvasLayer/Display" method="_on_button_4_send_data"]
 [connection signal="sendData" from="CanvasLayer/Button9" to="CanvasLayer/Display" method="_on_button_4_send_data"]
 [connection signal="sendData" from="CanvasLayer/clear" to="CanvasLayer/Display" method="_on_clear_send_data"]
+[connection signal="timeout" from="Timer" to="CanvasLayer/Display" method="_on_timer_timeout"]

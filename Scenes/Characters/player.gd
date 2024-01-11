@@ -57,10 +57,26 @@ func start_torch() :
 
 
 func _on_mülleimer_office_got_item(item):
+	print("added Inventory")
 	inventory.insert(item)
 	singelton.inventory.append(item)
+	
+
+
+func _on_stick_got_item(item):
+	print("added Inventory")
+	inventory.insert(item)
+	singelton.inventory.append(item)
+
 
 func _on_area_2d_body_entered(param) : 
 	pass 
 
 		
+
+
+
+func _on_schaufel_got_item(item):
+	print("added Inventory")
+	inventory.insert(item)
+	singelton.inventory.append(item)
