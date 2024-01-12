@@ -1,20 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://cptpy8w0235fw"]
+[gd_scene load_steps=5 format=3 uid="uid://cptpy8w0235fw"]
 
 [ext_resource type="Script" path="res://Scenes/textinput_test.gd" id="1_vuo7u"]
+[ext_resource type="Script" path="res://Scenes/Interacables/keller/Label.gd" id="2_jxpiq"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_48btl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xijmo"]
+font_color = Color(0.188235, 0.709804, 0, 1)
+shadow_size = 2
+shadow_color = Color(0.615686, 1, 0.584314, 0)
+shadow_offset = Vector2(2, 2)
 
 [node name="Textinput" type="Node2D"]
 script = ExtResource("1_vuo7u")
 
-[node name="Panel" type="Panel" parent="."]
-offset_top = 1.0
-offset_right = 40.0
-offset_bottom = 41.0
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -69.0
+offset_top = -26.0
+offset_right = 1084.0
+offset_bottom = 620.0
+scale = Vector2(0.213085, 0.154359)
+color = Color(0.32549, 0.372549, 0.411765, 1)
 
-[node name="LineEdit" type="LineEdit" parent="Panel"]
-layout_mode = 0
-offset_left = -14.0
-offset_top = 5.0
-offset_right = 53.0625
-offset_bottom = 36.0
+[node name="LineEdit" type="LineEdit" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_48btl")
+offset_left = -1.0
+offset_right = 66.0625
+offset_bottom = 31.0
+scale = Vector2(1.34832, 1.34809)
+alignment = 1
 
-[connection signal="text_submitted" from="Panel/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[node name="Display" type="Label" parent="."]
+texture_filter = 1
+offset_left = -26.0
+offset_top = 40.0
+offset_right = 261.0
+offset_bottom = 91.0
+scale = Vector2(0.525928, 0.525928)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Klicken und Uhrzeit-Stunde eingeben"
+label_settings = SubResource("LabelSettings_xijmo")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_jxpiq")
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
