@@ -49,6 +49,7 @@ position = Vector2(-48, -167)
 [node name="TileMap" parent="." instance=ExtResource("8_8csy6")]
 
 [node name="Textinput" parent="." instance=ExtResource("8_8chy4")]
+visible = false
 z_index = 5
 position = Vector2(-77, -192)
 scale = Vector2(0.489987, 0.489987)
