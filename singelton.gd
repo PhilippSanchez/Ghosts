@@ -5,6 +5,8 @@ var entering_gang_first = true
 var entering_gang_unten_first = true 
 var aufwach_rätsel = true 
 var passcode_keller = false
+var has_pipe = true
+var entering_aufwachtraum_first = true 
 
 #GUI
 
