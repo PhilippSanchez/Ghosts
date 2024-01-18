@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://1ex86dymtwwy"]
+[gd_scene load_steps=7 format=3 uid="uid://1ex86dymtwwy"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/Nasius_Cutscene.gd" id="1_v3nat"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_ua2e6"]
@@ -9,6 +9,9 @@ file = "res://Assets/MovieSequenz/Nasius_crying.ogg"
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_3h4a4"]
 file = "res://Assets/MovieSequenz/PlayerIdel_Scene.ogg"
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_xm3r4"]
+file = "res://Assets/MovieSequenz/Black_Background.ogg"
 
 [node name="Nasius_Cutscene" type="Node2D"]
 script = ExtResource("1_v3nat")
@@ -39,12 +42,12 @@ stream = SubResource("VideoStreamTheora_3h4a4")
 
 [node name="Player walking" type="VideoStreamPlayer" parent="."]
 z_index = 4
-offset_left = 349.0
-offset_top = 252.0
-offset_right = 3085.0
-offset_bottom = 2300.0
+offset_left = -533.0
+offset_top = -369.0
+offset_right = 2203.0
+offset_bottom = 1679.0
 scale = Vector2(0.847791, 0.807528)
-stream = SubResource("VideoStreamTheora_3h4a4")
+stream = SubResource("VideoStreamTheora_xm3r4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -66,6 +69,6 @@ autoplay = true
 
 [connection signal="finished" from="Nasius_crying" to="." method="_on_nasius_crying_finished"]
 [connection signal="finished" from="Player Idel" to="." method="_on_player_idel_finished"]
-[connection signal="finished" from="Player walking" to="." method="_on_player_idel_finished"]
+[connection signal="finished" from="Player walking" to="." method="_on_player_walking_finished"]
 [connection signal="dialogue_ended" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_ended"]
 [connection signal="dialogue_signal" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_signal"]

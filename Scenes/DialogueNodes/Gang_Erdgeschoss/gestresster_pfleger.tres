@@ -76,7 +76,7 @@ Beeil dich!",
 },
 "1_5": {
 "dialogue": "...",
-"offset": Vector2(-2880, 380),
+"offset": Vector2(-2540, 440),
 "options": {
 0: {
 "condition": {},
@@ -89,7 +89,7 @@ Beeil dich!",
 },
 "3_1": {
 "link": &"1_5",
-"offset": Vector2(-3212.65, 486.926),
+"offset": Vector2(-2960, 480),
 "signalValue": "true"
 }
 }

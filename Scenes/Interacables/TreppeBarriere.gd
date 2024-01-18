@@ -33,7 +33,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if textbox_startable == true and dialogue_finished == false and singelton.entered_nasius == true: 
+	if textbox_startable == true and dialogue_finished == false : 
 		textbox_startable = false 
 		$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
 	pass 
