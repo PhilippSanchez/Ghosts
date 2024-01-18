@@ -4,9 +4,13 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	singelton.entered_nasius = false 
+	
+	
 	if singelton.has_pipe == true:
 		$TileMap/soulmap.show()
 		
+	if singelton.has_pipe == false:
+		$TileMap/soulmap.queue_free()
 	
 
 	

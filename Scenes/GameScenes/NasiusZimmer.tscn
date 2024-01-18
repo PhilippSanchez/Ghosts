@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="7_di6ht"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="8_gnpnt"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="9_ci1uk"]
-[ext_resource type="PackedScene" path="res://Scenes/Characters/evil_ghosts.tscn" id="10_kaa7v"]
+[ext_resource type="PackedScene" uid="uid://dkgf074v48v0d" path="res://Scenes/Characters/evil_ghosts.tscn" id="10_kaa7v"]
 [ext_resource type="Script" path="res://Scenes/Characters/evil_ghost.gd" id="11_uu0m1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b650x"]
