@@ -16,6 +16,12 @@ visible = false
 custom_minimum_size = Vector2(256, 128)
 offset_right = 256.0
 offset_bottom = 128.0
+focus_mode = 2
 script = ExtResource("1_7wia8")
 dialogue_data = ExtResource("2_pv1yd")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_0e4f0"), SubResource("RichTextEffect_ic1i5")])
+
+[connection signal="dialogue_proceeded" from="." to="." method="_on_dialogue_proceeded"]
+[connection signal="dialogue_started" from="." to="." method="_on_dialogue_started"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
