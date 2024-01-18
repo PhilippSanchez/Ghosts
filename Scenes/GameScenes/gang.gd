@@ -36,5 +36,8 @@ func _on_aufwachraum_tür_interaction_true():
 
 
 func _on_object_interaction_collision_interaction_true():
-	get_tree().change_scene_to_file("res://Scenes/GameScenes/NasiusZimmer.tscn")
+	if singelton.entered_nasius == true: 
+		get_tree().change_scene_to_file("res://Scenes/GameScenes/cutscene_nasius_crying.tscn")
+	elif singelton.entered_nasius == false: 
+		get_tree().change_scene_to_file("res://Scenes/GameScenes/NasiusZimmer.tscn")
 
