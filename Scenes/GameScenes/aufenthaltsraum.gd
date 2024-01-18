@@ -6,3 +6,8 @@ func _ready():
 		$Player.position.x = singelton.xposplayer 
 		$Player.position.y = singelton.yposplayer 
 		
+
+
+func _on_object_interaction_collision_interaction_true():
+	$Textinput.show() 
+	pass # Replace with function body.

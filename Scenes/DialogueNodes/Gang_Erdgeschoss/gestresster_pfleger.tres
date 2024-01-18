@@ -71,12 +71,12 @@ Beeil dich!",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Gestresster Geist"
 },
 "1_5": {
 "dialogue": "...",
-"offset": Vector2(-2660, 420),
+"offset": Vector2(-2880, 380),
 "options": {
 0: {
 "condition": {},
@@ -84,18 +84,13 @@ Beeil dich!",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Gestresster Geist"
 },
 "3_1": {
-"link": &"3_2",
-"offset": Vector2(-3160, 420),
-"signalValue": "true"
-},
-"3_2": {
 "link": &"1_5",
-"offset": Vector2(-2880, 420),
-"signalValue": "notagain"
+"offset": Vector2(-3212.65, 486.926),
+"signalValue": "true"
 }
 }
 variables = {}

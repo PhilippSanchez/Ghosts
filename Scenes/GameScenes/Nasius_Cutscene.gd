@@ -2,6 +2,8 @@ extends Node2D
 var play_video_noise = true  
 @onready var crying = $Nasius_crying
 @onready var idel = $"Player Idel"
+@onready var walking = $"Player walking"
+
 var next_scene = "res://Scenes/GameScenes/NasiusZimmer.tscn"
 
 
@@ -30,6 +32,9 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 	if value == "true" : 
 		crying.stop() 
 		idel.play() 
+	if value == "false" : 
+		idel.stop() 
+		
 	if value == "null" : 
 		idel.stop()
 		crying.play() 

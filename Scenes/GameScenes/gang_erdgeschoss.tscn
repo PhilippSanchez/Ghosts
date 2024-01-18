@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bvr1fquca5ave"]
+[gd_scene load_steps=22 format=3 uid="uid://bvr1fquca5ave"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/gang_erdgeschoss.gd" id="1_kdirp"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_vqhho"]
@@ -13,6 +13,8 @@
 [ext_resource type="Resource" uid="uid://c5s6dq4m385l5" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/glasskaste.tres" id="11_tpgnw"]
 [ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode_gang_unten.gd" id="13_uvbvp"]
 [ext_resource type="Script" path="res://Scenes/Characters/pfleger_rennt.gd" id="14_0quvm"]
+[ext_resource type="Script" path="res://Scenes/Interacables/TreppeBarriere.gd" id="14_c462b"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/Barriere Treppe.gd" id="14_d3kae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_cu8g1")
@@ -416,6 +418,8 @@ sources/1 = SubResource("TileSetAtlasSource_rgwuf")
 sources/2 = SubResource("TileSetAtlasSource_i2ucf")
 sources/3 = SubResource("TileSetAtlasSource_yoggm")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pcrqc"]
+
 [node name="HallwayScene" type="Node2D"]
 script = ExtResource("1_kdirp")
 
@@ -514,5 +518,28 @@ dialogue_data = ExtResource("8_aylcj")
 [node name="Marker2D" type="Marker2D" parent="Pfelger_rennt"]
 position = Vector2(229, -13)
 
-[connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt" method="_on_direcrinteraction_interaction_true"]
+[node name="Barriere Treppe" type="Node" parent="."]
+script = ExtResource("14_d3kae")
+
+[node name="InteractionTreppe" parent="Barriere Treppe" instance=ExtResource("7_kal3k")]
+position = Vector2(191, 156)
+scale = Vector2(0.675198, 0.386203)
+script = ExtResource("14_c462b")
+textboxName = "DontLeave"
+dialogue_data = ExtResource("11_tpgnw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Barriere Treppe"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriere Treppe/StaticBody2D"]
+position = Vector2(196, 173)
+scale = Vector2(10.2991, 0.913393)
+shape = SubResource("CapsuleShape2D_pcrqc")
+
+[node name="Interaction" parent="Barriere Treppe" instance=ExtResource("9_hjsm5")]
+visible = false
+z_index = 5
+position = Vector2(180, 49)
+
 [connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt/Direcrinteraction" method="_on_interaction_true"]
+[connection signal="area_entered" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_entered"]
+[connection signal="area_exited" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_exited"]
