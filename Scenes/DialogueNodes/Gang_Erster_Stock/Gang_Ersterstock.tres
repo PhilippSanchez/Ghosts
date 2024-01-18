@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_m3iw3")
 starts = {
+"TreppeBarriere": &"0_3",
 "door_locked_1": &"0_2",
 "door_locked_2": &"0_4",
 "enter_gang": &"0_1"
@@ -19,6 +20,11 @@ nodes = {
 "link": &"1_6",
 "offset": Vector2(-3880, 300),
 "start_id": "door_locked_1"
+},
+"0_3": {
+"link": &"1_7",
+"offset": Vector2(-3979, 1107),
+"start_id": "TreppeBarriere"
 },
 "0_4": {
 "link": &"1_8",
@@ -103,6 +109,19 @@ nodes = {
 "size": Vector2(606.72, 550),
 "speaker": "Ghost"
 },
+"1_7": {
+"dialogue": "Warte hörst du nicht das weinen? Du solltest schauen wo es herkommt bevor du runter gehst!",
+"offset": Vector2(-3740, 1040),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme"
+},
 "1_8": {
 "dialogue": "Kein zutritt..",
 "offset": Vector2(-3200, 2300),
@@ -113,8 +132,21 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(642.72, 761.681),
+"size": Vector2(642.72, 761.682),
 "speaker": "Ghost"
+},
+"1_9": {
+"dialogue": "Was wenn jemand unsere Hilfe braucht?",
+"offset": Vector2(-3420, 1040),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme"
 },
 "2_1": {
 "comment": "Vieleich durch eine randomized zahl verschiedenen Dialoge?",

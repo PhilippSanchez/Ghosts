@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c43bjybc0ahl4"]
+[gd_scene load_steps=21 format=3 uid="uid://c43bjybc0ahl4"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/gang.gd" id="1_fgtp6"]
 [ext_resource type="Texture2D" uid="uid://dmsvdkjckh4k8" path="res://Assets/Inviroment/office_tiles/office_walls.png" id="1_wgbg4"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://76ld08c1cca1" path="res://Scenes/DialogueNodes/Gang_Erster_Stock/Gang_Ersterstock.tres" id="9_itpjv"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="10_mlf6j"]
 [ext_resource type="Script" path="res://Scenes/Interacables/switching_scene_nacht_tag.gd" id="13_xwjhx"]
+[ext_resource type="Script" path="res://Scenes/Interacables/TreppeBarriere.gd" id="14_1p5f4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ow2in"]
 
@@ -3628,6 +3629,8 @@ sources/1 = SubResource("TileSetAtlasSource_7o83a")
 sources/3 = SubResource("TileSetAtlasSource_oesav")
 sources/0 = SubResource("TileSetAtlasSource_fpduv")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ta1f2"]
+
 [node name="Gang" type="Node2D"]
 script = ExtResource("1_fgtp6")
 
@@ -3646,7 +3649,7 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(-131071, 458753, 8, -65535, 458753, 9, -131063, 458753, 8, -65527, 458753, 9, -131055, 458753, 8, -65519, 458753, 9, -131069, 655361, 44, -65533, 655361, 45, 3, 655361, 46, -131068, 720897, 44, -65532, 720897, 45, 4, 720897, 46, -131059, 655361, 44, -65523, 655361, 45, 13, 655361, 46, -131058, 720897, 44, -65522, 720897, 45, 14, 720897, 46, -131052, 655361, 44, -65516, 655361, 45, 20, 655361, 46, -131051, 720897, 44, -65515, 720897, 45, 21, 720897, 46, -131066, 655361, 21, -65530, 655361, 22, -131065, 720897, 21, -65529, 720897, 22, -131061, 720897, 48, -65525, 720897, 49, 11, 720897, 50, -131060, 786433, 48, -65524, 786433, 49, 12, 786433, 50)
 
 [node name="Player" parent="." instance=ExtResource("4_th8c4")]
-position = Vector2(76, 29)
+position = Vector2(24, 23)
 
 [node name="Follow Cam2" type="Camera2D" parent="Player"]
 scale = Vector2(1, 1.02053)
@@ -3694,6 +3697,22 @@ scale = Vector2(0.700614, 0.702754)
 [node name="switching_scene" parent="." instance=ExtResource("10_mlf6j")]
 position = Vector2(374, 11)
 script = ExtResource("13_xwjhx")
+
+[node name="Barriere Treppe" type="Node" parent="."]
+
+[node name="InteractionTreppe" parent="Barriere Treppe" instance=ExtResource("6_4ueqh")]
+position = Vector2(376, 2)
+scale = Vector2(0.443097, 0.736674)
+script = ExtResource("14_1p5f4")
+textboxName = "TreppeBarriere"
+dialogue_data = ExtResource("9_itpjv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Barriere Treppe"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriere Treppe/StaticBody2D"]
+position = Vector2(375, 7)
+scale = Vector2(0.922248, 0.575951)
+shape = SubResource("CapsuleShape2D_ta1f2")
 
 [connection signal="interaction_true" from="TürAufwachraum/AufwachraumTür" to="." method="_on_aufwachraum_tür_interaction_true"]
 [connection signal="interaction_true" from="Nasius_Tür/ObjectInteractionCollision" to="." method="_on_object_interaction_collision_interaction_true"]
