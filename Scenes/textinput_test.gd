@@ -22,4 +22,5 @@ func _on_line_edit_text_submitted(new_text):
 
 func _on_object_interaction_collision_interaction_true():
 	$".".show() 
+	$"../clock".play()
 	pass # Replace with function body.

@@ -40,13 +40,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	#$CanvasLayer/ObjectInteractionsDialog.grab_focus() 
 	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
 		textbox_startable = false 
 		if second_dialogue_true == true && second_dialogue_name != "":
 			$CanvasLayer/ObjectInteractionsDialog.start(second_dialogue_name) 
+			#$CanvasLayer/ObjectInteractionsDialog.grab_focus()
+			
 		else: 
 			$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
-	pass 
+			#$CanvasLayer/ObjectInteractionsDialog.grab_focus()
+
 	
 # Prüft ob der Player in der Nähe ist
 func _on_area_entered(area):
@@ -65,7 +69,7 @@ func _on_area_entered(area):
 func _on_area_exited(_area):
 	textbox_startable = false 
 	interaction.hide()
-	
+	player.dialoge_active = false 
 	pass # Replace with function body.
 
 
@@ -100,19 +104,12 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 
 func _on_object_interactions_dialog_dialogue_ended():
 	$CanvasLayer/TextsceneBarrier.hide() 
-	
-	
-	
 	print(player, "false")
 	player.dialoge_active = false 
 	textbox_startable = false  
-	
-	pass # Replace with function body.
 
 
 func _on_object_interactions_dialog_dialogue_started(_id):
 	$CanvasLayer/TextsceneBarrier.show() 
-	
 	player.dialoge_active = true 
 	print(player, "true")
-	pass # Replace with function body.

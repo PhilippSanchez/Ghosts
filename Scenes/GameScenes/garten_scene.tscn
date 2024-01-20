@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://docj351kx05c1"]
+[gd_scene load_steps=10 format=3 uid="uid://docj351kx05c1"]
 
 [ext_resource type="Texture2D" uid="uid://v08p7xyvprwj" path="res://Assets/Inviroment/garten/garten_tileset.png" id="1_7nnh8"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/garten_scene.gd" id="1_ktvof"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dl3eoa1hru7ri" path="res://Scenes/Interacables/stock.tscn" id="3_h34nn"]
 [ext_resource type="AudioStream" uid="uid://btsxj3mwskdw0" path="res://Audio/Sounds/Collect.wav" id="5_w0c1u"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="6_wfo45"]
+[ext_resource type="AudioStream" uid="uid://2fhnhqa7hr7d" path="res://Audio/Sounds/Wind_Ambience_02.wav" id="7_411y0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uxmqe"]
 texture = ExtResource("1_7nnh8")
@@ -353,13 +354,18 @@ position = Vector2(56, 73)
 [node name="Stick" parent="TileMap" instance=ExtResource("3_h34nn")]
 position = Vector2(226.342, 113.308)
 
-[node name="Succes" type="AudioStreamPlayer" parent="TileMap"]
+[node name="Succes" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_w0c1u")
+volume_db = -12.0
 
 [node name="switching_pin_pad" parent="." instance=ExtResource("6_wfo45")]
 position = Vector2(57, 49)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_411y0")
+volume_db = -30.0
 
 [connection signal="gotItem" from="TileMap/Stick" to="TileMap/Player" method="_on_stick_got_item"]

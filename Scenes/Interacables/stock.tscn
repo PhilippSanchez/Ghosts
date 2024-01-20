@@ -29,7 +29,6 @@ dialogue_data = ExtResource("3_62kwj")
 [node name="Interaction" parent="." instance=ExtResource("4_ujku2")]
 visible = false
 position = Vector2(-7, -15)
-rendering_quadrant_size = 8
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 texture_filter = 1

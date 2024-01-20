@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dqfdsfm3x0byr"]
+[gd_scene load_steps=17 format=3 uid="uid://dqfdsfm3x0byr"]
 
 [ext_resource type="Texture2D" uid="uid://b1773qk7xwnr5" path="res://Assets/Characters/Skeleton.png" id="1_icw8i"]
 [ext_resource type="Script" path="res://Scenes/Characters/player.gd" id="1_wgfm1"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Scenes/GameScenes/CanvasLayer.gd" id="5_84wi0"]
 [ext_resource type="PackedScene" uid="uid://b3vi6vv4uhl57" path="res://Scenes/Interacables/Office/inventory_GUI.tscn" id="6_1ej2n"]
 [ext_resource type="PackedScene" uid="uid://ch1wl42qyfnpd" path="res://GUI/Karma/karma_container.tscn" id="7_3whqy"]
+[ext_resource type="AudioStream" uid="uid://14mc2w0gp0yy" path="res://Audio/Sounds/BUBG_Walking_FX_.wav" id="8_6xdfh"]
+[ext_resource type="AudioStream" uid="uid://dnr6q8hgm8qmc" path="res://Audio/Sounds/BUBG_Walking_FX_2_.wav" id="9_mkeny"]
 
 [sub_resource type="Animation" id="Animation_k2b5f"]
 length = 0.001
@@ -40,6 +42,34 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("footstep")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("footstep2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_r32v8"]
 resource_name = "walk_left"
@@ -57,6 +87,34 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(2, 0), Vector2i(2, 1), Vector2i(2, 2), Vector2i(2, 3)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("footstep")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("footstep2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_pnwfi"]
@@ -76,6 +134,34 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(3, 0), Vector2i(3, 1), Vector2i(3, 2), Vector2i(3, 3)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("footstep")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("footstep2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_xf614"]
 resource_name = "walk_up"
@@ -93,6 +179,34 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(1, 0), Vector2i(1, 1), Vector2i(1, 2), Vector2i(1, 3)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("footstep")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("footstep2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oh2n7"]
@@ -117,7 +231,7 @@ inventory = ExtResource("2_pr5kk")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 visible = false
 position = Vector2(-5, -9)
-color = Color(0.286275, 0.411765, 0.584314, 1)
+color = Color(0.282353, 0.443137, 0.403922, 1)
 blend_mode = 2
 texture = ExtResource("3_fjl27")
 texture_scale = 1.6
@@ -166,5 +280,13 @@ offset_left = 89.0
 offset_top = 13.0
 offset_right = 165.0
 offset_bottom = 30.0
+
+[node name="footstep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6xdfh")
+volume_db = -24.0
+
+[node name="footstep2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mkeny")
+volume_db = -24.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

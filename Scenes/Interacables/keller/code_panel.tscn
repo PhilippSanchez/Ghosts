@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ux8whmecx3j5"]
+[gd_scene load_steps=25 format=3 uid="uid://ux8whmecx3j5"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/Enter_Button.gd" id="1_ifohy"]
 [ext_resource type="Texture2D" uid="uid://bofklbmt3muic" path="res://Assets/GUI/codepanel/codbox.png" id="1_n5ld5"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://bipqj17de3us2" path="res://Assets/GUI/codepanel/display.png" id="16_6xxbd"]
 [ext_resource type="Texture2D" uid="uid://c175qgf6dfne8" path="res://Assets/GUI/codepanel/display_error.png" id="17_7y61m"]
 [ext_resource type="AudioStream" uid="uid://btsxj3mwskdw0" path="res://Audio/Sounds/Collect.wav" id="19_6epjm"]
+[ext_resource type="AudioStream" uid="uid://dr1xpt54fqemh" path="res://Audio/Sounds/Key_Pad.mp3" id="19_ur66f"]
+[ext_resource type="AudioStream" uid="uid://cmjy2q360mxep" path="res://Audio/Sounds/denied.wav" id="20_r65sj"]
+[ext_resource type="AudioStream" uid="uid://epe6do7caeay" path="res://Audio/Sounds/Acces.wav" id="20_vvqpa"]
 
 [sub_resource type="Theme" id="Theme_hvtta"]
 default_base_scale = 0.79
@@ -276,6 +279,18 @@ z_index = -1
 scale = Vector2(1.0375, 1)
 texture = ExtResource("17_7y61m")
 centered = false
+
+[node name="keypad" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("19_ur66f")
+volume_db = -16.0
+
+[node name="access" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("20_vvqpa")
+volume_db = -16.0
+
+[node name="denied" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("20_r65sj")
+volume_db = -16.0
 
 [node name="Succes" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_6epjm")

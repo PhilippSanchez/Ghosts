@@ -67,11 +67,6 @@ func _on_stick_got_item(item):
 	print("added Inventory")
 	inventory.insert(item)
 	singelton.inventory.append(item)
-
-
-func _on_area_2d_body_entered(param) : 
-	pass 
-
 		
 
 

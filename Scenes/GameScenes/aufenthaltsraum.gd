@@ -4,5 +4,4 @@ extends Node2D
 func _ready():
 	if singelton.xposplayer : 
 		$Player.position.x = singelton.xposplayer 
-		$Player.position.y = singelton.yposplayer 
-		
+		$Player.position.y = singelton.yposplayer

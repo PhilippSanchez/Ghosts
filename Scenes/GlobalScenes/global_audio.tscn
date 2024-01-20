@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://db7tfdiwttf46"]
+
+[ext_resource type="AudioStream" uid="uid://dy2o6n8e3ndb6" path="res://Audio/Music/gonzo_start_game_sound_mbay.mp3" id="1_m7hho"]
+
+[node name="Global Audio" type="AudioStreamPlayer"]
+stream = ExtResource("1_m7hho")
+volume_db = -24.0

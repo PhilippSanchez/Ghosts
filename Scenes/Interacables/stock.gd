@@ -10,5 +10,5 @@ func _on_object_interaction_collision_2_interaction_true():
 	singelton.stock_picked = true
 	gotItem.emit(itemRes)
 	queue_free()
-	$"../Succes".play()
+	$"../../Succes".play()
 

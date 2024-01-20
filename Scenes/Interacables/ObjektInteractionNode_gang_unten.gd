@@ -47,7 +47,6 @@ func _on_area_entered(area):
 		textbox_startable = true 
 		
 		
-		
 	
 	pass # Replace with function body.
 

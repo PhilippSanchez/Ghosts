@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb6yrd2u1ivay"]
+[gd_scene load_steps=6 format=3 uid="uid://bb6yrd2u1ivay"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/starting_scene.gd" id="1_7mqy3"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="1_y8r7g"]
+[ext_resource type="AudioStream" uid="uid://c4x2pwon2mv26" path="res://Audio/Sounds/Space_Atmospheric_01.wav" id="3_5g8u6"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kynka"]
 file = "res://Assets/MovieSequenz/Background.ogg"
@@ -36,6 +37,11 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 start_id = "Waking_up_seq"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5g8u6")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="finished" from="BAckground_eyes" to="." method="_on_b_ackground_eyes_finished"]
 [connection signal="finished" from="Background_black" to="." method="_on_background_black_finished"]
