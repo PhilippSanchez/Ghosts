@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo6mlx5hnat2a"
+path="res://.godot/imported/White room waking up again_new_Entwurf_nochnichtfertig.mp3-18d5911b3b4878d1c34d720f78882a19.mp3str"
+
+[deps]
+
+source_file="res://Assets/Musik/White room waking up again_new_Entwurf_nochnichtfertig.mp3"
+dest_files=["res://.godot/imported/White room waking up again_new_Entwurf_nochnichtfertig.mp3-18d5911b3b4878d1c34d720f78882a19.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://ehu61yj3jc3q"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_co1b6"]
+
+[resource]
+script = ExtResource("1_co1b6")
+starts = {
+"loch": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(100, 220),
+"start_id": "loch"
+},
+"1_1": {
+"dialogue": "Der Boden sieht komisch aus als hätte jemand hier etwas umgegraben",
+"offset": Vector2(860, 220),
+"options": {
+0: {
+"condition": {},
+"link": &"3_3",
+"text": "Schaufel benutzen"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(952, 1037),
+"speaker": "Stimme"
+},
+"1_2": {
+"dialogue": "Oh da ist etwas... könnte das nasius Pfeife sein?",
+"offset": Vector2(2520, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(647.001, 688),
+"speaker": "Stimme"
+},
+"1_3": {
+"dialogue": "Das ist sie ... aber ... Das ist ja eine richtige Pfeife...",
+"offset": Vector2(3340, 140),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(703, 683),
+"speaker": "Stimme"
+},
+"1_4": {
+"dialogue": "Pfeife erhalten",
+"offset": Vector2(4820, -40),
+"options": {
+0: {
+"condition": {},
+"link": &"3_2",
+"text": ""
+}
+},
+"size": Vector2(969.999, 696),
+"speaker": "..."
+},
+"3_1": {
+"link": &"1_4",
+"offset": Vector2(4217.68, 404.76),
+"signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(6063.04, 24.76),
+"signalValue": "null"
+},
+"3_3": {
+"link": &"1_2",
+"offset": Vector2(2048, 339.76),
+"signalValue": "false"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

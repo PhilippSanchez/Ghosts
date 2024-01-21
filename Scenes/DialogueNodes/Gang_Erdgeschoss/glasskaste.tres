@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_obq0r")
 starts = {
+"DontLeave": &"0_2",
 "GK_1": &"0_1"
 }
 nodes = {
@@ -12,6 +13,11 @@ nodes = {
 "link": &"5_1",
 "offset": Vector2(-900, -520),
 "start_id": "GK_1"
+},
+"0_2": {
+"link": &"1_10",
+"offset": Vector2(-880, 320),
+"start_id": "DontLeave"
 },
 "1_1": {
 "dialogue": "Na, was treibt dich hier so allein rum? Hast du nichts Besseres zu tun? Oder willst du dich nur verlaufen?",
@@ -28,8 +34,47 @@ nodes = {
 "text": "Fragen wer er ist"
 }
 },
-"size": Vector2(685.002, 648.999),
+"size": Vector2(685.001, 648.998),
 "speaker": "..."
+},
+"1_10": {
+"dialogue": "HAAAALT! Wohin des weges? ",
+"offset": Vector2(-160, 260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(300, 431),
+"speaker": "Eric"
+},
+"1_11": {
+"dialogue": "Ich ähh... naja raus hier halt",
+"offset": Vector2(180, 260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 431),
+"speaker": "Ghost"
+},
+"1_12": {
+"dialogue": "Nichts da! Du hast hier noch was zu erledigen",
+"offset": Vector2(560, 260),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 431),
+"speaker": "Eric"
 },
 "1_2": {
 "dialogue": "Ähm, könntest du mir sagen, wo ich hier bin?",
@@ -54,7 +99,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(960.998, 645.919),
+"size": Vector2(960.997, 645.919),
 "speaker": "..."
 },
 "1_4": {
@@ -67,7 +112,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(720.997, 602.001),
+"size": Vector2(720.998, 602.001),
 "speaker": "Ghost"
 },
 "1_5": {
@@ -80,7 +125,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(1022.68, 628.283),
+"size": Vector2(1022.68, 628.282),
 "speaker": "..."
 },
 "1_6": {
@@ -93,7 +138,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(765.006, 482),
+"size": Vector2(765.005, 482),
 "speaker": "Eric"
 },
 "1_7": {
@@ -111,7 +156,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(825.588, 709.44),
+"size": Vector2(825.585, 709.44),
 "speaker": "..."
 },
 "1_8": {
@@ -129,7 +174,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(870.229, 757.366),
+"size": Vector2(870.228, 757.367),
 "speaker": "Eric"
 },
 "1_9": {
@@ -143,7 +188,7 @@ Und jetzt verschwinde und lass mich in Ruhe. Es gibt hier genug zu tun, ohne das
 "text": ""
 }
 },
-"size": Vector2(817.999, 848),
+"size": Vector2(818, 848),
 "speaker": "Eric"
 },
 "2_1": {
@@ -151,7 +196,7 @@ Und jetzt verschwinde und lass mich in Ruhe. Es gibt hier genug zu tun, ohne das
 "offset": Vector2(-1300, -520),
 "size": {
 "x": 322.0,
-"y": 345.001
+"y": 375.0
 }
 },
 "4_1": {

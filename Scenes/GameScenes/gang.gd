@@ -3,10 +3,15 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if singelton.entered_nasius == true : 
+		$switching_scene.queue_free()
+	
+	
 	if singelton.entered_nasius == false : 
 		print("hit")
 		$"Nasius_Tür/ObjectInteractionCollision".second_dialogue_name = "NasiusDoor2"
 		$"Nasius_Tür/ObjectInteractionCollision".second_dialogue_true = true 
+		$"Barriere Treppe".queue_free()
 		
 	
 	if singelton.xposplayer: 
@@ -31,5 +36,8 @@ func _on_aufwachraum_tür_interaction_true():
 
 
 func _on_object_interaction_collision_interaction_true():
-	get_tree().change_scene_to_file("res://Scenes/GameScenes/NasiusZimmer.tscn")
+	if singelton.entered_nasius == true: 
+		get_tree().change_scene_to_file("res://Scenes/GameScenes/cutscene_nasius_crying.tscn")
+	elif singelton.entered_nasius == false: 
+		get_tree().change_scene_to_file("res://Scenes/GameScenes/NasiusZimmer.tscn")
 

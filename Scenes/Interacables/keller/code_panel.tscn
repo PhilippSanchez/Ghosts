@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://ux8whmecx3j5"]
+[gd_scene load_steps=26 format=3 uid="uid://ux8whmecx3j5"]
 
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/Enter_Button.gd" id="1_ifohy"]
 [ext_resource type="Texture2D" uid="uid://bofklbmt3muic" path="res://Assets/GUI/codepanel/codbox.png" id="1_n5ld5"]
 [ext_resource type="Texture2D" uid="uid://ca5g86xmrc7ys" path="res://Assets/GUI/codepanel/button.png" id="1_sd2gl"]
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/pinpad.gd" id="1_vqrc5"]
+[ext_resource type="Texture2D" uid="uid://dy61mtt4t58y1" path="res://Assets/GUI/codepanel/exitbtnt.png" id="3_7ilpl"]
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/Label.gd" id="3_biiex"]
 [ext_resource type="Texture2D" uid="uid://bc5lq5uiokwb6" path="res://Assets/GUI/codepanel/Button_0.png" id="4_casjn"]
 [ext_resource type="Texture2D" uid="uid://do3hcplm08ttq" path="res://Assets/GUI/codepanel/Button_2.png" id="5_drt3t"]
@@ -61,17 +62,17 @@ texture = ExtResource("1_n5ld5")
 
 [node name="exipt" type="Button" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 905.0
-offset_top = -107.0
-offset_right = 955.0
-offset_bottom = -59.0
+offset_left = 360.0
+offset_top = 350.0
+offset_right = 456.0
+offset_bottom = 398.0
 theme = SubResource("Theme_hvtta")
 theme_type_variation = &"FlatButton"
 text = "enter"
 script = ExtResource("1_ifohy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/exipt"]
-texture = ExtResource("1_sd2gl")
+texture = ExtResource("3_7ilpl")
 centered = false
 
 [node name="Enter Button" type="Button" parent="CanvasLayer"]
@@ -296,6 +297,7 @@ volume_db = -16.0
 stream = ExtResource("19_6epjm")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="timeout" from="invalidTimer" to="CanvasLayer/Display" method="_on_invalid_timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/exipt" to="CanvasLayer/Display" method="_on_exipt_pressed"]

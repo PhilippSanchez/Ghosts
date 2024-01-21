@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://d3mby1ohrvmik"]
+
+[ext_resource type="Script" path="res://inventory_item.gd" id="1_xdig1"]
+[ext_resource type="Texture2D" uid="uid://dfgyr3r5ldu7f" path="res://Assets/GUI/items/schaufel_fertig.png" id="2_wi762"]
+
+[resource]
+script = ExtResource("1_xdig1")
+name = "schaufel_ready"
+texture = ExtResource("2_wi762")

@@ -75,3 +75,16 @@ func _on_schaufel_got_item(item):
 	print("added Inventory")
 	inventory.insert(item)
 	singelton.inventory.append(item)
+
+
+func _on_werkbank_got_item(item):
+	print('added inventory')
+	inventory.insert(item)
+	singelton.inventory.append(item)
+
+
+
+func _on_loch_node_got_item(item):
+	print('added inventory')
+	inventory.insert(item)
+	singelton.inventory.append(item)

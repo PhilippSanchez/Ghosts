@@ -1,0 +1,124 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://dvrg8tomwdtj8"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_464kx"]
+
+[resource]
+script = ExtResource("1_464kx")
+starts = {
+"dialouge1": &"0_1",
+"dialouge2": &"0_2",
+"dialouge3": &"0_3"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-1040, 520),
+"start_id": "dialouge1"
+},
+"0_2": {
+"link": &"1_2",
+"offset": Vector2(-840, 1860),
+"start_id": "dialouge2"
+},
+"0_3": {
+"link": &"1_3",
+"offset": Vector2(-900, 2860),
+"start_id": "dialouge3"
+},
+"1_1": {
+"dialogue": "Oh eine Werkbank.
+Vielleicht kannst du hier etwas nützliches bauen.",
+"offset": Vector2(640, 520),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(1159.02, 977.919),
+"speaker": "Freundliche Stimme"
+},
+"1_2": {
+"dialogue": "Wenn du noch einen Stil zu deiner Schaufelspitze findest könntest du auf der Werkbank
+die Schaufel reparieren.",
+"offset": Vector2(640, 1620),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(1159.02, 834.921),
+"speaker": "Freundliche Stimme"
+},
+"1_3": {
+"dialogue": "Hey du könntest den Stock aus dem Garten an der Schaufelspitze
+befestigen.",
+"offset": Vector2(640, 2840),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": "Zusammensetzen"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(1159.02, 865.921),
+"speaker": "Freundliche Stimme"
+},
+"1_4": {
+"dialogue": "Schaufel erhalten.",
+"offset": Vector2(2640, 2660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(730, 740.999),
+"speaker": "..."
+},
+"1_5": {
+"dialogue": "Ob ich damit vielleicht was ausgraben kann.",
+"offset": Vector2(3840, 2600),
+"options": {
+0: {
+"condition": {},
+"link": &"3_2",
+"text": ""
+}
+},
+"size": Vector2(928, 743.997),
+"speaker": "Ghost"
+},
+"3_1": {
+"link": &"1_4",
+"offset": Vector2(2151.4, 2881.04),
+"signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(4986.72, 2723.16),
+"signalValue": "null"
+}
+}
+variables = {
+"inventory": {
+"type": 1,
+"value": true
+},
+"schaufelspitze": {
+"type": 1,
+"value": true
+}
+}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

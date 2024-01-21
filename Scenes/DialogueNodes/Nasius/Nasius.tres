@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_k1x6u")
 starts = {
+"NasiusCutscene": &"0_4",
 "NasiusDoor2": &"0_3",
 "Nasius_door": &"0_1",
 "nasius_main_dialouge": &"0_2"
@@ -24,6 +25,11 @@ nodes = {
 "link": &"1_17",
 "offset": Vector2(-4471.65, -44.7022),
 "start_id": "NasiusDoor2"
+},
+"0_4": {
+"link": &"1_18",
+"offset": Vector2(-4560, 1272.44),
+"start_id": "NasiusCutscene"
 },
 "1_1": {
 "dialogue": "Ein [shake rate=10.0 level=3 connected=1]Wimmern...[/shake] jemand braucht Hilfe. Sollte ich die Tür öffnen und nachsehen?",
@@ -84,7 +90,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(550.56, 701.831),
+"size": Vector2(550.561, 701.831),
 "speaker": "Ghost"
 },
 "1_13": {
@@ -97,7 +103,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(533.281, 686.798),
+"size": Vector2(533.28, 686.798),
 "speaker": "Nasius"
 },
 "1_14": {
@@ -110,7 +116,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(798.232, 793.363),
+"size": Vector2(798.233, 793.363),
 "speaker": "Nasius"
 },
 "1_15": {
@@ -124,7 +130,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(701.756, 761.678),
+"size": Vector2(701.757, 761.677),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -158,6 +164,32 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "size": Vector2(433.734, 307),
 "speaker": "???"
 },
+"1_18": {
+"dialogue": "Oh nein jetzt sieh dir diesen traurigen Haufen an. ",
+"offset": Vector2(-4420, 1380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
+"1_19": {
+"dialogue": "Unser Held sollte mit ihm Reden und herausfindend was los ist.",
+"offset": Vector2(-4100, 1380),
+"options": {
+0: {
+"condition": {},
+"link": &"3_4",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
 "1_2": {
 "dialogue": "Hey, warum weinst du?
 Kann ich dir irgendwie helfen? ",
@@ -171,6 +203,71 @@ Kann ich dir irgendwie helfen? ",
 },
 "size": Vector2(770.001, 598.997),
 "speaker": "Ghost"
+},
+"1_20": {
+"dialogue": "Ich weiß doch noch nichteinmal selbst wo ich bin. Sollte ich mich zuerst um andere Leute Probleme kümmern?",
+"offset": Vector2(-3520, 1380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_21",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Ghost"
+},
+"1_21": {
+"dialogue": "Unser Held scheint zu zweifeln, gehe weiter vorwärts. Keine Angst. Die Antwort liegt auf dem Weg in Freundschaft und miteinander.",
+"offset": Vector2(-3100, 1360),
+"options": {
+0: {
+"condition": {},
+"link": &"3_5",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
+"1_22": {
+"dialogue": "Wo wären wir geblieben ohne Mitgefühl? ",
+"offset": Vector2(-2540, 1360),
+"options": {
+0: {
+"condition": {},
+"link": &"1_23",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
+"1_23": {
+"dialogue": "Einsam...",
+"offset": Vector2(-2180, 1340),
+"options": {
+0: {
+"condition": {},
+"link": &"3_6",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
+"1_24": {
+"dialogue": "... und allein...",
+"offset": Vector2(-1600, 1340),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
 },
 "1_3": {
 "dialogue": "Ich... ich bin so verloren. 
@@ -216,7 +313,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(688.998, 572.994),
+"size": Vector2(688.999, 572.994),
 "speaker": "..."
 },
 "1_6": {
@@ -260,7 +357,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Was ist passiert?"
 }
 },
-"size": Vector2(300.004, 431.006),
+"size": Vector2(300.003, 431.006),
 "speaker": "..."
 },
 "1_9": {
@@ -299,6 +396,21 @@ Herz abziehen wenn beleidigen",
 "link": "END",
 "offset": Vector2(-3536.49, -106.31),
 "signalValue": "true"
+},
+"3_4": {
+"link": &"1_20",
+"offset": Vector2(-3760, 1380),
+"signalValue": "true"
+},
+"3_5": {
+"link": &"1_22",
+"offset": Vector2(-2761.88, 1404.98),
+"signalValue": "false"
+},
+"3_6": {
+"link": &"1_24",
+"offset": Vector2(-1840, 1340),
+"signalValue": "null"
 },
 "4_1": {
 "link": &"1_5",

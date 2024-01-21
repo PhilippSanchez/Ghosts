@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="1_44oxp"]
 [ext_resource type="Script" path="res://Scenes/Interacables/keller/schaufel.gd" id="1_lp5mb"]
 [ext_resource type="Resource" uid="uid://ducyfahpcsxls" path="res://Assets/GUI/items/schaufel.tres" id="2_0aqlq"]
-[ext_resource type="Resource" uid="uid://b1gvfuw3xndc4" path="res://Scenes/DialogueNodes/Garten/stock.tres" id="2_j7bud"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_7x0ky"]
+[ext_resource type="Resource" uid="uid://dweyoh83v73h4" path="res://Scenes/DialogueNodes/Garten/schaufel_spitze.tres" id="4_1m8fg"]
 [ext_resource type="Texture2D" uid="uid://8a6sina27mc2" path="res://Assets/GUI/items/schaufel_klein.png" id="5_4ifm4"]
 [ext_resource type="Script" path="res://Scenes/Interacables/Sprite2D2.gd" id="5_7bcae"]
 
@@ -22,9 +22,9 @@ shape = SubResource("CircleShape2D_udirj")
 [node name="ObjectInteractionCollision2" parent="." instance=ExtResource("1_44oxp")]
 position = Vector2(-0.52, -7.68)
 scale = Vector2(0.572, 0.92)
-textboxName = "stock_pick"
+textboxName = "schaufel_spitze"
 groupName = "Player"
-dialogue_data = ExtResource("2_j7bud")
+dialogue_data = ExtResource("4_1m8fg")
 
 [node name="Interaction" parent="." instance=ExtResource("3_7x0ky")]
 visible = false
@@ -35,4 +35,5 @@ texture_filter = 1
 texture = ExtResource("5_4ifm4")
 script = ExtResource("5_7bcae")
 
+[connection signal="interaction_null" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]
 [connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://iqgnkrrohc1a"]
+
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="1_datsf"]
+[ext_resource type="Script" path="res://GUI/Menu/loch.gd" id="1_ubsc1"]
+[ext_resource type="Resource" uid="uid://ehu61yj3jc3q" path="res://Scenes/DialogueNodes/Garten/loch.tres" id="2_h7p7v"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_v6g0s"]
+[ext_resource type="Texture2D" uid="uid://d106ullgghvn6" path="res://Assets/Inviroment/garten/loch.png" id="5_ub033"]
+
+[node name="LochNode" type="Node2D"]
+script = ExtResource("1_ubsc1")
+
+[node name="Loch" parent="." instance=ExtResource("1_datsf")]
+position = Vector2(200, 6)
+scale = Vector2(0.182, 0.23)
+textboxName = "loch"
+groupName = "Player"
+dialogue_data = ExtResource("2_h7p7v")
+
+[node name="Interaction" parent="." instance=ExtResource("3_v6g0s")]
+visible = false
+position = Vector2(199.33, -15)
+
+[node name="loch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(200, 8)
+texture = ExtResource("5_ub033")
+
+[connection signal="interaction_false" from="Loch" to="." method="_on_loch_interaction_false"]
+[connection signal="interaction_null" from="Loch" to="." method="_on_object_interaction_collision_2_interaction_null"]
+[connection signal="interaction_true" from="Loch" to="." method="_on_object_interaction_collision_2_interaction_true"]

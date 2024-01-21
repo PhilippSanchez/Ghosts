@@ -5,7 +5,7 @@ var entering_gang_first = true
 var entering_gang_unten_first = true 
 var aufwach_rätsel = true 
 var passcode_keller = false
-var has_pipe = true
+var has_pipe = false
 var entering_aufwachtraum_first = true 
 
 #GUI
@@ -18,6 +18,9 @@ var newKarma : int
 #Enviroment
 var keller_open = false
 var stock_picked = false
+var schaufel = false
+var schaufel_asamblet = false
+var pipe = false
 
 
 

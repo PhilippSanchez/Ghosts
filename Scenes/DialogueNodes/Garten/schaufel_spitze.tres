@@ -21,7 +21,7 @@ ob der mir nützlich sein könnte?",
 0: {
 "condition": {},
 "link": &"3_1",
-"text": "Stock nehmen"
+"text": "Spitze nehmen"
 },
 1: {
 "condition": {},
@@ -38,17 +38,22 @@ ob der mir nützlich sein könnte?",
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_2",
 "text": ""
 }
 },
 "size": Vector2(438.999, 498),
-"speaker": ""
+"speaker": "..."
 },
 "3_1": {
 "link": &"1_2",
 "offset": Vector2(1282, 585),
 "signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(2132.2, 443.48),
+"signalValue": "null"
 }
 }
 variables = {}

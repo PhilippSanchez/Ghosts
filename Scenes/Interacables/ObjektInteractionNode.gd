@@ -31,6 +31,7 @@ signal interaction_null
 
 signal take_something 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -40,16 +41,17 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	#$CanvasLayer/ObjectInteractionsDialog.grab_focus() 
+
+
 	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
 		textbox_startable = false 
 		if second_dialogue_true == true && second_dialogue_name != "":
 			$CanvasLayer/ObjectInteractionsDialog.start(second_dialogue_name) 
-			#$CanvasLayer/ObjectInteractionsDialog.grab_focus()
 			
 		else: 
 			$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
-			#$CanvasLayer/ObjectInteractionsDialog.grab_focus()
+			
+	pass 
 
 	
 # Prüft ob der Player in der Nähe ist

@@ -35,4 +35,5 @@ texture_filter = 1
 texture = ExtResource("1_wdslx")
 script = ExtResource("5_s50ef")
 
+[connection signal="interaction_null" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]
 [connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

@@ -33,22 +33,27 @@ ob der mir nützlich sein könnte?",
 "speaker": "Ghost"
 },
 "1_2": {
-"dialogue": "Stock Erhalten!",
-"offset": Vector2(1594.2, 148.02),
+"dialogue": "Stock erhalten!",
+"offset": Vector2(1900, 200),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"3_2",
 "text": ""
 }
 },
-"size": Vector2(439, 498),
-"speaker": ""
+"size": Vector2(439.001, 498),
+"speaker": "..."
 },
 "3_1": {
 "link": &"1_2",
-"offset": Vector2(1240, 580),
+"offset": Vector2(1380, 660),
 "signalValue": "true"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(2678.56, 366.48),
+"signalValue": "null"
 }
 }
 variables = {}

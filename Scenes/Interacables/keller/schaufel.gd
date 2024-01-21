@@ -6,7 +6,17 @@ extends Node2D
 signal gotItem
 
 func _on_object_interaction_collision_2_interaction_true():
-	singelton.stock_picked = true
+	$"../Player/SchaufelDialog".show()
+	$"../BG".show()
+	singelton.schaufel = true
 	gotItem.emit(itemRes)
-	queue_free()
 	$"../Succes".play()
+
+
+
+
+func _on_object_interaction_collision_2_interaction_null():
+	$"../Player/SchaufelDialog".hide()
+	$"../BG".hide()
+	queue_free()
+	
