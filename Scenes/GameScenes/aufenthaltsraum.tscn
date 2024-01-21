@@ -39,16 +39,10 @@ scenename = "res://Scenes/GameScenes/garten_scene.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
 
-[node name="switching_office" parent="." instance=ExtResource("4_seyhk")]
-position = Vector2(87, -114)
-scenename = "res://Scenes/GameScenes/garten_scene.tscn"
-xposition_player = 12.0
-yposition_player = 85.0
-
 [node name="BarriereBüro" type="Node" parent="."]
 
 [node name="InteractionWache" parent="BarriereBüro" instance=ExtResource("5_smk1t")]
-position = Vector2(71, -126)
+position = Vector2(71, -92)
 scale = Vector2(0.377689, 1.27894)
 script = ExtResource("5_kgoyh")
 textboxName = "Geistwache"
@@ -67,29 +61,13 @@ visible = false
 position = Vector2(-48, -167)
 
 [node name="TileMap" parent="." instance=ExtResource("8_8csy6")]
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
-layer_2/y_sort_enabled = false
-layer_2/y_sort_origin = 0
-layer_3/enabled = true
-layer_3/modulate = Color(1, 1, 1, 1)
-layer_3/y_sort_enabled = false
-layer_3/y_sort_origin = 0
-layer_4/enabled = true
-layer_4/modulate = Color(1, 1, 1, 1)
-layer_4/y_sort_enabled = false
-layer_4/y_sort_origin = 0
 
 [node name="clock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_tqe7y")
 volume_db = -16.0
 
 [node name="Souls" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("10_vnyvk")]
-position = Vector2(68, -129)
+position = Vector2(68, -97)
 script = ExtResource("11_hraqk")
 endPoint = NodePath("Marker2D")
 

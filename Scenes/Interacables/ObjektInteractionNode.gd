@@ -60,10 +60,6 @@ func _on_area_entered(area):
 		print("areatest")
 		interaction.show() 
 		textbox_startable = true 
-		
-		
-		
-	
 	pass # Replace with function body.
 
 
