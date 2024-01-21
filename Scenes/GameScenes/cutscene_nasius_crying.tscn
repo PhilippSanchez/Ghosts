@@ -32,7 +32,6 @@ scale = Vector2(0.467369, 0.4843)
 stream = SubResource("VideoStreamTheora_kynka")
 
 [node name="Player Idel" type="VideoStreamPlayer" parent="."]
-z_index = 4
 offset_left = 349.0
 offset_top = 252.0
 offset_right = 3085.0
@@ -41,7 +40,6 @@ scale = Vector2(0.847791, 0.807528)
 stream = SubResource("VideoStreamTheora_3h4a4")
 
 [node name="Player walking" type="VideoStreamPlayer" parent="."]
-z_index = 4
 offset_left = -533.0
 offset_top = -369.0
 offset_right = 2203.0
@@ -62,10 +60,6 @@ grow_horizontal = 2
 grow_vertical = 0
 dialogue_data = ExtResource("3_wvqww")
 start_id = "NasiusCutscene"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-pitch_scale = 0.9
-autoplay = true
 
 [connection signal="finished" from="Nasius_crying" to="." method="_on_nasius_crying_finished"]
 [connection signal="finished" from="Player Idel" to="." method="_on_player_idel_finished"]

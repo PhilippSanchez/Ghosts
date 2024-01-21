@@ -16,4 +16,3 @@ func _process(delta):
 	if pflegergeist_gestresst!= null: 
 		if pflegergeist_gestresst.position.x < 110 && singelton.entering_gang_unten_first == false: 
 			pflegergeist_gestresst.queue_free()
-			$Player.dialoge_active = false 
