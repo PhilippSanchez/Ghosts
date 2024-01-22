@@ -76,7 +76,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(585.119, 658.003),
+"size": Vector2(585.12, 658.003),
 "speaker": "..."
 },
 "1_11": {
@@ -89,7 +89,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(645.6, 760.233),
+"size": Vector2(645.601, 760.233),
 "speaker": "Ghost"
 },
 "1_12": {
@@ -128,7 +128,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(798.232, 793.363),
+"size": Vector2(798.233, 793.363),
 "speaker": "Nasius"
 },
 "1_15": {
@@ -348,7 +348,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_3": {
@@ -381,7 +381,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_31": {
@@ -394,7 +394,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_32": {
@@ -407,7 +407,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_33": {
@@ -420,8 +420,86 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
+},
+"1_34": {
+"dialogue": "Oh es tut mir leid.... ich habe sie nicht gefunden...",
+"offset": Vector2(-2600, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"1_35",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_35": {
+"dialogue": "Oh schade aber ich weiß, dass du dich bemüht hast. Ich sehe du hast dich seit dem letzten mal verändert... ",
+"offset": Vector2(-2260, 1840),
+"options": {
+0: {
+"condition": {},
+"link": &"1_36",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Nasius"
+},
+"1_36": {
+"dialogue": "Wirst du nun auch gehen wie die anderen? ",
+"offset": Vector2(-1840, 1860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_37",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Nasius"
+},
+"1_37": {
+"dialogue": "Ich weiß es nicht. Ich kann die Zukunft nicht vorhersagen. Aber für den Moment kann ich bei dir bleiben. Und in einem Moment in der Zukunft vielleicht wieder",
+"offset": Vector2(-1500, 1860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_38",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
+},
+"1_38": {
+"dialogue": "Schnief.... Das wäre schön... aber dazwischen? ",
+"offset": Vector2(-1160, 1860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_39",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Nasius"
+},
+"1_39": {
+"dialogue": "Dazwischen bleibt uns die Erinnerung...",
+"offset": Vector2(-820, 1860),
+"options": {
+0: {
+"condition": {},
+"link": &"1_40",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost"
 },
 "1_4": {
 "dialogue": "Es ist so schwer... schluchzt... die anderen Waisen Kinder lachen über mich, nur wegen meiner blöden großen Nase. Und jetzt habe ich auch noch meine geliebte Pfeife verloren. schnieft.. wenn ich doch nur noch meine geliebte Pfeife hätte... Mit ihr könnte ich mir tausend Freunde machen.",
@@ -436,6 +514,19 @@ Ich kann meinen Weg nicht finden.
 "size": Vector2(715.008, 599.999),
 "speaker": "..."
 },
+"1_40": {
+"dialogue": "Und die Erinnerung blieb und sollte unseren beiden Helden dieser Geschichte bald wieder zusammenführen. Um gemeinsam der Einsamkeit zu entfliehen...",
+"offset": Vector2(-500, 1860),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Freundliche Stimme"
+},
 "1_5": {
 "dialogue": "Schnief.. 
 Ich heiße Nasius... glaube ich zumindest..",
@@ -447,7 +538,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(688.998, 572.994),
+"size": Vector2(688.999, 572.994),
 "speaker": "..."
 },
 "1_6": {
@@ -465,7 +556,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Nach Pfeife fragen"
 }
 },
-"size": Vector2(670.101, 762.728),
+"size": Vector2(670.102, 762.728),
 "speaker": "Ghost"
 },
 "1_7": {
@@ -504,7 +595,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(599.514, 629.201),
+"size": Vector2(599.515, 629.201),
 "speaker": "Ghost"
 },
 "2_1": {
@@ -552,7 +643,7 @@ Herz abziehen wenn beleidigen",
 "signalValue": "false"
 },
 "3_8": {
-"link": "END",
+"link": &"1_34",
 "offset": Vector2(-2880, 1960),
 "signalValue": "null"
 },

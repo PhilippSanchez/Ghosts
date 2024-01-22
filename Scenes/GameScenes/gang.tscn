@@ -3697,6 +3697,8 @@ scale = Vector2(0.700614, 0.702754)
 [node name="switching_scene" parent="." instance=ExtResource("10_mlf6j")]
 position = Vector2(374, 11)
 script = ExtResource("13_xwjhx")
+xposition_player = 344.0
+yposition_player = 87.0
 
 [node name="Barriere Treppe" type="Node" parent="."]
 
