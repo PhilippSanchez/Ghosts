@@ -16,6 +16,7 @@ var dialoge_active = false
 
 func _ready():
 	karmaContainer.setMaxKarma(maxKarma)
+	karmaContainer.updateKarma(singelton.currentKarma)
 	singelton.karmahit.connect(_onkarmachange)
 
 func _onkarmachange(): 
