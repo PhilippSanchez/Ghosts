@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyji7on3qp8bx"]
+[gd_scene load_steps=3 format=3 uid="uid://dyji7on3qp8bx"]
 
 [ext_resource type="Script" path="res://GUI/Menu/menu.gd" id="1_hu8t6"]
+[ext_resource type="Texture2D" uid="uid://d05f68elqb4y2" path="res://GUI/ghost.001.png" id="2_tpqlx"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,12 +12,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hu8t6")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.598148, 0.598148)
+texture = ExtResource("2_tpqlx")
+centered = false
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 322.0
-offset_top = 312.0
-offset_right = 848.0
-offset_bottom = 382.0
+offset_left = 311.0
+offset_top = 334.0
+offset_right = 837.0
+offset_bottom = 404.0
 text = "Start Game"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

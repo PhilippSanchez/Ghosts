@@ -674,6 +674,10 @@ position = Vector2(136, 7)
 collision_layer = 2
 
 [node name="ProgressBar" parent="Office/Player" instance=ExtResource("7_y3ipl")]
+offset_left = -12.0
+offset_top = -19.0
+offset_right = 12.0
+offset_bottom = -15.0
 
 [node name="Switchscene" type="Area2D" parent="Office"]
 collision_layer = 0

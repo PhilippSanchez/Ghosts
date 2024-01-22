@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5ajcitp5h15x"]
+[gd_scene load_steps=14 format=3 uid="uid://b5ajcitp5h15x"]
 
 [ext_resource type="Texture2D" uid="uid://b55y6eckktd5y" path="res://Assets/Inviroment/Keller/keller_tiles.png" id="1_o0d6v"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Raum.gd" id="2_8yl6v"]
@@ -147,6 +147,23 @@ texture = ExtResource("1_o0d6v")
 [sub_resource type="TileSet" id="TileSet_81xoy"]
 sources/0 = SubResource("TileSetAtlasSource_qul4j")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf2wj"]
+size = Vector2(9, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5u5j3"]
+size = Vector2(49, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27nmc"]
+size = Vector2(72, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggh4w"]
+size = Vector2(10, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ethg4"]
+size = Vector2(120, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ha2k"]
+
 [node name="KellerVorraum" type="Node2D"]
 
 [node name="Raum" type="TileMap" parent="."]
@@ -187,3 +204,29 @@ position = Vector2(47, -8)
 scenename = "res://Scenes/GameScenes/keller_scene.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-11.5, 20)
+shape = SubResource("RectangleShape2D_yf2wj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(13.5, -23)
+shape = SubResource("RectangleShape2D_5u5j3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(74, -21)
+shape = SubResource("RectangleShape2D_27nmc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(107, 27.5)
+shape = SubResource("RectangleShape2D_ggh4w")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(44, 67)
+shape = SubResource("RectangleShape2D_ethg4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(93, 53)
+shape = SubResource("RectangleShape2D_4ha2k")
