@@ -16,6 +16,8 @@ func _on_line_edit_text_submitted(new_text):
 		singelton.wrongdecision = true 
 		singelton.player_torch = false 
 		singelton.currentKarma -=1 
+		singelton.xposplayer = 98
+		singelton.yposplayer = 108
 		$".".hide() 
 		get_tree().change_scene_to_file("res://Scenes/GameScenes/Zimmer_Aufwachraum.tscn")
 	pass # Replace with function body.

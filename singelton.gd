@@ -30,6 +30,8 @@ var pipe = false
 signal playertorch_signal 
 var player_torch = false 
 var strike = 0 
+var karmacontainer =[] 
+var currentkarma : int 
 
 
 #Postionen des Players 
