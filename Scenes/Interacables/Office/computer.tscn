@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://blewmdiid806e"]
+
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="1_kni2g"]
+[ext_resource type="Script" path="res://Scenes/Interacables/Office/computer.gd" id="1_sbuy6"]
+[ext_resource type="Resource" uid="uid://bog4gnqj8r5o1" path="res://Scenes/DialogueNodes/Office_Dialouges/pc.tres" id="2_nmf4y"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_yy4ne"]
+
+[node name="Computer" type="Node2D"]
+script = ExtResource("1_sbuy6")
+
+[node name="ObjectInteractionCollision2" parent="." instance=ExtResource("1_kni2g")]
+position = Vector2(-0.27, -2.46)
+scale = Vector2(0.41, 0.66)
+textboxName = "pc"
+groupName = "Player"
+dialogue_data = ExtResource("2_nmf4y")
+
+[node name="Interaction" parent="." instance=ExtResource("3_yy4ne")]
+visible = false
+position = Vector2(-7, -15)
+
+[connection signal="interaction_true" from="ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_true"]

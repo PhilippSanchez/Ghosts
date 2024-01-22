@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bvr1fquca5ave"]
+[gd_scene load_steps=23 format=3 uid="uid://bvr1fquca5ave"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/gang_erdgeschoss.gd" id="1_kdirp"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_vqhho"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" path="res://Scenes/Characters/pfleger_rennt.gd" id="14_0quvm"]
 [ext_resource type="Script" path="res://Scenes/Interacables/TreppeBarriere.gd" id="14_c462b"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Barriere Treppe.gd" id="14_d3kae"]
+[ext_resource type="PackedScene" uid="uid://0mixaef1mmwl" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/schild.tscn" id="16_7fjgj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_cu8g1")
@@ -531,6 +532,9 @@ shape = SubResource("CapsuleShape2D_pcrqc")
 visible = false
 z_index = 5
 position = Vector2(180, 49)
+
+[node name="Schild" parent="." instance=ExtResource("16_7fjgj")]
+position = Vector2(216, 61)
 
 [connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt/Direcrinteraction" method="_on_interaction_true"]
 [connection signal="area_entered" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_entered"]

@@ -1,14 +1,19 @@
 extends CharacterBody2D #muss extenden damit es funktionieren kann
 
 
+
 @export var speed: int = 50
 @export var maxKarma = 4
 @export var inventory: Inventory
+
 
 @onready var animations = $AnimationPlayer
 @onready var karmaContainer = $CanvasLayer/karmaContainer
 @onready var singelton = get_node("/root/Singelton")
 @onready var currentKarma = singelton.currentKarma
+
+
+
 
 var dialoge_active = false  
 

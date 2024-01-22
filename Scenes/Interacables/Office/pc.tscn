@@ -1,0 +1,138 @@
+[gd_scene load_steps=7 format=3 uid="uid://debrt6mdn22dr"]
+
+[ext_resource type="Script" path="res://Scenes/Interacables/Office/pc.gd" id="1_h8ect"]
+[ext_resource type="Texture2D" uid="uid://4sgrfvj1lftr" path="res://Assets/GUI/PC/inventory_field.png" id="1_umcc0"]
+[ext_resource type="Theme" uid="uid://c7sdrp3ltdq24" path="res://addons/dialogue_nodes/themes/pixelart.theme" id="3_oh26o"]
+[ext_resource type="Script" path="res://Scenes/Interacables/keller/Enter_Button.gd" id="4_yc1jq"]
+[ext_resource type="Texture2D" uid="uid://dy61mtt4t58y1" path="res://Assets/GUI/codepanel/exitbtnt.png" id="5_2yx27"]
+
+[sub_resource type="Theme" id="Theme_r5e03"]
+default_base_scale = 0.79
+
+[node name="pc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h8ect")
+
+[node name="bildschirm2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -9.0
+offset_right = 1195.0
+offset_bottom = 654.0
+color = Color(0.290196, 0.588235, 0.329412, 1)
+
+[node name="bildschirm" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 34.0
+offset_right = 959.0
+offset_bottom = 611.0
+color = Color(0.835294, 0.709804, 0.639216, 1)
+
+[node name="display" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 83.0
+offset_right = 902.0
+offset_bottom = 554.0
+color = Color(0.227451, 0.545098, 0.780392, 1)
+
+[node name="display2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 525.0
+offset_right = 902.0
+offset_bottom = 554.0
+color = Color(0.788235, 0.890196, 0.956863, 1)
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 787.0
+offset_top = 130.0
+offset_right = 868.0
+offset_bottom = 208.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+texture_filter = 1
+position = Vector2(39, 39)
+scale = Vector2(2.98, 2.98)
+texture = ExtResource("1_umcc0")
+
+[node name="display3" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 348.0
+offset_top = 118.0
+offset_right = 824.0
+offset_bottom = 493.0
+color = Color(0, 0, 0, 1)
+
+[node name="display4" type="ColorRect" parent="display3"]
+layout_mode = 0
+offset_right = 476.0
+offset_bottom = 29.0
+color = Color(0.788235, 0.890196, 0.956863, 1)
+
+[node name="ColorRect" type="ColorRect" parent="display3"]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 5.0
+offset_right = 469.0
+offset_bottom = 26.0
+color = Color(1, 0.109804, 0.172549, 1)
+
+[node name="Button2" type="Button" parent="display3"]
+modulate = Color(1, 0.160784, 0.356863, 1)
+self_modulate = Color(0.807843, 0, 0, 0)
+layout_mode = 0
+offset_left = 444.0
+offset_right = 473.0
+offset_bottom = 31.0
+
+[node name="text" type="RichTextLabel" parent="display3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 44.0
+offset_right = 460.0
+offset_bottom = 360.0
+theme = ExtResource("3_oh26o")
+theme_override_colors/default_color = Color(0, 0.996078, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+text = "										26.12.2000
+
+Eintrag von Pflegerin Lillith 
+
+\"Pfleger Eric meldet, Nasius außerhalb der erlaubten Zeit, in der Nähe der Schaukel gefunden zu haben. 
+
+Er hat den Verdacht auf unerlaubte Aktivitäten, jedoch hat er keine konkreten Beweise gefunden.
+
+Allerdings war Nasius war stark verschmutzt und zeigte merkwürdiges Verhalten.\""
+
+[node name="exipt" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 287.9
+offset_top = 524.28
+offset_right = 345.19
+offset_bottom = 555.28
+theme = SubResource("Theme_r5e03")
+theme_type_variation = &"FlatButton"
+text = "enter"
+script = ExtResource("4_yc1jq")
+
+[node name="Sprite2D" type="Sprite2D" parent="exipt"]
+position = Vector2(-5.52, 4.77)
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("5_2yx27")
+centered = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="display3/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="exipt" to="." method="_on_exipt_pressed"]

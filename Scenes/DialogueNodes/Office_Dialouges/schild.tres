@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bj62driksfduy"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_8cdgg"]
+
+[resource]
+script = ExtResource("1_8cdgg")
+starts = {
+"schild": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-1280.56, 356.16),
+"start_id": "schild"
+},
+"1_1": {
+"dialogue": "Ein Schild mit den Bürozeiten der Pfleger. Mal sehen, ob das mir weiterhelfen kann",
+"offset": Vector2(-493.56, 164.66),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(611, 618.92),
+"speaker": "Ghost"
+},
+"1_2": {
+"dialogue": "Bürozeiten der Pfleger: 01:00 - 00:00 Uhr",
+"offset": Vector2(265.44, 127.58),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 370),
+"speaker": "Schild"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

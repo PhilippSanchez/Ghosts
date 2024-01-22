@@ -14,6 +14,8 @@ var inventory = []
 signal karmahit
 var currentKarma: int = 4
 var newKarma : int 
+var currentTime: int = 13000
+var timerexited = false
 
 #Enviroment
 var keller_open = false

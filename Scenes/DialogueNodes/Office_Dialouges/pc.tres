@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bog4gnqj8r5o1"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_ja003"]
+
+[resource]
+script = ExtResource("1_ja003")
+starts = {
+"pc": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(1405, 328.76),
+"start_id": "pc"
+},
+"1_1": {
+"dialogue": "\"Hmm, ein Computer. Vielleicht finde ich hier Informationen über meine Vergangenheit.\"",
+"offset": Vector2(1920, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(734, 594),
+"speaker": "Ghost"
+},
+"1_2": {
+"dialogue": "\"Ist das rechtens, einfach so den Computer zu durchsuchen?\"",
+"offset": Vector2(2823.04, 321.18),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": ""
+}
+},
+"size": Vector2(598.002, 505),
+"speaker": "Freundliche Stimme"
+},
+"1_3": {
+"dialogue": "mhmmm....",
+"offset": Vector2(3549.84, 157.18),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": "PC durchsuchen"
+},
+1: {
+"condition": {},
+"link": "END",
+"text": "Weggehen"
+}
+},
+"size": Vector2(300, 492),
+"speaker": "Ghost"
+},
+"1_4": {
+"dialogue": "Vielleicht gibt es Hinweise, die mir bei der Suche nach meinen Erinnerungen helfen. Ich muss es versuchen.",
+"offset": Vector2(4133.24, 78.18),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(595.999, 668),
+"speaker": "Ghost"
+},
+"1_5": {
+"dialogue": "Das ist eigentlich nicht rechtens, aber manchmal müssen wir außergewöhnliche Wege gehen, um Antworten zu finden. Mach, was du für richtig hältst.",
+"offset": Vector2(5080, 80),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(704.001, 686),
+"speaker": "Freundliche Stimme"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(6002.28, 320.6),
+"signalValue": "true"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
