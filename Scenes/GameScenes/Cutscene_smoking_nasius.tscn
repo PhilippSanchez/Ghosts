@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://can32xifxb4c2"]
+
+[ext_resource type="Script" path="res://Scenes/GameScenes/Cutscene_smoking_nasius.gd" id="1_12a6m"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_aimsh"]
+[ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="3_rea45"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_cd0ap"]
+file = "res://Assets/MovieSequenz/Black_Background.ogg"
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_7beun"]
+file = "res://Assets/MovieSequenz/Smokers.ogg"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_12a6m")
+
+[node name="Player walking" type="VideoStreamPlayer" parent="."]
+offset_left = -533.0
+offset_top = -369.0
+offset_right = 2203.0
+offset_bottom = 1679.0
+scale = Vector2(0.847791, 0.807528)
+stream = SubResource("VideoStreamTheora_cd0ap")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = 306.0
+offset_top = -5.0
+offset_right = 346.0
+offset_bottom = 35.0
+scale = Vector2(0.256129, 0.245467)
+stream = SubResource("VideoStreamTheora_7beun")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("2_aimsh")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+dialogue_data = ExtResource("3_rea45")
+start_id = "SmokingNasius"
+
+[connection signal="finished" from="Player walking" to="." method="_on_player_walking_finished"]
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="dialogue_ended" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_ended"]

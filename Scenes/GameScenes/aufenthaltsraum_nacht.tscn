@@ -27,7 +27,7 @@ position = Vector2(-73, -166)
 
 [node name="switching_aufenthaltsraum2" parent="." instance=ExtResource("4_b8pq5")]
 position = Vector2(90, 73)
-scenename = "res://Scenes/GameScenes/gang_erdgeschoss.tscn"
+scenename = "res://Scenesres://Scenes/GameScenes/aufenthaltsraum_nacht.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
 

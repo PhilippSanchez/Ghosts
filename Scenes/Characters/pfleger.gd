@@ -6,8 +6,6 @@ extends CharacterBody2D
 
 @onready var animations = $AnimatedSprite2D
 
-
-
 var startPosition
 var endPosition
 

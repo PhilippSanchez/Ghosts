@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dm7syvhhy62cp"]
+[gd_scene load_steps=19 format=3 uid="uid://dm7syvhhy62cp"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/NasiusZimmer.gd" id="1_86hdd"]
 [ext_resource type="Texture2D" uid="uid://b2xrb1re01n52" path="res://Assets/Inviroment/NasiusZimmer/nasius_tiles.png" id="1_l4p4i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cb6y324ygf73c" path="res://Assets/Characters/Nasebert.png" id="3_boebp"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Nasius.gd" id="4_oj6px"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="6_v56m8"]
+[ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode_nasius.gd" id="7_75s1a"]
 [ext_resource type="Resource" uid="uid://bhk070nh670ro" path="res://Scenes/DialogueNodes/Nasius/Nasius.tres" id="7_di6ht"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="8_gnpnt"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="9_ci1uk"]
@@ -348,8 +349,8 @@ libraries = {
 [node name="ObjectInteractionCollision2" parent="TileMap/Nasius" instance=ExtResource("6_v56m8")]
 position = Vector2(2, 13)
 scale = Vector2(0.41, 0.66)
-textboxName = "nasius_main_dialouge"
-groupName = "Player"
+script = ExtResource("7_75s1a")
+textboxName = "Endtscheidung Ende"
 dialogue_data = ExtResource("7_di6ht")
 
 [node name="Interaction" parent="TileMap/Nasius" instance=ExtResource("8_gnpnt")]
@@ -442,4 +443,6 @@ xposition_player = 280.0
 yposition_player = 10.0
 
 [connection signal="changedKarma" from="TileMap/Nasius" to="TileMap/Player" method="_on_nasius_changed_karma"]
+[connection signal="interaction_false" from="TileMap/Nasius/ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_false"]
+[connection signal="interaction_null" from="TileMap/Nasius/ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]
 [connection signal="interaction_true" from="TileMap/Nasius/ObjectInteractionCollision2" to="TileMap/Nasius" method="_on_object_interaction_collision_2_interaction_true"]
