@@ -45,11 +45,17 @@ func _process(_delta):
 
 	if textbox_startable == true and Input.is_action_just_released("ui_accept") and dialogue_finished == false: 
 		textbox_startable = false 
-		if second_dialogue_true == true && second_dialogue_name != "":
-			$CanvasLayer/ObjectInteractionsDialog.start(second_dialogue_name) 
+		
+		if singelton.pipe != true : 
 			
-		else: 
-			$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
+			if second_dialogue_true == true && second_dialogue_name != "":
+				$CanvasLayer/ObjectInteractionsDialog.start(second_dialogue_name) 
+				
+			else: 
+				$CanvasLayer/ObjectInteractionsDialog.start(textboxName)
+		elif singelton.pipe == true: 
+			$CanvasLayer/ObjectInteractionsDialog.start("Endtscheidung Ende")
+			
 			
 	pass 
 

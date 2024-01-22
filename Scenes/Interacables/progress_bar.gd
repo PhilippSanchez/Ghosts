@@ -16,6 +16,8 @@ func _on_timer_timeout():
 		self.value -= 1000
 		singelton.currentTime -= 1000
 	elif  value < 1 && singelton.timerexited == false:
+		singelton.wrongdecision = true 
+		singelton.currentKarma -=1 
 		get_tree().change_scene_to_file("res://Scenes/GameScenes/Zimmer_Aufwachraum.tscn")
 		
 

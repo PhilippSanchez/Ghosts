@@ -289,8 +289,8 @@ Bei der Fußmatte ist eine TÜRE versuche sie doch mal zu benutzen",
 "speaker": "Freundliche Stimme"
 },
 "1_25": {
-"dialogue": "Oh nein so ist das aber nicht passiert. Unser Held muss es noch einmal veruschen. ",
-"offset": Vector2(-660, 3060),
+"dialogue": "Oh nein so ist das aber nicht passiert. Unser Held muss es noch einmal versuchen. ",
+"offset": Vector2(-620, 3060),
 "options": {
 0: {
 "condition": {},
@@ -298,7 +298,7 @@ Bei der Fußmatte ist eine TÜRE versuche sie doch mal zu benutzen",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_3": {

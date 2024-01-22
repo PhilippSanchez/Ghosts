@@ -89,9 +89,6 @@ func _on_object_interactions_dialog_dialogue_signal(value):
 
 func _on_object_interactions_dialog_dialogue_ended():
 	$CanvasLayer/TextsceneBarrier.hide() 
-	
-	
-	
 	print(player, "false")
 	player.dialoge_active = false 
 	textbox_startable = false  

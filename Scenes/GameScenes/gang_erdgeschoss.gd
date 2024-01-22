@@ -8,6 +8,7 @@ func _ready():
 	if singelton.entering_gang_unten_first == false: 
 		$Pfelger_rennt.queue_free()
 		
+		
 	if singelton.xposplayer: 
 		$Player.position.x = singelton.xposplayer 
 		$Player.position.y = singelton.yposplayer 
@@ -15,4 +16,5 @@ func _ready():
 func _process(delta):
 	if pflegergeist_gestresst!= null: 
 		if pflegergeist_gestresst.position.x < 110 && singelton.entering_gang_unten_first == false: 
+			$Player.dialoge_active = false 
 			pflegergeist_gestresst.queue_free()

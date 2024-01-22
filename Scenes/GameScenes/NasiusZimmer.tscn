@@ -271,4 +271,6 @@ xposition_player = 280.0
 yposition_player = 10.0
 
 [connection signal="changedKarma" from="TileMap/Nasius" to="TileMap/Player" method="_on_nasius_changed_karma"]
+[connection signal="interaction_false" from="TileMap/Nasius/ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_false"]
+[connection signal="interaction_null" from="TileMap/Nasius/ObjectInteractionCollision2" to="." method="_on_object_interaction_collision_2_interaction_null"]
 [connection signal="interaction_true" from="TileMap/Nasius/ObjectInteractionCollision2" to="TileMap/Nasius" method="_on_object_interaction_collision_2_interaction_true"]
