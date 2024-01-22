@@ -1,13 +1,16 @@
-[gd_scene load_steps=28 format=3 uid="uid://6yvrhih8t76n"]
+[gd_scene load_steps=32 format=3 uid="uid://6yvrhih8t76n"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/Zimmer_Aufwachraum.gd" id="1_x3ga2"]
 [ext_resource type="PackedScene" uid="uid://dmgqhk2b5noe4" path="res://Scenes/Interacables/bett_scene.tscn" id="1_y8rd6"]
+[ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="2_axapl"]
 [ext_resource type="PackedScene" uid="uid://dbn28skl0yds5" path="res://Scenes/Interacables/schrank1_scene.tscn" id="2_lgcsv"]
 [ext_resource type="Texture2D" uid="uid://j06yb5n402qf" path="res://Assets/Inviroment/book_Small.png" id="2_u7p08"]
 [ext_resource type="Texture2D" uid="uid://b13cfetwwgwv3" path="res://Assets/Inviroment/Cottage_Tileset.png" id="2_x3qt7"]
 [ext_resource type="Texture2D" uid="uid://dn4kav8dvjj1b" path="res://Assets/Inviroment/Fußmatte.png" id="3_24w1r"]
+[ext_resource type="Theme" uid="uid://c7sdrp3ltdq24" path="res://addons/dialogue_nodes/themes/pixelart.theme" id="3_otddf"]
 [ext_resource type="Texture2D" uid="uid://bkwj5i3si3523" path="res://Assets/Inviroment/Book1.png" id="3_tihox"]
 [ext_resource type="Texture2D" uid="uid://ed6lw7gkierp" path="res://Assets/GUI/items/GoldKey.png" id="4_2bxng"]
+[ext_resource type="Texture2D" uid="uid://x7wwj32k0m7h" path="res://Assets/GUI/text bubbles/down_arrow.png" id="4_bdlke"]
 [ext_resource type="Texture2D" uid="uid://b8yxmaqwlalcy" path="res://Assets/Inviroment/parkett.png" id="4_r4wy7"]
 [ext_resource type="PackedScene" uid="uid://dvprga2ciepva" path="res://Scenes/Interacables/schreibtisch.tscn" id="6_6udp6"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="7_dopga"]
@@ -19,6 +22,7 @@
 [ext_resource type="Script" path="res://Scenes/Interacables/ObjektInteractionNode_Aufwachraum.gd" id="15_hfxbv"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="16_l7xlw"]
 [ext_resource type="Script" path="res://Scenes/Interacables/Tutorial.gd" id="20_ca8kv"]
+[ext_resource type="Texture2D" uid="uid://cp3qn20asuq0d" path="res://Assets/GUI/text bubbles/textbackground.png" id="20_v1lk7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hox08"]
 texture = ExtResource("2_x3qt7")
@@ -446,3 +450,44 @@ scale = Vector2(0.4, 0.65)
 script = ExtResource("20_ca8kv")
 textboxName = "Tutorial"
 dialogue_data = ExtResource("15_cdmp0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextsceneBarrier" type="Control" parent="CanvasLayer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.0756, 6.73171)
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextsceneBarrier"]
+texture_filter = 1
+position = Vector2(19.7588, 86.0108)
+scale = Vector2(1.6, 1.645)
+texture = ExtResource("20_v1lk7")
+
+[node name="ObjectInteractionsDialog" parent="CanvasLayer" instance=ExtResource("2_axapl")]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -198.0
+offset_right = 0.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_otddf")
+start_id = "WrongDecision"
+next_icon = ExtResource("4_bdlke")
+default_speaker_color = Color(0.490196, 0.239216, 0.521569, 1)
+
+[connection signal="interaction_true" from="Tutorial/Tutorial" to="." method="_on_tutorial_interaction_true"]
+[connection signal="dialogue_ended" from="CanvasLayer/ObjectInteractionsDialog" to="." method="_on_object_interactions_dialog_dialogue_ended"]

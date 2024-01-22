@@ -91,7 +91,7 @@ func _on_object_interactions_dialog_dialogue_ended():
 	print("hit dialogend")
 	$CanvasLayer/TextsceneBarrier.hide() 
 	$"../../Souls/Interaction_Souls".hide() 
-	$"../../Player".move_to_target(Vector2(38,-115))
+	$"../../Player".move_to_target(Vector2(48,-80))
 	
 	
 	print(player, "false")

@@ -6,7 +6,7 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	
+	print("entered")
 	if body.is_in_group("Player"):
 		singelton.xposplayer = xposition_player
 		singelton.yposplayer = yposition_player

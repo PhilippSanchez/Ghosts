@@ -11,7 +11,8 @@ starts = {
 "Schreibtisch": &"0_5",
 "Tutorial": &"0_7",
 "Tür": &"0_1",
-"Waking_up_seq": &"0_4"
+"Waking_up_seq": &"0_4",
+"WrongDecision": &"0_8"
 }
 nodes = {
 "0_1": {
@@ -48,6 +49,11 @@ nodes = {
 "link": &"1_21",
 "offset": Vector2(-898.221, 2775.82),
 "start_id": "Tutorial"
+},
+"0_8": {
+"link": &"1_25",
+"offset": Vector2(-938.666, 3097.16),
+"start_id": "WrongDecision"
 },
 "1_1": {
 "dialogue": "Ein Bett. ",
@@ -238,7 +244,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_22": {
@@ -252,7 +258,7 @@ Du bist endlich aufgewacht! ",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_23": {
@@ -266,12 +272,25 @@ Bei der Fußmatte ist eine TÜRE versuche sie doch mal zu benutzen",
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme "
 },
 "1_24": {
 "dialogue": "Es gibt bestimmt eine Lösung für dieses Rätsel. Schau dich weiter im Raum um",
 "offset": Vector2(-220, 760),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 276),
+"speaker": "Freundliche Stimme"
+},
+"1_25": {
+"dialogue": "Oh nein so ist das aber nicht passiert. Unser Held muss es noch einmal veruschen. ",
+"offset": Vector2(-660, 3060),
 "options": {
 0: {
 "condition": {},
