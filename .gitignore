@@ -1,8 +1,4 @@
 # Godot 4+ specific ignores
 
 .godot/
-<<<<<<< HEAD
-addons/dialogue_nodes/
-=======
 addons/
->>>>>>> refs/remotes/origin/main

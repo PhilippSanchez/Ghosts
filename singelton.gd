@@ -7,6 +7,7 @@ var aufwach_rätsel = true
 var passcode_keller = false
 var has_pipe = false
 var entering_aufwachtraum_first = true 
+var wrongdecision = false 
 
 #GUI
 
@@ -31,6 +32,8 @@ var pipe = false
 signal playertorch_signal 
 var player_torch = false 
 var strike = 0 
+var karmacontainer =[] 
+var currentkarma : int 
 
 
 #Postionen des Players 

@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb6yrd2u1ivay"]
+[gd_scene load_steps=7 format=3 uid="uid://bb6yrd2u1ivay"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/starting_scene.gd" id="1_7mqy3"]
 [ext_resource type="PackedScene" uid="uid://dpt5e5h1lypgo" path="res://Scenes/DialogueNodes/Objectinteractions.tscn" id="1_y8r7g"]
-
-[ext_resource type="AudioStream" uid="uid://c4x2pwon2mv26" path="res://Audio/Sounds/Space_Atmospheric_01.wav" id="3_5g8u6"]
-
 [ext_resource type="AudioStream" uid="uid://bo6mlx5hnat2a" path="res://Assets/Musik/White room waking up again_new_Entwurf_nochnichtfertig.mp3" id="3_3scu2"]
-
+[ext_resource type="AudioStream" uid="uid://c4x2pwon2mv26" path="res://Audio/Sounds/Space_Atmospheric_01.wav" id="3_5g8u6"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_kynka"]
 file = "res://Assets/MovieSequenz/Background.ogg"
@@ -42,7 +39,6 @@ grow_horizontal = 2
 grow_vertical = 0
 start_id = "Waking_up_seq"
 
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_5g8u6")
 volume_db = -30.0
@@ -50,7 +46,6 @@ volume_db = -30.0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_3scu2")
 pitch_scale = 0.9
-
 autoplay = true
 
 [connection signal="finished" from="BAckground_eyes" to="." method="_on_b_ackground_eyes_finished"]

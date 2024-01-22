@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bwpuo1b564b80"]
+[gd_scene load_steps=14 format=3 uid="uid://bwpuo1b564b80"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/aufenthaltsraum.gd" id="1_2svxj"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_n58p0"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="4_seyhk"]
+[ext_resource type="Script" path="res://Scenes/Interacables/InteractionWache.gd" id="5_kgoyh"]
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="5_smk1t"]
 [ext_resource type="Resource" uid="uid://bvgh2ojgaahl" path="res://Scenes/DialogueNodes/Aufenthaltsraum/Aufenthaltsraum.tres" id="6_kyl1q"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="6_xnpsw"]
@@ -11,9 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://fyqvsni4mojs" path="res://Audio/Sounds/Tick_Tock_Slow_01.wav" id="9_tqe7y"]
 [ext_resource type="PackedScene" uid="uid://khw0x4hw4yft" path="res://Scenes/Characters/pfleger.tscn" id="10_vnyvk"]
 [ext_resource type="Script" path="res://Scenes/Characters/pfleger.gd" id="11_hraqk"]
-[ext_resource type="Script" path="res://Scenes/Interacables/wache.gd" id="12_xphag"]
 [ext_resource type="AudioStream" uid="uid://dy2o6n8e3ndb6" path="res://Audio/Music/gonzo_start_game_sound_mbay.mp3" id="14_86jt4"]
-[ext_resource type="Resource" uid="uid://b4byebhp0pbpu" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/gestresster_pfleger.tres" id="14_ywt2j"]
 
 [node name="Aufenthaltsraum" type="Node2D"]
 script = ExtResource("1_2svxj")
@@ -40,11 +39,14 @@ scenename = "res://Scenes/GameScenes/garten_scene.tscn"
 xposition_player = 12.0
 yposition_player = 85.0
 
-[node name="switching_office" parent="." instance=ExtResource("4_seyhk")]
-position = Vector2(87, -114)
-scenename = "res://Scenes/GameScenes/garten_scene.tscn"
-xposition_player = 12.0
-yposition_player = 85.0
+[node name="BarriereBüro" type="Node" parent="."]
+
+[node name="InteractionWache" parent="BarriereBüro" instance=ExtResource("5_smk1t")]
+position = Vector2(71, -92)
+scale = Vector2(0.377689, 1.27894)
+script = ExtResource("5_kgoyh")
+textboxName = "Geistwache"
+dialogue_data = ExtResource("6_kyl1q")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -60,32 +62,25 @@ position = Vector2(-48, -167)
 
 [node name="TileMap" parent="." instance=ExtResource("8_8csy6")]
 
-
 [node name="clock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_tqe7y")
 volume_db = -16.0
 
 [node name="Souls" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("10_vnyvk")]
-position = Vector2(69, -150)
+position = Vector2(68, -97)
 script = ExtResource("11_hraqk")
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Souls"]
-position = Vector2(4, 68)
+position = Vector2(0, 33)
 
-[node name="Direcrinteraction" parent="Souls" instance=ExtResource("5_smk1t")]
-position = Vector2(2, 53.06)
-scale = Vector2(0.412, -2.431)
-script = ExtResource("12_xphag")
-textboxName = "pfleger_gestresst"
-dialogue_data = ExtResource("14_ywt2j")
+[node name="Interaction_Souls" parent="Souls" instance=ExtResource("6_xnpsw")]
+visible = false
+position = Vector2(-8, -15)
 
 [node name="Theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_86jt4")
 volume_db = -12.0
-
-[connection signal="interaction_true" from="Node2D/ObjectInteractionCollision" to="Textinput" method="_on_object_interaction_collision_interaction_true"]
-[connection signal="interaction_true" from="Souls/Direcrinteraction" to="Souls/Direcrinteraction" method="_on_interaction_true"]
 
 [node name="Textinput" parent="." instance=ExtResource("8_8chy4")]
 visible = false
@@ -94,4 +89,4 @@ position = Vector2(-77, -192)
 scale = Vector2(0.489987, 0.489987)
 
 [connection signal="interaction_true" from="Node2D/ObjectInteractionCollision" to="." method="_on_object_interaction_collision_interaction_true"]
-
+[connection signal="interaction_true" from="Node2D/ObjectInteractionCollision" to="Textinput" method="_on_object_interaction_collision_interaction_true"]

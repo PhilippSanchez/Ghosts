@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_1qkdh")
 starts = {
+"Geistwache": &"0_2",
 "Uhr": &"0_1"
 }
 nodes = {
@@ -12,6 +13,11 @@ nodes = {
 "link": &"1_1",
 "offset": Vector2(-837.091, -325.455),
 "start_id": "Uhr"
+},
+"0_2": {
+"link": &"1_3",
+"offset": Vector2(-890.406, 67.0845),
+"start_id": "Geistwache"
 },
 "1_1": {
 "dialogue": "Die Zeiger der Uhr scheinen locker. Sie lassen sich bewegen",
@@ -43,6 +49,32 @@ nodes = {
 },
 "size": Vector2(300, 307),
 "speaker": "Ghost "
+},
+"1_3": {
+"dialogue": "HAAAAAALLLLTTT STOOOOOOOOP. Solange ich hier stehe kommst du hier nicht weiter!!",
+"offset": Vector2(-620, 40),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Geist Wache"
+},
+"1_4": {
+"dialogue": "Das Büro ist nur für Angestellte!!!!",
+"offset": Vector2(-240, 20),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Geist Wache"
 },
 "3_1": {
 "link": "END",

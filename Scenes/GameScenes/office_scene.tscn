@@ -673,25 +673,15 @@ layer_3/tile_data = PackedInt32Array(458758, 4915203, 5, 524294, 4849667, 3, 458
 position = Vector2(136, 7)
 collision_layer = 2
 
-[node name="ProgressBar2" parent="Office/Player" instance=ExtResource("7_y3ipl")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = -20.0
-offset_right = 58.0
-offset_bottom = -12.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.29, 0.29)
+[node name="ProgressBar" parent="Office/Player" instance=ExtResource("7_y3ipl")]
 
 [node name="Switchscene" type="Area2D" parent="Office"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("6_xioi0")
-gamepath = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
+scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
+xposition_player = 48.0
+yposition_player = -80.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Office/Switchscene"]
 position = Vector2(-11, 38)

@@ -4,7 +4,6 @@ extends ProgressBar
 
 
 func _ready():
-	$Timer.start()
 	self.value = singelton.currentTime
 	
 	

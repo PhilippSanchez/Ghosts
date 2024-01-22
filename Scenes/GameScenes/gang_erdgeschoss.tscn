@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://Scenes/Characters/pfleger_rennt.gd" id="14_0quvm"]
 [ext_resource type="Script" path="res://Scenes/Interacables/TreppeBarriere.gd" id="14_c462b"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Barriere Treppe.gd" id="14_d3kae"]
-[ext_resource type="PackedScene" uid="uid://0mixaef1mmwl" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/schild.tscn" id="16_7fjgj"]
+[ext_resource type="PackedScene" uid="uid://0mixaef1mmwl" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/schild.tscn" id="16_a6fih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_cu8g1")
@@ -424,10 +424,6 @@ sources/3 = SubResource("TileSetAtlasSource_yoggm")
 [node name="HallwayScene" type="Node2D"]
 script = ExtResource("1_kdirp")
 
-[node name="Player" parent="." instance=ExtResource("1_vqhho")]
-position = Vector2(351, 110)
-inventory = null
-
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
@@ -450,7 +446,7 @@ xposition_player = 375.0
 yposition_player = 35.0
 
 [node name="Pfleger" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_lk7uj")]
-position = Vector2(-7, 86)
+position = Vector2(26, 85)
 script = ExtResource("7_u4vns")
 speed = 80
 endPoint = NodePath("Marker2D_3")
@@ -467,7 +463,7 @@ visible = false
 position = Vector2(-1.24, -0.97)
 
 [node name="Marker2D_3" type="Marker2D" parent="Pfleger"]
-position = Vector2(125, 4)
+position = Vector2(77, 2)
 
 [node name="Pfleger_Glasskasten" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_lk7uj")]
 y_sort_enabled = true
@@ -515,7 +511,7 @@ position = Vector2(229, -13)
 script = ExtResource("14_d3kae")
 
 [node name="InteractionTreppe" parent="Barriere Treppe" instance=ExtResource("7_kal3k")]
-position = Vector2(191, 156)
+position = Vector2(191, 147)
 scale = Vector2(0.675198, 0.386203)
 script = ExtResource("14_c462b")
 textboxName = "DontLeave"
@@ -533,8 +529,11 @@ visible = false
 z_index = 5
 position = Vector2(180, 49)
 
-[node name="Schild" parent="." instance=ExtResource("16_7fjgj")]
-position = Vector2(216, 61)
+[node name="Player" parent="." instance=ExtResource("1_vqhho")]
+position = Vector2(359, 94)
+
+[node name="Schild" parent="." instance=ExtResource("16_a6fih")]
+position = Vector2(216, 59)
 
 [connection signal="interaction_true" from="Pfelger_rennt/Direcrinteraction" to="Pfelger_rennt/Direcrinteraction" method="_on_interaction_true"]
 [connection signal="area_entered" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_entered"]
