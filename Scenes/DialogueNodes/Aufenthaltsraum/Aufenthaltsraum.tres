@@ -60,7 +60,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Geist Wache"
 },
 "1_4": {
@@ -73,7 +73,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 245),
+"size": Vector2(300, 276),
 "speaker": "Geist Wache"
 },
 "3_1": {

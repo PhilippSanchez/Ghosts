@@ -23,7 +23,7 @@ var keller_open = false
 var stock_picked = false
 var schaufel = false
 var schaufel_asamblet = false
-var pipe = true
+var pipe = false 
 
 
 

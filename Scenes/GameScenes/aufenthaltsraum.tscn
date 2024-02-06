@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bwpuo1b564b80"]
+[gd_scene load_steps=14 format=3 uid="uid://bwpuo1b564b80"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/aufenthaltsraum.gd" id="1_2svxj"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_n58p0"]
@@ -14,42 +14,12 @@
 [ext_resource type="Script" path="res://Scenes/Characters/pfleger.gd" id="11_hraqk"]
 [ext_resource type="AudioStream" uid="uid://dy2o6n8e3ndb6" path="res://Audio/Music/gonzo_start_game_sound_mbay.mp3" id="14_86jt4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwfng"]
-size = Vector2(432, 5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_175ma"]
-size = Vector2(16, 126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2nss"]
-size = Vector2(14, 109)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvtor"]
-size = Vector2(336, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qo1ud"]
-size = Vector2(14, 274)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qweav"]
-size = Vector2(40, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jth6e"]
-size = Vector2(14, 77)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiqt8"]
-size = Vector2(100, 31)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8hq8"]
-size = Vector2(14, 87)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_stfyk"]
-size = Vector2(44, 6)
-
 [node name="Aufenthaltsraum" type="Node2D"]
 script = ExtResource("1_2svxj")
 
 [node name="Player" parent="." instance=ExtResource("2_n58p0")]
 z_index = 8
-position = Vector2(63, 80)
+position = Vector2(55, 79)
 
 [node name="switching_aufenthaltsraum" parent="." instance=ExtResource("4_seyhk")]
 position = Vector2(90, 73)
@@ -117,48 +87,6 @@ visible = false
 z_index = 5
 position = Vector2(-77, -192)
 scale = Vector2(0.489987, 0.489987)
-
-[node name="collision" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="collision"]
-position = Vector2(-120, 130.5)
-shape = SubResource("RectangleShape2D_gwfng")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="collision"]
-position = Vector2(88, 0)
-shape = SubResource("RectangleShape2D_175ma")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="collision"]
-position = Vector2(89, -152.5)
-shape = SubResource("RectangleShape2D_h2nss")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="collision"]
-position = Vector2(-87, -192)
-shape = SubResource("RectangleShape2D_cvtor")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="collision"]
-position = Vector2(-248, -42)
-shape = SubResource("RectangleShape2D_qo1ud")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="collision"]
-position = Vector2(-273, 82)
-shape = SubResource("RectangleShape2D_qweav")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="collision"]
-position = Vector2(-297, 55.5)
-shape = SubResource("RectangleShape2D_jth6e")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="collision"]
-position = Vector2(-348, 32.5)
-shape = SubResource("RectangleShape2D_aiqt8")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="collision"]
-position = Vector2(-392, 88.5)
-shape = SubResource("RectangleShape2D_t8hq8")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="collision"]
-position = Vector2(-377, 131)
-shape = SubResource("RectangleShape2D_stfyk")
 
 [connection signal="interaction_true" from="Node2D/ObjectInteractionCollision" to="." method="_on_object_interaction_collision_interaction_true"]
 [connection signal="interaction_true" from="Node2D/ObjectInteractionCollision" to="Textinput" method="_on_object_interaction_collision_interaction_true"]

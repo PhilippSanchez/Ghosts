@@ -174,7 +174,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(870.228, 757.367),
+"size": Vector2(870.229, 757.367),
 "speaker": "Eric"
 },
 "1_9": {
@@ -188,7 +188,7 @@ Und jetzt verschwinde und lass mich in Ruhe. Es gibt hier genug zu tun, ohne das
 "text": ""
 }
 },
-"size": Vector2(818, 848),
+"size": Vector2(817.999, 848),
 "speaker": "Eric"
 },
 "2_1": {

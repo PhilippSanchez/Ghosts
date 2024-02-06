@@ -35,12 +35,12 @@ nodes = {
 },
 "0_5": {
 "link": &"1_25",
-"offset": Vector2(-4720, 1840),
+"offset": Vector2(-4583.97, 1809.2),
 "start_id": "Endtscheidung Ende"
 },
 "0_6": {
 "link": &"1_29",
-"offset": Vector2(-4740, 2160),
+"offset": Vector2(-4649.87, 2181.76),
 "start_id": "SmokingNasius"
 },
 "1_1": {
@@ -76,7 +76,7 @@ nodes = {
 "text": "Weggehen"
 }
 },
-"size": Vector2(585.12, 658.003),
+"size": Vector2(585.121, 658.003),
 "speaker": "..."
 },
 "1_11": {
@@ -89,7 +89,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(645.602, 760.233),
+"size": Vector2(645.603, 760.233),
 "speaker": "Ghost"
 },
 "1_12": {
@@ -102,7 +102,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(550.56, 701.831),
+"size": Vector2(550.561, 701.831),
 "speaker": "Ghost"
 },
 "1_13": {
@@ -115,7 +115,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(533.281, 686.798),
+"size": Vector2(533.279, 686.798),
 "speaker": "Nasius"
 },
 "1_14": {
@@ -128,7 +128,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(798.234, 793.364),
+"size": Vector2(798.232, 793.363),
 "speaker": "Nasius"
 },
 "1_15": {
@@ -142,7 +142,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(701.758, 761.677),
+"size": Vector2(701.76, 761.677),
 "speaker": "Ghost"
 },
 "1_16": {
@@ -173,7 +173,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": "Nein"
 }
 },
-"size": Vector2(433.734, 492),
+"size": Vector2(433.734, 307),
 "speaker": "???"
 },
 "1_18": {
@@ -186,7 +186,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_19": {
@@ -199,7 +199,7 @@ aber ich werde dir trotzdem helfen.. keine sorge ich komme wieder mit deiner Pfe
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_2": {
@@ -226,7 +226,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_21": {
@@ -239,7 +239,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_22": {
@@ -252,7 +252,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_23": {
@@ -265,7 +265,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_24": {
@@ -278,7 +278,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_25": {
@@ -291,7 +291,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme "
 },
 "1_26": {
@@ -304,7 +304,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Ghost "
 },
 "1_27": {
@@ -317,7 +317,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Nasius"
 },
 "1_28": {
@@ -335,7 +335,7 @@ Kann ich dir irgendwie helfen? ",
 "text": "Pfeife behalten"
 }
 },
-"size": Vector2(300, 492),
+"size": Vector2(300, 307),
 "speaker": "Freundliche Stimme "
 },
 "1_29": {
@@ -348,7 +348,7 @@ Kann ich dir irgendwie helfen? ",
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_3": {
@@ -368,7 +368,7 @@ Ich kann meinen Weg nicht finden.
 "text": "Wie heißt du?"
 }
 },
-"size": Vector2(925, 751.998),
+"size": Vector2(925.001, 751.998),
 "speaker": "..."
 },
 "1_30": {
@@ -381,7 +381,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_31": {
@@ -394,7 +394,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_32": {
@@ -407,7 +407,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_33": {
@@ -420,7 +420,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_34": {
@@ -433,7 +433,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_35": {
@@ -446,7 +446,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Nasius"
 },
 "1_36": {
@@ -459,7 +459,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Nasius"
 },
 "1_37": {
@@ -472,7 +472,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_38": {
@@ -485,7 +485,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Nasius"
 },
 "1_39": {
@@ -498,7 +498,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Ghost"
 },
 "1_4": {
@@ -511,7 +511,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(715.009, 599.999),
+"size": Vector2(715.008, 599.999),
 "speaker": "..."
 },
 "1_40": {
@@ -524,7 +524,7 @@ Ich kann meinen Weg nicht finden.
 "text": ""
 }
 },
-"size": Vector2(300, 431),
+"size": Vector2(300, 276),
 "speaker": "Freundliche Stimme"
 },
 "1_5": {
@@ -538,7 +538,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(689, 572.994),
+"size": Vector2(688.999, 572.994),
 "speaker": "..."
 },
 "1_6": {
@@ -569,7 +569,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Wie heißt du?"
 }
 },
-"size": Vector2(300, 491.998),
+"size": Vector2(300.002, 491.998),
 "speaker": "..."
 },
 "1_8": {
@@ -582,7 +582,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": "Was ist passiert?"
 }
 },
-"size": Vector2(300.002, 431.006),
+"size": Vector2(300.003, 431.006),
 "speaker": "..."
 },
 "1_9": {
@@ -595,7 +595,7 @@ Ich heiße Nasius... glaube ich zumindest..",
 "text": ""
 }
 },
-"size": Vector2(599.516, 629.201),
+"size": Vector2(599.517, 629.201),
 "speaker": "Ghost"
 },
 "2_1": {
@@ -603,8 +603,8 @@ Ich heiße Nasius... glaube ich zumindest..",
 Herz abziehen wenn beleidigen",
 "offset": Vector2(3840, -140),
 "size": {
-"x": 274.009,
-"y": 522.0
+"x": 274.008,
+"y": 507.0
 }
 },
 "3_1": {

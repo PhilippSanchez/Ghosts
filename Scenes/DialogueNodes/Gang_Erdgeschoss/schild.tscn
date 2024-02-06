@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0mixaef1mmwl"]
+[gd_scene load_steps=5 format=3 uid="uid://divpbunk8ifvf"]
 
 [ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="1_avoqp"]
 [ext_resource type="Texture2D" uid="uid://bi17w71td15b4" path="res://Assets/Inviroment/erdgeschoss/uhrzeiten.png" id="1_jl6pl"]
 [ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="3_jd8wg"]
-[ext_resource type="Resource" uid="uid://bj62driksfduy" path="res://Scenes/DialogueNodes/Office_Dialouges/schild.tres" id="3_ro1lc"]
+[ext_resource type="Resource" uid="uid://si182rglewhk" path="res://Scenes/DialogueNodes/Office_Dialouges/schild.tres" id="3_ro1lc"]
 
 [node name="Schild" type="Node2D"]
 
