@@ -34,8 +34,8 @@ yposition_player = 85.0
 [node name="switching_keller_vorraum" parent="." instance=ExtResource("4_b8pq5")]
 position = Vector2(-344, 57)
 scenename = "res://Scenes/GameScenes/Keller_Vorraum.tscn"
-xposition_player = 12.0
-yposition_player = 85.0
+xposition_player = 25.0
+yposition_player = 56.0
 
 [node name="switching_Garten" parent="." instance=ExtResource("4_b8pq5")]
 position = Vector2(-344, 136)

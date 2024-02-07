@@ -439,7 +439,7 @@ volume_db = -12.0
 position = Vector2(57, 49)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
 xposition_player = -344.0
-yposition_player = 110.0
+yposition_player = 120.0
 
 [node name="Ambient" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_411y0")
