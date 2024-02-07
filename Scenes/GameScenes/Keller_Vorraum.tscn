@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://b5ajcitp5h15x"]
+[gd_scene load_steps=15 format=3 uid="uid://b5ajcitp5h15x"]
 
 [ext_resource type="Texture2D" uid="uid://b55y6eckktd5y" path="res://Assets/Inviroment/Keller/keller_tiles.png" id="1_o0d6v"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/Keller_Vorraum.gd" id="1_w1q07"]
 [ext_resource type="Script" path="res://Scenes/GameScenes/Raum.gd" id="2_8yl6v"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="2_npci6"]
 [ext_resource type="Texture2D" uid="uid://dvoqr4lvgnanb" path="res://Assets/Inviroment/Keller/KellerDoorOpen.png" id="2_uysa0"]
@@ -165,6 +166,7 @@ size = Vector2(120, 6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ha2k"]
 
 [node name="KellerVorraum" type="Node2D"]
+script = ExtResource("1_w1q07")
 
 [node name="Raum" type="TileMap" parent="."]
 texture_filter = 1
@@ -173,8 +175,18 @@ format = 2
 layer_0/name = "Boden"
 layer_0/tile_data = PackedInt32Array(0, 4194304, 0, 65536, 4194304, 1, 131072, 4194304, 1, 196608, 4194304, 2, 196609, 4259840, 2, 196610, 4259840, 2, 196611, 4259840, 2, 196612, 4259840, 2, 196613, 4325376, 2, 131077, 4325376, 1, 65541, 4325376, 1, 5, 4325376, 0, 4, 4259840, 0, 3, 4259840, 0, 2, 4259840, 0, 1, 4259840, 0, 65537, 4259840, 1, 131073, 4259840, 1, 65538, 4259840, 1, 131074, 4259840, 1, 65539, 4259840, 1, 131075, 4259840, 1, 65540, 4259840, 1, 131076, 4259840, 1)
 layer_1/name = "Walls"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-131071, 3145728, 2, -65535, 3145728, 3, -131070, 3211264, 2, -65534, 3211264, 3, -131069, 3145728, 2, -65533, 3145728, 3, -131068, 3211264, 2, -65532, 3211264, 3, -131067, 3211264, 2, -65531, 3211264, 3, -131072, 3211264, 2, -65536, 3211264, 3, -131066, 3276800, 0, -65530, 3276800, 1, 6, 3276800, 2, 65542, 3276800, 2, 131078, 3276800, 2, 196614, 3276800, 2, 262150, 3276800, 5, 262149, 3211264, 5, 262148, 3211264, 5, 262147, 3211264, 5, 262146, 3211264, 5, 262145, 3211264, 5, 262144, 3211264, 5, -65537, 3080192, 0, -1, 3080192, 1, 65535, 3080192, 2, 131071, 3080192, 2, 196607, 3080192, 2, 262143, 3080192, 2, 327679, 3080192, 5)
 layer_2/name = "Interrior"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-131070, 2686976, 2, -65534, 2686976, 3, -131069, 2752512, 2, -65533, 2752512, 3, 196608, 3538944, 3, 131077, 3997696, 4, 196613, 3997696, 5, -131071, 2686976, 6, -65535, 2686976, 7)
 script = ExtResource("2_8yl6v")
 
@@ -189,21 +201,19 @@ position = Vector2(23, 59)
 [node name="switching_upstairs" parent="Raum" instance=ExtResource("3_nxfyg")]
 position = Vector2(27, -12)
 scenename = "res://Scenes/Interacables/keller/code_panel.tscn"
-xposition_player = 12.0
-yposition_player = 85.0
 
 [node name="switching_pin_pad2" parent="Raum" instance=ExtResource("3_nxfyg")]
 position = Vector2(3, 57)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum.tscn"
-xposition_player = 12.0
+xposition_player = -347.0
 yposition_player = 85.0
 
 [node name="switching_keller" parent="Raum" instance=ExtResource("3_nxfyg")]
 visible = false
 position = Vector2(47, -8)
 scenename = "res://Scenes/GameScenes/keller_scene.tscn"
-xposition_player = 12.0
-yposition_player = 85.0
+xposition_player = 125.0
+yposition_player = 135.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

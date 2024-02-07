@@ -19,4 +19,8 @@ func _on_object_interaction_collision_2_interaction_null():
 	$"../Player/SchaufelDialog".hide()
 	$"../BG".hide()
 	queue_free()
+	singelton.xposplayer = $"../Player".position.x
+	singelton.yposplayer = $"../Player".position.y
+	
+	get_tree().change_scene_to_file("res://Scenes/GameScenes/keller_scene.tscn")
 	

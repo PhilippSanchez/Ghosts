@@ -5,10 +5,9 @@ func _ready():
 	singelton.player_torch = false
 	if singelton.xposplayer : 
 		$Player.position.x = singelton.xposplayer 
-
 		$Player.position.y = singelton.yposplayer
 
-		$Player.position.y = singelton.yposplayer 
+	
 		
 
 func _on_object_interaction_collision_interaction_true():
