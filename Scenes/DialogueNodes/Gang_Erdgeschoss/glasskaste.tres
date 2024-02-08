@@ -6,6 +6,7 @@
 script = ExtResource("1_obq0r")
 starts = {
 "DontLeave": &"0_2",
+"DontLeave_night": &"0_3",
 "GK_1": &"0_1"
 }
 nodes = {
@@ -18,6 +19,11 @@ nodes = {
 "link": &"1_10",
 "offset": Vector2(-880, 320),
 "start_id": "DontLeave"
+},
+"0_3": {
+"link": &"1_13",
+"offset": Vector2(-1120, 840),
+"start_id": "DontLeave_night"
 },
 "1_1": {
 "dialogue": "Na, was treibt dich hier so allein rum? Hast du nichts Besseres zu tun? Oder willst du dich nur verlaufen?",
@@ -52,7 +58,7 @@ nodes = {
 },
 "1_11": {
 "dialogue": "Ich ähh... naja raus hier halt",
-"offset": Vector2(180, 260),
+"offset": Vector2(840, 560),
 "options": {
 0: {
 "condition": {},
@@ -75,6 +81,32 @@ nodes = {
 },
 "size": Vector2(300, 431),
 "speaker": "Eric"
+},
+"1_13": {
+"dialogue": "Verschlossen... mist! Hier komme ich wohl erstmal nicht raus... ",
+"offset": Vector2(-900, 840),
+"options": {
+0: {
+"condition": {},
+"link": &"1_14",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "Ghost "
+},
+"1_14": {
+"dialogue": "Unser Held bemerkt, dass es keinen Ausweg zu geben scheint, bevor er sich nicht seiner Aufgabe gestellt hat...",
+"offset": Vector2(-580, 840),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 245),
+"speaker": "freundliche Stimme"
 },
 "1_2": {
 "dialogue": "Ähm, könntest du mir sagen, wo ich hier bin?",
@@ -99,7 +131,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(960.997, 645.919),
+"size": Vector2(960.999, 645.919),
 "speaker": "..."
 },
 "1_4": {

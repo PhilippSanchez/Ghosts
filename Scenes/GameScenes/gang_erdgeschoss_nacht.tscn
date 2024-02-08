@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmrg8jl06rgd0"]
+[gd_scene load_steps=18 format=3 uid="uid://bmrg8jl06rgd0"]
 
 [ext_resource type="Script" path="res://Scenes/GameScenes/gang_erdgeschoss_nacht.gd" id="1_1e6ag"]
 [ext_resource type="PackedScene" uid="uid://dqfdsfm3x0byr" path="res://Scenes/Characters/player.tscn" id="1_8sfjk"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://c0aiv1eq8wqvi" path="res://Assets/Inviroment/office_tiles/office_floor_single.png" id="3_0bla1"]
 [ext_resource type="PackedScene" uid="uid://dwkok0yy7ifdu" path="res://Scenes/Interacables/switching_scene.tscn" id="4_cv2xq"]
 [ext_resource type="PackedScene" uid="uid://divpbunk8ifvf" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/schild.tscn" id="5_o45gl"]
+[ext_resource type="Script" path="res://Scenes/GameScenes/Barriere Treppe.gd" id="7_j2ax5"]
+[ext_resource type="PackedScene" uid="uid://chese50emd77q" path="res://Scenes/Interacables/ObjektInteractionNode.tscn" id="8_5q0g3"]
+[ext_resource type="Script" path="res://Scenes/Interacables/TreppeBarriere.gd" id="9_f8hl7"]
+[ext_resource type="Resource" uid="uid://c5s6dq4m385l5" path="res://Scenes/DialogueNodes/Gang_Erdgeschoss/glasskaste.tres" id="10_0mvjt"]
+[ext_resource type="PackedScene" uid="uid://dfhse8cxt4whv" path="res://Scenes/Interacables/interaction.tscn" id="11_6iu7v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgwuf"]
 texture = ExtResource("2_o07vl")
@@ -409,6 +414,8 @@ sources/1 = SubResource("TileSetAtlasSource_rgwuf")
 sources/2 = SubResource("TileSetAtlasSource_i2ucf")
 sources/3 = SubResource("TileSetAtlasSource_yoggm")
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y86yv"]
+
 [node name="HallwayScene" type="Node2D"]
 script = ExtResource("1_1e6ag")
 
@@ -452,3 +459,28 @@ position = Vector2(-13, 85)
 scenename = "res://Scenes/GameScenes/aufenthaltsraum_nacht.tscn"
 xposition_player = 65.0
 yposition_player = 70.0
+
+[node name="Barriere Treppe" type="Node" parent="."]
+script = ExtResource("7_j2ax5")
+
+[node name="InteractionTreppe" parent="Barriere Treppe" instance=ExtResource("8_5q0g3")]
+position = Vector2(193, 149)
+scale = Vector2(0.675198, 0.386203)
+script = ExtResource("9_f8hl7")
+textboxName = "DontLeave_night"
+dialogue_data = ExtResource("10_0mvjt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Barriere Treppe"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barriere Treppe/StaticBody2D"]
+position = Vector2(196, 173)
+scale = Vector2(10.2991, 0.913393)
+shape = SubResource("CapsuleShape2D_y86yv")
+
+[node name="Interaction" parent="Barriere Treppe" instance=ExtResource("11_6iu7v")]
+visible = false
+z_index = 5
+position = Vector2(175, 138)
+
+[connection signal="area_entered" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_entered"]
+[connection signal="area_exited" from="Barriere Treppe/InteractionTreppe" to="Barriere Treppe" method="_on_interaction_treppe_area_exited"]
